@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>learn AI governance with phoebe - the EU AI Act, NIST AI RMF & ISO 42001</title>
+<link rel="stylesheet" href="assets/style.css?v=1">
+<style>
+  .stats-row { display: flex; gap: 2.4rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .stat b { display: block; font-size: 2.1rem; font-weight: 800; line-height: 1.05; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: .72rem; opacity: .85; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; }
+  .lawnote { margin-top: 1rem; font-size: .8rem; background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); border-radius: 10px; padding: .55rem .8rem; max-width: 47rem; }
+
+  .course-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .course-card { border: 1px solid var(--hairline); border-top: 4px solid var(--diff, var(--indigo)); border-radius: var(--radius); padding: 1.2rem 1.3rem 1.1rem; display: flex; flex-direction: column; gap: .5rem; text-decoration: none; color: var(--ink); background: #fff; transition: box-shadow .15s ease, border-color .15s ease, transform .15s ease; position: relative; }
+  .course-card:hover { border-color: var(--indigo-soft); border-top-color: var(--diff, var(--indigo)); box-shadow: 0 8px 28px rgba(5,150,105,.14); transform: translateY(-3px); }
+  .course-card .cicon { font-size: 1.7rem; line-height: 1; }
+  .course-card .cnum { font-size: .72rem; font-weight: 700; color: var(--indigo); text-transform: uppercase; letter-spacing: .1em; }
+  .course-card h3 { font-size: 1.05rem; font-weight: 800; line-height: 1.3; }
+  .course-card p { font-size: .85rem; color: var(--muted); flex: 1; }
+  .course-card .meta { display: flex; gap: .4rem; flex-wrap: wrap; }
+
+  .diff-legend { display: flex; gap: 1rem; margin-top: 1.6rem; font-size: .74rem; color: var(--muted); font-weight: 600; flex-wrap: wrap; }
+  .diff-legend i { display: inline-block; width: .85rem; height: .35rem; border-radius: 999px; margin-right: .35rem; vertical-align: middle; }
+
+  .paths { margin-top: 2.6rem; }
+  .paths h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .3rem; }
+  .paths .plede { color: var(--muted); font-size: .92rem; margin-bottom: .8rem; }
+  .path { display: flex; gap: .55rem; align-items: center; padding: .75rem 0; border-bottom: .5px solid var(--hairline); flex-wrap: wrap; }
+  .path:last-child { border-bottom: none; }
+  .path b { min-width: 15.5rem; font-size: .9rem; }
+  .path .pstep { background: var(--indigo-50); color: var(--indigo); border-radius: 999px; padding: .16rem .68rem; font-weight: 700; font-size: .8rem; text-decoration: none; transition: all .12s ease; }
+  .path .pstep:hover { background: var(--indigo); color: #fff; }
+  .path .parr { color: var(--faint); font-weight: 700; }
+
+  .rp-card { border: 1px solid var(--hairline); border-left: 4px solid var(--indigo); border-radius: var(--radius); padding: 1rem 1.2rem; background: linear-gradient(180deg,#fff,var(--indigo-50)); margin-top: 1.2rem; }
+  .rp-card h4 { font-size: 1rem; font-weight: 800; margin-bottom: .3rem; }
+  .rp-card p { font-size: .86rem; color: var(--muted); line-height: 1.6; }
+
+  .mm-section { margin-top: 1.6rem; }
+  .mm-section h2 { font-size: 1.3rem; font-weight: 800; margin-bottom: .2rem; }
+  .mm-section .mm-lede { color: var(--muted); font-size: .92rem; margin-bottom: .4rem; }
+  .mm-wrap { border: 1px solid var(--hairline); border-radius: var(--radius); background: linear-gradient(180deg,#fff,#ECFDF5); padding: .6rem; overflow-x: auto; }
+  .mm-svg { width: 100%; height: auto; display: block; max-width: 60rem; margin: 0 auto; min-width: 34rem; }
+  .mm-link { cursor: pointer; text-decoration: none; }
+  .mm-node rect { transition: opacity .15s ease, filter .15s ease; }
+  .mm-node text { pointer-events: none; }
+  .mm-link:hover .mm-node rect { filter: brightness(1.06); }
+  .mm-edge { transition: opacity .15s ease; }
+</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe</div>
+    <h1>Govern the AI you build and deploy - before the regulator does</h1>
+    <p class="sub">AI governance stopped being optional the day the EU AI Act became law. It reaches any company whose AI output is used in the EU - your Singapore firm included - and fines run to 7% of global turnover. A leader track teaches the Act's risk tiers, who is on the hook, and how NIST AI RMF and ISO/IEC 42001 turn the law into a runnable program. A practitioner track builds that program: classify a system, meet the high-risk obligations, and prove it. The running case is Vantage, a Singapore firm shipping an AI hiring tool into the EU.</p>
+    <div class="stats-row">
+      <div class="stat"><b data-count="2">2</b><span>tracks</span></div>
+      <div class="stat"><b data-count="14">14</b><span>sessions</span></div>
+      <div class="stat"><b data-count="1">1</b><span>live risk classifier</span></div>
+      <div class="stat"><b data-count="3">3</b><span>frameworks</span></div>
+    </div>
+    <div class="lawnote">🛡️ Educational, not legal advice. The EU AI Act is new and its high-risk timeline is under live amendment; NIST AI RMF and ISO/IEC 42001 are voluntary. Verify against the primary texts and get proper advice before acting.</div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section">
+    <div class="paths" style="margin-top:0">
+      <h2>The leader track 🤝 <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for C-level, boards &amp; AI leads · 6 x 45 min · no jargon</span></h2>
+      <p class="plede">What the law requires, when it reaches you, and how the voluntary frameworks turn it into something you can run - each session ends with questions to ask your AI, legal, and data teams.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/a1-why-governance.html" style="--diff:#34D399">
+        <span class="cicon">🧭</span><span class="cnum">Leader 1 · easy</span>
+        <h3>Why AI governance now + the Act's reach</h3>
+        <p>The EU AI Act reaches a Singapore company when its AI output is used in the EU. Why governance is a board topic, and the map of what is coming.</p>
+        <span class="meta"><span class="pill amber">▶ Leaders start here</span></span>
+      </a>
+      <a class="course-card" href="courses/a2-risk-tiers.html" style="--diff:#34D399">
+        <span class="cicon">🪜</span><span class="cnum">Leader 2 · easy</span>
+        <h3>The risk tiers</h3>
+        <p>Prohibited, high-risk, limited, minimal - plus the GPAI layer. The one mental model that sorts any AI system and sets what you owe.</p>
+        <span class="meta"><span class="pill light">The spine</span></span>
+      </a>
+      <a class="course-card" href="courses/a3-roles-timeline.html" style="--diff:#FBBF24">
+        <span class="cicon">🎭</span><span class="cnum">Leader 3 · medium</span>
+        <h3>Who must do what + the timeline</h3>
+        <p>Provider vs deployer vs importer - who carries the load - and the dates the obligations actually bite (with the live amendment).</p>
+        <span class="meta"><span class="pill light">Roles + dates</span></span>
+      </a>
+      <a class="course-card" href="courses/a4-penalties.html" style="--diff:#FBBF24">
+        <span class="cicon">⚖️</span><span class="cnum">Leader 4 · medium</span>
+        <h3>Penalties + enforcement</h3>
+        <p>Up to EUR 35M or 7% of global turnover for banned uses. The three fine tiers, the AI Office, and national enforcement.</p>
+        <span class="meta"><span class="pill light">The stakes</span></span>
+      </a>
+      <a class="course-card" href="courses/a5-frameworks.html" style="--diff:#FB923C">
+        <span class="cicon">🧩</span><span class="cnum">Leader 5 · deciding</span>
+        <h3>NIST AI RMF · ISO 42001 · SG framework</h3>
+        <p>The Act says what you must do; NIST says how to think about risk; ISO 42001 lets you run and prove it. How they fit together.</p>
+        <span class="meta"><span class="pill light">The frameworks</span></span>
+      </a>
+      <a class="course-card" href="courses/a6-program.html" style="--diff:#FB923C">
+        <span class="cicon">🏛️</span><span class="cnum">Leader 6 · deciding</span>
+        <h3>Building an AI governance program</h3>
+        <p>The roadmap, the roles, and how AI governance ties to your data governance and your evals - one operating system, not three.</p>
+        <span class="meta"><span class="pill light">The program</span></span>
+      </a>
+    </div>
+
+    <div class="paths">
+      <h2>The practitioner track 🛠️ <span style="font-size:.85rem;font-weight:600;color:var(--muted)">· for AI/ML, risk &amp; compliance · 8 x 45 min · Vantage case</span></h2>
+      <p class="plede">The operational half: how to actually classify, comply, and prove it. Every session moves Vantage, a Singapore firm shipping an AI hiring tool into the EU, closer to defensible governance.</p>
+    </div>
+    <div class="course-grid">
+      <a class="course-card" href="courses/b1-classify.html" style="--diff:#34D399">
+        <span class="cicon">🔎</span><span class="cnum">Practitioner 1 · easy</span>
+        <h3>Classify a system - the checker</h3>
+        <p>A live risk-tier classifier: pick what an AI system does and see its tier, the obligations that attach, and the article behind it.</p>
+        <span class="meta"><span class="pill amber">▶ Practitioners start here</span></span>
+      </a>
+      <a class="course-card" href="courses/b2-high-risk-obligations.html" style="--diff:#FBBF24">
+        <span class="cicon">🛡️</span><span class="cnum">Practitioner 2 · medium</span>
+        <h3>High-risk obligations</h3>
+        <p>Risk management, data governance and bias, technical docs, logging, human oversight, accuracy - the seven a high-risk provider must meet.</p>
+        <span class="meta"><span class="pill light">Vantage complies</span></span>
+      </a>
+      <a class="course-card" href="courses/b3-transparency.html" style="--diff:#FBBF24">
+        <span class="cicon">💬</span><span class="cnum">Practitioner 3 · medium</span>
+        <h3>Transparency obligations</h3>
+        <p>Tell people it is AI, mark synthetic content machine-readably, disclose deepfakes. The Article 50 duties that catch chatbots and GenAI.</p>
+        <span class="meta"><span class="pill light">Disclose it</span></span>
+      </a>
+      <a class="course-card" href="courses/b4-gpai.html" style="--diff:#FB923C">
+        <span class="cicon">🧠</span><span class="cnum">Practitioner 4 · hands-on</span>
+        <h3>GPAI / foundation models</h3>
+        <p>Baseline documentation, copyright policy, training-data summary - and the systemic-risk tier above 10^25 FLOP with adversarial testing.</p>
+        <span class="meta"><span class="pill light">Foundation models</span></span>
+      </a>
+      <a class="course-card" href="courses/b5-nist-rmf.html" style="--diff:#FB923C">
+        <span class="cicon">🔁</span><span class="cnum">Practitioner 5 · hands-on</span>
+        <h3>NIST AI RMF hands-on</h3>
+        <p>Govern, Map, Measure, Manage - the voluntary risk method that gives your team a common language and maps onto both the Act and ISO.</p>
+        <span class="meta"><span class="pill light">The risk method</span></span>
+      </a>
+      <a class="course-card" href="courses/b6-iso-42001.html" style="--diff:#FB923C">
+        <span class="cicon">📐</span><span class="cnum">Practitioner 6 · hands-on</span>
+        <h3>ISO/IEC 42001</h3>
+        <p>The first certifiable AI management system - policy, roles, impact assessment, Annex A controls - the way to prove governance to a regulator.</p>
+        <span class="meta"><span class="pill light">Certifiable proof</span></span>
+      </a>
+      <a class="course-card" href="courses/b7-risk-assessment.html" style="--diff:#F87171">
+        <span class="cicon">📋</span><span class="cnum">Practitioner 7 · hardest</span>
+        <h3>Risk assessment + conformity</h3>
+        <p>The fundamental rights impact assessment, and the conformity-to-CE-to-registration path a high-risk system runs before market.</p>
+        <span class="meta"><span class="pill light">Prove it before market</span></span>
+      </a>
+      <a class="course-card" href="courses/b8-operating-model.html" style="--diff:#F87171">
+        <span class="cicon">🗂️</span><span class="cnum">Practitioner 8 · hardest</span>
+        <h3>The AI governance operating model</h3>
+        <p>An AI registry, clear roles, evals as compliance evidence - and running AI governance in one system with GDPR and the PDPA. Vantage graduates.</p>
+        <span class="meta"><span class="pill light">One operating system</span></span>
+      </a>
+    </div>
+    <div class="diff-legend">
+      <span><i style="background:#34D399"></i>easy - everyone</span>
+      <span><i style="background:#FBBF24"></i>medium</span>
+      <span><i style="background:#FB923C"></i>hands-on / deciding</span>
+      <span><i style="background:#F87171"></i>hardest</span>
+    </div>
+
+    <div class="paths">
+      <h2>The running case + the live classifier 🔎</h2>
+      <div class="rp-card">
+        <h4>Vantage, and a risk-tier classifier you can poke</h4>
+        <p>The practitioner track follows Vantage, a fictional Singapore firm shipping an AI hiring tool to EU employers - a textbook high-risk system under Annex III(4). Session b1 gives you a live classifier: pick what an AI system does and it returns the EU AI Act tier (prohibited / high-risk / limited / minimal / GPAI), the obligations that attach, and the article behind it. It encodes the Article 5 / 6 / 50 / Chapter V logic (educational, not legal advice).</p>
+      </div>
+    </div>
+
+    <div class="paths">
+      <h2>Choose your path 🗺️</h2>
+      <p class="plede">Two doors, one course. Leaders get the law and the frameworks; practitioners build the program that proves compliance.</p>
+      <div class="path"><b>🤝 Leader (the law + the frameworks)</b>
+        <a class="pstep" href="courses/a1-why-governance.html">a1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a2-risk-tiers.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a3-roles-timeline.html">a3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a4-penalties.html">a4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a5-frameworks.html">a5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/a6-program.html">a6</a>
+      </div>
+      <div class="path"><b>🛠️ Practitioner (build the program)</b>
+        <a class="pstep" href="courses/b1-classify.html">b1</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b2-high-risk-obligations.html">b2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b3-transparency.html">b3</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b4-gpai.html">b4</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b5-nist-rmf.html">b5</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b6-iso-42001.html">b6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b7-risk-assessment.html">b7</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b8-operating-model.html">b8</a>
+      </div>
+      <div class="path"><b>🌱 Just classify our system</b>
+        <a class="pstep" href="courses/a2-risk-tiers.html">a2</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-classify.html">b1</a>
+      </div>
+      <div class="path"><b>🚀 Full journey (govern + prove)</b>
+        <a class="pstep" href="courses/a1-why-governance.html">a1-a6</a><span class="parr">→</span>
+        <a class="pstep" href="courses/b1-classify.html">b1-b8</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section mm-section">
+    <h2>The knowledge map 🧠</h2>
+    <p class="mm-lede">Both tracks at a glance - hover a session to spotlight its concepts, click any node to jump in.</p>
+    <div class="mm-wrap"><div id="mindmap"></div></div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>learn-ai-governance-with-phoebe · by Phoebe Fu · taught from the EU AI Act (Reg (EU) 2024/1689), NIST AI RMF &amp; ISO/IEC 42001 · educational, not legal advice</span>
+    <span>📚 Part of <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a> - the shelf of every course</span>
+  </footer>
+</main>
+
+<script>
+window.MINDMAP_DATA = {
+  title: "Learn AI\nGovernance",
+  centerColor: "#064E3B",
+  sessions: [
+    { label: "Why + the\nreach", href: "courses/a1-why-governance.html", color: "#34D399",
+      concepts: [ { label: "Output-in-EU reach", href: "courses/a1-why-governance.html" }, { label: "Board topic", href: "courses/a1-why-governance.html" } ] },
+    { label: "Risk\ntiers", href: "courses/a2-risk-tiers.html", color: "#34D399",
+      concepts: [ { label: "Prohibited / high", href: "courses/a2-risk-tiers.html" }, { label: "Limited / minimal", href: "courses/a2-risk-tiers.html" }, { label: "GPAI layer", href: "courses/a2-risk-tiers.html" } ] },
+    { label: "Roles +\ntimeline", href: "courses/a3-roles-timeline.html", color: "#FBBF24",
+      concepts: [ { label: "Provider vs deployer", href: "courses/a3-roles-timeline.html" }, { label: "Application dates", href: "courses/a3-roles-timeline.html" } ] },
+    { label: "Penalties", href: "courses/a4-penalties.html", color: "#FBBF24",
+      concepts: [ { label: "7% / EUR 35M", href: "courses/a4-penalties.html" }, { label: "AI Office", href: "courses/a4-penalties.html" } ] },
+    { label: "The\nframeworks", href: "courses/a5-frameworks.html", color: "#FB923C",
+      concepts: [ { label: "NIST AI RMF", href: "courses/a5-frameworks.html" }, { label: "ISO 42001", href: "courses/a5-frameworks.html" }, { label: "SG framework", href: "courses/a5-frameworks.html" } ] },
+    { label: "The\nprogram", href: "courses/a6-program.html", color: "#FB923C",
+      concepts: [ { label: "Roadmap + roles", href: "courses/a6-program.html" }, { label: "Ties to data-gov", href: "courses/a6-program.html" } ] },
+    { label: "Classify\na system", href: "courses/b1-classify.html", color: "#34D399",
+      concepts: [ { label: "The checker", href: "courses/b1-classify.html" }, { label: "The decision logic", href: "courses/b1-classify.html" } ] },
+    { label: "High-risk\nobligations", href: "courses/b2-high-risk-obligations.html", color: "#FBBF24",
+      concepts: [ { label: "Risk mgmt + data", href: "courses/b2-high-risk-obligations.html" }, { label: "Human oversight", href: "courses/b2-high-risk-obligations.html" } ] },
+    { label: "Transparency", href: "courses/b3-transparency.html", color: "#FBBF24",
+      concepts: [ { label: "Chatbot disclosure", href: "courses/b3-transparency.html" }, { label: "Label synthetic", href: "courses/b3-transparency.html" } ] },
+    { label: "GPAI", href: "courses/b4-gpai.html", color: "#FB923C",
+      concepts: [ { label: "Baseline docs", href: "courses/b4-gpai.html" }, { label: "Systemic risk", href: "courses/b4-gpai.html" } ] },
+    { label: "NIST AI\nRMF", href: "courses/b5-nist-rmf.html", color: "#FB923C",
+      concepts: [ { label: "Govern/Map/Measure/Manage", href: "courses/b5-nist-rmf.html" }, { label: "7 trust traits", href: "courses/b5-nist-rmf.html" } ] },
+    { label: "ISO/IEC\n42001", href: "courses/b6-iso-42001.html", color: "#FB923C",
+      concepts: [ { label: "AI management system", href: "courses/b6-iso-42001.html" }, { label: "Certifiable", href: "courses/b6-iso-42001.html" } ] },
+    { label: "Risk +\nconformity", href: "courses/b7-risk-assessment.html", color: "#F87171",
+      concepts: [ { label: "FRIA", href: "courses/b7-risk-assessment.html" }, { label: "Conformity + CE", href: "courses/b7-risk-assessment.html" } ] },
+    { label: "Operating\nmodel", href: "courses/b8-operating-model.html", color: "#F87171",
+      concepts: [ { label: "AI registry", href: "courses/b8-operating-model.html" }, { label: "Evals as evidence", href: "courses/b8-operating-model.html" }, { label: "GDPR/PDPA harmony", href: "courses/b8-operating-model.html" } ] }
+  ]
+};
+</script>
+<script src="assets/mindmap.js?v=1"></script>
+<script src="assets/app.js?v=1"></script>
+</body>
+</html>

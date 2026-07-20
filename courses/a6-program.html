@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 6 · Building an AI governance program - learn AI governance with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Leader session 6 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Leader track · Session 6 of 6 · finale</div>
+    <h1>Building an AI governance program <span class="accent">one owner, one operating system</span></h1>
+    <p class="sub">You now have the whole picture: the Act reaches you, your systems sort by risk tier, roles decide who carries which duty, penalties put a number on getting it wrong, and the frameworks make it runnable. This final session assembles those pieces into a program - something with an owner, a registry of your AI systems, and a small set of artifacts that fit together. And it makes the point that ties the course to everything else you run: AI governance is not a third silo next to data governance and model evaluation. It is one operating system.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Deciding</span>
+      <span class="chip audience">Leaders: C-level · boards · AI leads</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Concepts</span>
+      <span class="a3" style="flex:4">20-40 · Exercises</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>From five sessions to one program</h2></div>
+    <p class="lede">Everything so far has been input. This session is the assembly. A governance program is not a binder or a policy PDF - it is a small set of living artifacts, owned by one person, kept current by a habit. The failure mode is not missing knowledge; it is scattered ownership - legal holds the law, engineering holds the models, nobody holds the whole. This hour gives you the hub-and-artifacts picture, the one-operating-system framing that connects governance to your data and your evals, and a 90-day plan to stand it up.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. This session synthesises the frameworks into a program pattern; it is not a compliance certification or a substitute for professional advice. Verify against the source frameworks and the EU AI Act, and get proper advice before acting.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> The program hub - one owner and the artifacts around them, the one-operating-system view that links AI governance to data governance and evals, a review cadence that keeps compliance a habit not a project, a 90-day plan, and five questions to put to your AI, legal, and data teams this week.</div>
+  </section>
+
+  <section class="section" id="hub">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers the program hub</span><h2>The program hub <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">A program needs a centre. Put one person in it - an AI governance lead - and arrange the artifacts around them. Not a committee that meets quarterly and disperses, but a named owner with a registry of every AI system and a handful of artifacts they keep alive. This is what turns five sessions of knowledge into something that runs.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An AI governance lead at the centre, surrounded by the program artifacts: AI registry, NIST risk method, ISO 42001 management system, EU AI Act compliance, model evaluations, and incident and monitoring">
+        <style>
+          .a6pT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .a6pW { font: 400 11.5px Inter, sans-serif; fill: #D1FAE5; }
+          .a6pC { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a6pN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .a6pArr { stroke: #D1D5DB; stroke-width: 2; fill: none; }
+        </style>
+        <line class="a6pArr" x1="440" y1="170" x2="150" y2="70"/>
+        <line class="a6pArr" x1="440" y1="170" x2="440" y2="60"/>
+        <line class="a6pArr" x1="440" y1="170" x2="730" y2="70"/>
+        <line class="a6pArr" x1="440" y1="170" x2="150" y2="270"/>
+        <line class="a6pArr" x1="440" y1="170" x2="440" y2="280"/>
+        <line class="a6pArr" x1="440" y1="170" x2="730" y2="270"/>
+        <circle cx="440" cy="170" r="66" fill="#064E3B"/>
+        <text class="a6pC" x="440" y="165" text-anchor="middle">AI governance</text>
+        <text class="a6pC" x="440" y="184" text-anchor="middle">lead (owner)</text>
+        <rect x="40" y="34" width="220" height="52" rx="10" fill="#059669"/><text class="a6pT" x="60" y="58">AI inventory / registry</text><text class="a6pW" x="60" y="76">every system, its tier + role</text>
+        <rect x="330" y="24" width="220" height="46" rx="10" fill="#10B981"/><text class="a6pT" x="350" y="52">EU AI Act compliance</text>
+        <rect x="620" y="34" width="220" height="52" rx="10" fill="#059669"/><text class="a6pT" x="640" y="58">Risk method (NIST)</text><text class="a6pW" x="640" y="76">Govern, Map, Measure, Manage</text>
+        <rect x="40" y="254" width="220" height="52" rx="10" fill="#10B981"/><text class="a6pT" x="60" y="278">Management system</text><text class="a6pW" x="60" y="296">ISO 42001 - auditable</text>
+        <rect x="330" y="266" width="220" height="46" rx="10" fill="#059669"/><text class="a6pT" x="350" y="294">Model evaluations</text>
+        <rect x="620" y="254" width="220" height="52" rx="10" fill="#10B981"/><text class="a6pT" x="640" y="278">Incident + monitoring</text><text class="a6pW" x="640" y="296">catch + report problems</text>
+        <rect x="40" y="322" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a6pN" x="64" y="334">One named owner at the centre - not a committee. The artifacts orbit the owner, not each other.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - one owner at the centre, the artifacts around them</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>One owner, a registry, the artifacts<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A program is four things assembled around a person:</p>
+        <ul>
+          <li><strong>One owner.</strong> An AI governance lead - a named individual accountable for the whole, with a seat close to the board. Scattered ownership is the number-one failure; a single owner is the number-one fix.</li>
+          <li><strong>An AI system inventory / registry.</strong> A living list of every AI system you build or use, each tagged with its risk tier (a2) and your role (a3). You cannot govern what you have not listed.</li>
+          <li><strong>Defined roles.</strong> Provider or deployer duties assigned per system, so responsibility is never ambiguous.</li>
+          <li><strong>The artifacts.</strong> A risk method (NIST), a management system (ISO 42001), an EU AI Act compliance mapping, model evaluations as evidence the system works, and incident-and-monitoring to catch problems early.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Help me design an AI governance program for a mid-sized company. Give me the core pieces: a single owner, an AI system registry, defined roles, a risk method, a management system, an EU AI Act compliance mapping, model evaluations, and incident monitoring - and explain what each artifact is for in one line. Educational only.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why the registry comes first<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>You cannot govern an unknown.</strong> Most organisations underestimate how many AI systems they run - shadow tools, embedded features, vendor models. The registry surfaces them.</li>
+          <li><strong>It carries the tier and the role.</strong> Each entry links to session a2 (which risk tier) and a3 (provider or deployer), so the registry is where the whole course lands in one table.</li>
+          <li><strong>It drives the cadence.</strong> A new system or a new feature is a trigger to review - the registry is what the review works from. No registry, no habit.</li>
+        </ul>
+        <div class="callout tip"><strong>Build the registry before the policy</strong> A polished policy governing systems you have not inventoried is theatre. List every AI system first - tier and role per row - and the rest of the program has something real to attach to.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="os">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers the operating-system view</span><h2>One operating system, not three silos <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">The most expensive mistake is treating AI governance, data governance, and model evaluation as three separate programs. They are one operating system. Governance reads from the data that feeds your models and from the evals that show the models work. Wire them together and each makes the others stronger; keep them apart and all three drift.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 280" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI governance connected to data governance and model evaluation as one operating system, not three silos">
+        <style>
+          .a6oT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a6oW { font: 400 12px Inter, sans-serif; fill: #D1FAE5; }
+          .a6oN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .a6oArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#a6oAh); }
+        </style>
+        <defs><marker id="a6oAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="330" y="40" width="220" height="70" rx="12" fill="#064E3B"/>
+        <text class="a6oT" x="440" y="70" text-anchor="middle">AI governance</text>
+        <text class="a6oW" x="440" y="92" text-anchor="middle">the owner + artifacts</text>
+        <rect x="40" y="180" width="260" height="70" rx="12" fill="#059669"/>
+        <text class="a6oT" x="170" y="210" text-anchor="middle">Data governance</text>
+        <text class="a6oW" x="170" y="232" text-anchor="middle">the data feeding the models</text>
+        <rect x="580" y="180" width="260" height="70" rx="12" fill="#10B981"/>
+        <text class="a6oT" x="710" y="210" text-anchor="middle">Model evaluation</text>
+        <text class="a6oW" x="710" y="232" text-anchor="middle">evidence the model works</text>
+        <line class="a6oArr" x1="390" y1="112" x2="200" y2="176"/>
+        <line class="a6oArr" x1="490" y1="112" x2="680" y2="176"/>
+        <rect x="40" y="262" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a6oN" x="64" y="274">Governance reads from governed data and from evals - one operating system, not three silos.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - AI governance connected to data governance and evals</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>How the three connect<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Governance reads from data governance.</strong> A model is only as trustworthy as the data feeding it. Provenance, quality, and consent for that data are a data-governance job - and AI governance depends on it. If you took the data-governance course, this is where it plugs in.</li>
+          <li><strong>Governance reads from evals.</strong> "The model works" is not a claim, it is an evidence question. Model evaluations - accuracy, bias, retrieval quality - produce exactly the proof a regulator or customer asks for. The RAG and evals courses build this muscle.</li>
+          <li><strong>Make it a habit.</strong> Tie a review cadence to real triggers: a new AI system, a major feature, an incident. Compliance is a habit, not a project - a program that only wakes up for an audit has already failed.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage stands up its program.</strong> Vantage named a head of data as its AI governance lead, built a one-page registry that listed the hiring tool as high-risk with Vantage as provider, and hung the artifacts off it: the NIST method it already used for bias, the ISO 42001 path for its German customer, an EU AI Act compliance map, the evals that measured the tool's fairness, and an incident channel. Crucially, it did not build these in isolation - the registry drew on the same data-governance catalogue that tracked the training data, and the fairness evals became the evidence its compliance map pointed to. One owner, one operating system. The board's someday-item was now a running program with a 90-day plan and a quarterly review.</p></div>
+        <div class="callout tip"><strong>Do not rebuild what you have</strong> If you already run data governance or model evals, do not stand up parallel AI-governance versions. Point your governance program at the systems you already have and connect them - one operating system is cheaper and truer than three.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>A warm handoff to the practitioner track<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>That closes the leader track. You started with a board that thought AI regulation was someone else's problem and you finish with a program you can own, fund, and defend. You know the Act reaches you when your AI's output touches the EU, how your systems sort by risk tier, who carries which duty, what non-compliance costs, which frameworks make it runnable, and how to assemble it all around one owner as a single operating system. That is the leader's job - to see the whole board and decide. The next job is to play the pieces, and that is hands-on work: classifying a system against the Act's criteria, writing the technical documentation, wiring up evaluations, running conformity steps. If you lead the people who do that, or you want to see exactly what your teams are doing, the practitioner track is your next stop - it takes the same running case and builds it, step by step. Whether you go on or hand this to your teams, you now have what you came for: AI governance as something concrete, evidenced, and yours. Thank you for spending these six sessions here.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Score your program artifacts <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">Five artifacts, a quick honest score. Where the zeros are is where your program starts.</p>
+    <div class="steps">
+      <div class="step"><p>Score each on 0 (none) / 1 (partial) / 2 (in place): a named owner, an AI system registry, a risk method (NIST), a management system (ISO 42001), and model evaluations.</p></div>
+      <div class="step"><p>Add them up. A total under 5 means the program is aspiration, not operation - and that is fine as a starting point, as long as you name it.</p></div>
+      <div class="step"><p>Circle every zero. Those are the gaps that block everything downstream - especially a missing owner or a missing registry.</p></div>
+      <div class="step"><p>Check the connections: does governance read from your data governance and your evals, or do they run as silos? Note that separately.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your program scorer (paste into any chat AI)</span>Help me score my AI governance program. Ask me about five artifacts - a named owner, an AI system registry, a NIST-style risk method, an ISO 42001 management system, and model evaluations - score each 0 to 2, total it, and tell me which gap to close first and why. Then ask whether governance connects to my data governance and evals. Educational only.</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>Write a 90-day plan <span class="tag demo">★ 8 min · your next leadership meeting</span></h2></div>
+    <p class="lede">Four moves that turn today's knowledge into a plan your board can fund.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Days 1-30: name the owner and build the registry.</strong> Appoint the AI governance lead and inventory every AI system with its tier and role. Nothing else can start without these two.</p></div>
+      <div class="step"><p><strong>Days 31-60: adopt a method and map the Act.</strong> Put the NIST functions to work on your highest-risk system, and map its EU AI Act obligations.</p></div>
+      <div class="step"><p><strong>Days 61-90: wire in proof and connections.</strong> Set the ISO 42001 path if a customer needs it, connect governance to your data governance and evals, and stand up incident monitoring.</p></div>
+      <div class="step"><p><strong>Set the cadence.</strong> Fix a recurring review tied to new systems and features so the program stays a habit after day 90.</p></div>
+    </div>
+    <div class="callout tip"><strong>The mindset</strong> A 90-day plan beats a perfect policy. Name the owner, list the systems, put the method to work on the riskiest one, and set a cadence. Compliance is a habit, not a launch - the plan exists to start the habit, not to finish the work.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>After the leader track <span class="tag exercise">◐ 30 min total</span></h2></div>
+    <ul>
+      <li>Turn your artifact scores into a one-page 90-day plan and put it in front of the person who can fund it.</li>
+      <li>Name a candidate for the AI governance lead - the single most important decision in the whole program.</li>
+      <li>Ask whether your data governance and model evaluations could feed the program, or whether they run as silos today.</li>
+      <li>Optional: if you lead technical teams, preview the practitioner track so you know what hands-on work the program will require.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to ask your AI, legal, and data teams this week</strong>
+      <ol>
+        <li>Who is our AI governance lead - one named owner, or is ownership scattered?</li>
+        <li>Do we have a live registry of every AI system, tagged with tier and role?</li>
+        <li>Which artifacts do we have - risk method, management system, compliance map, evals, monitoring - and which are missing?</li>
+        <li>Does AI governance read from our data governance and our model evaluations, or do they run as silos?</li>
+        <li>Do we have a review cadence tied to new systems and features, so compliance is a habit not a project?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">This finale synthesises the frameworks taught across the track. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Synthesis of the frameworks</span><span class="note">Parts 1-2 · program pattern drawn from NIST, ISO 42001, the EU AI Act</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">NIST AI RMF + ISO/IEC 42001 (as program artifacts)</span><span class="note">Part 1 · the risk method + management system in the hub</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Data governance + model evaluation (course links)</span><span class="note">Part 2 · the connected operating system</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · The number-one failure mode of an AI governance program is...</p>
+      <button class="qopt" type="button">A · Buying the wrong software</button>
+      <button class="qopt" type="button">B · Scattered ownership - nobody owns the whole</button>
+      <button class="qopt" type="button">C · Certifying to too many frameworks</button>
+      <p class="qwhy">A program needs one named owner - an AI governance lead. Legal holding the law and engineering holding the models, with nobody holding the whole, is the classic failure.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · Why should AI governance connect to data governance and model evaluation?</p>
+      <button class="qopt" type="button">A · It should not - they are separate programs</button>
+      <button class="qopt" type="button">B · Only to save budget</button>
+      <button class="qopt" type="button">C · Because models depend on governed data, and evals produce the evidence a regulator or customer wants</button>
+      <p class="qwhy">They are one operating system, not three silos: governance reads from the data feeding models and from the evals that evidence the models work.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · "Compliance is a habit, not a project" means...</p>
+      <button class="qopt" type="button">A · Tie a review cadence to new systems and features so the program stays alive</button>
+      <button class="qopt" type="button">B · Do it once, then stop</button>
+      <button class="qopt" type="button">C · Only review during an audit</button>
+      <p class="qwhy">A program that only wakes up for an audit has already failed. A recurring review triggered by new systems and features keeps governance current.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 6 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>One owner</b><span>A named AI governance lead accountable for the whole - not a committee.</span></div>
+      <div class="cheat-item"><b>Registry first</b><span>A live inventory of every AI system, tagged with tier and role.</span></div>
+      <div class="cheat-item"><b>The artifacts</b><span>Risk method (NIST), management system (ISO 42001), Act compliance map, evals, monitoring.</span></div>
+      <div class="cheat-item"><b>One operating system</b><span>AI governance reads from data governance and from evals - not three silos.</span></div>
+      <div class="cheat-item"><b>Reads from data</b><span>A model is only as trustworthy as the governed data feeding it.</span></div>
+      <div class="cheat-item"><b>Reads from evals</b><span>Evaluations produce the evidence a regulator or customer asks for.</span></div>
+      <div class="cheat-item"><b>Habit not project</b><span>A review cadence tied to new systems and features keeps it alive.</span></div>
+      <div class="cheat-item"><b>90-day plan</b><span>Name owner + registry, then method + Act map, then proof + connections.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 6 of 6 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b1-classify.html">Next: switch to the practitioner track →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

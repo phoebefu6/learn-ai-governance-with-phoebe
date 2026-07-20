@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 2 · The risk tiers - learn AI governance with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Leader session 2 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Leader track · Session 2 of 6</div>
+    <h1>The risk tiers <span class="accent">and the lists that decide your obligations</span></h1>
+    <p class="sub">The EU AI Act does not treat all AI the same. It sorts every system into a risk tier, and the tier - not the technology - decides how much you must do. Some uses are banned outright. Some carry a full compliance programme. Most carry almost nothing. This session gives you the pyramid, the two lists that actually matter (what is banned, what is high-risk), and where our running case, Vantage's AI hiring tool, lands - and why.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Easy</span>
+      <span class="chip audience">Leaders: C-level · boards · AI leads</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Concepts</span>
+      <span class="a3" style="flex:4">20-40 · Exercises</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>Why the tier is the whole game</h2></div>
+    <p class="lede">In session 1 you found which of your AI systems are in scope of the EU AI Act. That was the door. This session is the sorting hat. Once a system is in scope, its risk tier decides everything that follows - whether it is allowed at all, whether it needs a full compliance programme, or whether a one-line disclosure is enough. Leaders who skip this step spend money governing minimal-risk toys and miss the one high-risk system that carries real liability. Get the tier right and the rest of the course is just execution.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. The EU AI Act is new and the high-risk list and timeline are under live amendment. Verify against the Regulation text and Annex III, and get proper advice before you classify anything for real.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> The four-tier risk pyramid plus the GPAI side-layer, the obligation that attaches to each tier, the two lists that decide it (the banned practices and the Annex III high-risk areas), and the reason Vantage's hiring tool is high-risk - not optional.</div>
+  </section>
+
+  <section class="section" id="pyramid">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers the risk-tier structure</span><h2>The pyramid <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">Picture the Act's world as a pyramid. The higher the tier, the more the law demands - and the fewer systems sit there. Almost all AI lives at the wide bottom with no mandatory obligations. A thin band above needs disclosure. A narrow band above that needs a full compliance programme. And at the tip, a few uses are simply forbidden. Off to the side sits a separate track for general-purpose AI models.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 380" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Risk pyramid: prohibited at the top is banned, high-risk needs a full compliance programme, limited-risk needs disclosure, minimal-risk at the base has no obligations, with a general-purpose AI side-layer">
+        <style>
+          .a2tT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .a2tW { font: 400 12px Inter, sans-serif; fill: #D1FAE5; }
+          .a2tI { font: 700 14px Inter, sans-serif; fill: #1F2937; }
+          .a2tS { font: 400 12px Inter, sans-serif; fill: #374151; }
+          .a2tN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <polygon points="440,30 520,90 360,90" fill="#064E3B"/>
+        <text class="a2tT" x="440" y="66" text-anchor="middle">PROHIBITED</text>
+        <text class="a2tW" x="440" y="82" text-anchor="middle">banned outright</text>
+        <polygon points="355,96 525,96 585,166 295,166" fill="#059669"/>
+        <text class="a2tT" x="440" y="128" text-anchor="middle">HIGH-RISK</text>
+        <text class="a2tW" x="440" y="148" text-anchor="middle">full compliance programme</text>
+        <polygon points="290,172 590,172 650,242 230,242" fill="#10B981"/>
+        <text class="a2tT" x="440" y="204" text-anchor="middle">LIMITED RISK</text>
+        <text class="a2tW" x="440" y="224" text-anchor="middle">transparency + disclosure</text>
+        <polygon points="225,248 655,248 700,312 180,312" fill="#6EE7B7"/>
+        <text class="a2tI" x="440" y="280" text-anchor="middle">MINIMAL RISK</text>
+        <text class="a2tS" x="440" y="300" text-anchor="middle">no mandatory obligations (most AI lives here)</text>
+        <rect x="720" y="96" width="140" height="216" rx="12" fill="#ECFDF5" stroke="#6EE7B7"/>
+        <text class="a2tI" x="790" y="150" text-anchor="middle">GPAI</text>
+        <text class="a2tS" x="790" y="172" text-anchor="middle">side-layer:</text>
+        <text class="a2tS" x="790" y="190" text-anchor="middle">general-purpose</text>
+        <text class="a2tS" x="790" y="208" text-anchor="middle">AI models</text>
+        <text class="a2tS" x="790" y="234" text-anchor="middle">baseline docs;</text>
+        <text class="a2tS" x="790" y="252" text-anchor="middle">systemic-risk</text>
+        <text class="a2tS" x="790" y="270" text-anchor="middle">tier above</text>
+        <text class="a2tS" x="790" y="288" text-anchor="middle">10^25 FLOP</text>
+        <rect x="30" y="344" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a2tN" x="54" y="356">The tier decides the workload: banned, full programme, disclosure only, or nothing. Find the tier first.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four risk tiers plus the GPAI side-layer</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>Tier</th><th>What it covers</th><th>Key obligation</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Prohibited</strong></td><td>A short list of unacceptable uses (Art 5)</td><td>Banned - you may not do it at all</td></tr>
+        <tr><td><strong>High-risk</strong></td><td>Uses in Annex III areas + safety components (Art 6)</td><td>Full compliance programme + conformity assessment</td></tr>
+        <tr><td><strong>Limited risk</strong></td><td>Chatbots, deepfakes, emotion/biometric hints (Art 50)</td><td>Disclosure and labelling only</td></tr>
+        <tr><td><strong>Minimal risk</strong></td><td>Everything else - spam filters, game AI, most tools</td><td>None mandatory (voluntary codes, Art 95)</td></tr>
+        <tr><td><strong>GPAI</strong></td><td>General-purpose models (side-layer, Ch V)</td><td>Baseline docs; heavier tier if systemic-risk</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>What each tier actually asks of you<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Prohibited (Art 5):</strong> a small set of uses the Act judges unacceptable. There is no compliance path - the answer is stop. This is the first thing to scan for.</li>
+          <li><strong>High-risk (Art 6 + Annex III):</strong> the heavy tier. A full programme - risk management, data governance, technical documentation, logging, human oversight, accuracy and robustness - plus a conformity assessment, CE marking, and EU database registration. This is where most of your governance budget goes.</li>
+          <li><strong>Limited risk (Art 50):</strong> transparency obligations only. Tell people they are dealing with AI, label AI-generated or manipulated content. No programme, just honesty.</li>
+          <li><strong>Minimal risk:</strong> the vast majority of AI. No mandatory obligations at all. The Act encourages voluntary codes of conduct (Art 95), but nothing is compelled.</li>
+        </ul>
+        <p>Notice the shape: obligation is concentrated at the top. Your job as a leader is not to govern everything equally - it is to find the few systems that sit high on the pyramid and put the effort there.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The GPAI side-layer<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>General-purpose AI models - the large foundation models behind many products - do not fit the four-tier pyramid neatly, so the Act gives them their own track (Chapter V).</p>
+        <ul>
+          <li><strong>Every GPAI model</strong> carries baseline obligations (Art 53): technical documentation, information for downstream developers, a copyright policy, and a training-data summary.</li>
+          <li><strong>A GPAI model with systemic risk</strong> carries more (Art 55): model evaluation, systemic-risk assessment and mitigation, incident reporting, and cybersecurity. A model is presumed to be in this tier when the compute used to train it exceeds <strong>10^25 FLOP</strong> (Art 51).</li>
+        </ul>
+        <div class="callout tip"><strong>Why leaders care</strong> If you build on top of a foundation model rather than train one, you are usually not the GPAI provider - the model maker is. But your product built around it may still be high-risk in its own right. The two questions are separate: what tier is my system, and am I also a GPAI provider?</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Limited and minimal risk, in one minute<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The bottom two tiers are where most of your AI actually lives, and they are refreshingly light.</p>
+        <ul>
+          <li><strong>Limited risk (Art 50)</strong> is about honesty, not engineering. If people interact with a chatbot, tell them it is AI. If content is AI-generated or manipulated (a deepfake, a synthetic voice), label it. If a system does emotion recognition or biometric categorisation outside the banned contexts, inform the people subject to it. That is the whole duty: disclose.</li>
+          <li><strong>Minimal risk</strong> carries no mandatory obligations at all. Spam filters, recommendation engines, inventory forecasters, game AI - the Act leaves them alone and merely encourages voluntary codes of conduct (Art 95).</li>
+        </ul>
+        <p>The leadership takeaway: do not build a governance programme for a spam filter. Reserve the effort for the prohibited scan and the high-risk few, and handle the limited-risk band with a disclosure checklist your product team can run itself.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="lists">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers the two decisive lists</span><h2>The lists that matter <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">Two lists do the real work of classification. The banned list (Article 5) tells you what you may never do. The high-risk list (Annex III) tells you which everyday business uses carry the full programme. Learn to recognise both and you can tier almost any system in a minute.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Two lists: the banned practices under Article 5 on the left, and the eight Annex III high-risk areas on the right, with a general-purpose AI note below">
+        <style>
+          .a2lT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a2lW { font: 400 11.5px Inter, sans-serif; fill: #D1FAE5; }
+          .a2lI { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .a2lS { font: 400 11.5px Inter, sans-serif; fill: #374151; }
+          .a2lN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="30" width="380" height="30" rx="8" fill="#064E3B"/>
+        <text class="a2lT" x="50" y="50">BANNED - Article 5 (never do these)</text>
+        <rect x="30" y="68" width="380" height="278" rx="10" fill="#ECFDF5" stroke="#6EE7B7"/>
+        <text class="a2lS" x="50" y="94">· Subliminal or manipulative harm</text>
+        <text class="a2lS" x="50" y="120">· Exploiting age or disability vulnerability</text>
+        <text class="a2lS" x="50" y="146">· Social scoring of people</text>
+        <text class="a2lS" x="50" y="172">· Crime-risk scoring by profiling alone</text>
+        <text class="a2lS" x="50" y="198">· Untargeted facial-image scraping</text>
+        <text class="a2lS" x="50" y="224">· Emotion recognition at work or school</text>
+        <text class="a2lS" x="50" y="250">· Sensitive biometric categorisation</text>
+        <text class="a2lS" x="50" y="276">· Real-time public biometric ID by police</text>
+        <text class="a2lS" x="50" y="308">(narrow law-enforcement exceptions apply</text>
+        <text class="a2lS" x="50" y="326">to the last item only)</text>
+        <rect x="470" y="30" width="380" height="30" rx="8" fill="#059669"/>
+        <text class="a2lT" x="490" y="50">HIGH-RISK - Annex III (full programme)</text>
+        <rect x="470" y="68" width="380" height="278" rx="10" fill="#ECFDF5" stroke="#6EE7B7"/>
+        <text class="a2lS" x="490" y="94">1 · Biometrics</text>
+        <text class="a2lS" x="490" y="120">2 · Critical infrastructure</text>
+        <text class="a2lS" x="490" y="146">3 · Education + vocational training</text>
+        <text class="a2lS" x="490" y="172">4 · Employment + recruitment</text>
+        <text class="a2lS" x="490" y="198">5 · Essential services (incl. credit, insurance)</text>
+        <text class="a2lS" x="490" y="224">6 · Law enforcement</text>
+        <text class="a2lS" x="490" y="250">7 · Migration, asylum, border control</text>
+        <text class="a2lS" x="490" y="276">8 · Justice + democratic processes</text>
+        <text class="a2lI" x="490" y="308">Area 4 = where hiring tools land.</text>
+        <rect x="30" y="360" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a2lN" x="54" y="372">Scan the banned list first (is it forbidden?), then Annex III (is it high-risk?). Most systems clear both.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the banned list and the eight high-risk areas</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The banned list - the first scan<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Article 5 forbids a short set of uses the Act considers unacceptable in a democratic society. In plain terms, they are:</p>
+        <ul>
+          <li><strong>Subliminal or manipulative techniques</strong> that cause harm, and <strong>exploiting the vulnerability</strong> of children or people with disabilities.</li>
+          <li><strong>Social scoring</strong> - rating people's trustworthiness and using it against them in unrelated contexts.</li>
+          <li><strong>Predicting crime by profiling alone</strong>, <strong>untargeted scraping of facial images</strong> to build recognition databases.</li>
+          <li><strong>Emotion recognition in the workplace or in education</strong>, and <strong>biometric categorisation</strong> that infers sensitive traits.</li>
+          <li><strong>Real-time remote biometric identification in public by law enforcement</strong>, with narrow, tightly conditioned exceptions.</li>
+        </ul>
+        <p>For most businesses the practical takeaway is a single one: <strong>do not deploy emotion recognition on employees or students.</strong> That is the banned-list item a normal company is most likely to trip over.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The Annex III high-risk areas<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Annex III lists eight areas where an AI system is high-risk because a mistake hits people's rights, safety, or livelihood. If your system makes or materially shapes a decision in one of these, assume high-risk:</p>
+        <ul>
+          <li><strong>Biometrics</strong> · <strong>critical infrastructure</strong> · <strong>education</strong> and vocational training</li>
+          <li><strong>Employment and recruitment</strong> - hiring, task allocation, promotion, termination</li>
+          <li><strong>Essential public and private services</strong>, including <strong>credit scoring</strong> and insurance pricing</li>
+          <li><strong>Law enforcement</strong> · <strong>migration, asylum and border control</strong> · <strong>justice and democratic processes</strong></li>
+        </ul>
+        <p>One nuance worth knowing: Article 6(3) lets you downgrade a system that only does a narrow or preparatory task and does not really drive the outcome - <em>unless</em> it profiles people, in which case it stays high-risk no matter how narrow it looks.</p>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage lands in Annex III(4).</strong> Vantage's AI hiring tool ranks and screens job candidates. That is squarely employment and recruitment - Annex III area 4 - so it is high-risk. And because it profiles people (scoring candidates), the Article 6(3) narrow-task escape hatch is closed to it. Vantage cannot argue its way down a tier. The full compliance programme applies, and the rest of this course is Vantage building it.</p></div>
+        <div class="callout tip"><strong>The GPAI reminder</strong> If Vantage had trained its own general-purpose model, it would also pick up the GPAI baseline duties - and the systemic-risk tier if training compute passed 10^25 FLOP. It did not; it fine-tuned a vendor model. So Vantage is a high-risk system provider, not a GPAI provider. Keep the two questions separate.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why "most AI is minimal-risk" is not a loophole<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is true that the overwhelming majority of AI systems fall into the minimal-risk tier with no mandatory obligations, and that fact can tempt a leader into assuming their systems are fine by default. Resist that. The reason most AI is minimal-risk is that most AI does not make consequential decisions about people - it filters spam, recommends films, autocompletes text. The moment a system starts screening candidates, pricing credit, allocating a public service, or identifying a face, it climbs the pyramid fast, and the jump from "no obligations" to "full compliance programme" is a cliff, not a slope. So the minimal-risk majority is not a reason to relax; it is a reason to look hard at the handful of systems that are the exception, because those are the ones carrying all of your legal exposure. A mature leader can name their high-risk systems from memory and treats every new AI use as high-risk until the classification proves otherwise.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Sort six systems into tiers <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">Take six of Vantage's or your own AI uses and place each on the pyramid.</p>
+    <div class="steps">
+      <div class="step"><p>Write down six AI uses. If you are short, borrow Vantage's: the candidate ranker, a careers-page chatbot, a spam filter on the recruiter inbox, an internal meeting-notes summariser, a tool that reads staff webcam expressions in interviews, and a credit-check add-on for contractor onboarding.</p></div>
+      <div class="step"><p>For each, ask the banned-list question first: is this an Article 5 practice? (The webcam-expression tool is - emotion recognition at work.)</p></div>
+      <div class="step"><p>Then ask the Annex III question: does it decide or shape something in one of the eight areas? (The ranker = employment; the credit add-on = essential services.)</p></div>
+      <div class="step"><p>Whatever is left - the chatbot, the summariser, the spam filter - drops to limited or minimal risk. Label all six and count how many are high-risk. That number is your real workload.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your tiering partner (paste into any chat AI)</span>You are helping a leader classify AI systems under the EU AI Act. For each system I describe, check it against the Article 5 banned practices first, then the Annex III high-risk areas, then limited-risk transparency triggers - and tell me the tier and the one-line reason. Note if Article 6(3) could downgrade it and whether profiling closes that door. Educational only, remind me to get advice. My systems: [list them]</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>The "any prohibited?" scan <span class="tag demo">★ 8 min · your next AI review</span></h2></div>
+    <p class="lede">Before anything else, sweep your whole AI estate for banned practices - because no compliance effort can save a prohibited use.</p>
+    <div class="steps">
+      <div class="step"><p><strong>"Do we run emotion recognition on employees or students anywhere?"</strong> Interview tools, wellbeing monitors, classroom analytics - this is the most common trip-wire.</p></div>
+      <div class="step"><p><strong>"Do we score people's general trustworthiness and reuse it across contexts?"</strong> That drifts toward social scoring.</p></div>
+      <div class="step"><p><strong>"Do we scrape faces from the web or CCTV to build a recognition database?"</strong> Untargeted facial scraping is banned.</p></div>
+      <div class="step"><p><strong>"Any real-time public biometric identification?"</strong> Almost always off-limits outside narrow law-enforcement cases. If any answer is yes, that is a stop-now item, not a fix-later one.</p></div>
+    </div>
+    <div class="callout tip"><strong>The mindset</strong> Prohibited beats high-risk beats everything. Always scan for banned practices before you invest a cent in a compliance programme - there is no programme that makes a forbidden use legal.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session a3 <span class="tag exercise">◐ 30 min total</span></h2></div>
+    <ul>
+      <li>Finish tiering your in-scope systems from session 1 - keep the list, a3 assigns roles and deadlines to the high-risk ones.</li>
+      <li>Run the "any prohibited?" scan across your whole AI estate and flag anything on the banned list for immediate review.</li>
+      <li>For each high-risk system, note who built it (you or a vendor) - that decides your role in a3.</li>
+      <li>Optional: skim Annex III and Article 5 - they are short lists, and they are the whole classification.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to ask your AI, legal, and data teams this week</strong>
+      <ol>
+        <li>Which of our in-scope AI systems are high-risk under Annex III, and which area do they fall in?</li>
+        <li>Do we run any Article 5 prohibited practice anywhere - especially emotion recognition on staff or students?</li>
+        <li>For each high-risk system, could Article 6(3) downgrade it, or does it profile people and stay high-risk?</li>
+        <li>Do we build or train any general-purpose AI model, or only use vendors' - and do we know the 10^25 FLOP line?</li>
+        <li>How many high-risk systems do we have - and is our governance effort concentrated there?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the primary texts. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 5 (prohibited practices)</span><span class="note">Part 2 · the banned list + the workplace trip-wire</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 6 + Annex III (high-risk)</span><span class="note">Parts 1-2 · the eight areas + the 6(3) nuance</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 50 (transparency) + Art 51-55 (GPAI)</span><span class="note">Part 1 · limited-risk disclosure + the GPAI side-layer</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Vantage's AI tool ranks and screens job candidates. Under the EU AI Act it is...</p>
+      <button class="qopt" type="button">A · Minimal risk - hiring is a normal business activity</button>
+      <button class="qopt" type="button">B · High-risk - it is employment/recruitment under Annex III area 4</button>
+      <button class="qopt" type="button">C · Prohibited - all hiring AI is banned</button>
+      <p class="qwhy">Employment and recruitment is Annex III area 4, so a candidate-screening tool is high-risk. And because it profiles people, the Article 6(3) narrow-task downgrade does not apply.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · A company wants to read employees' facial expressions during video interviews to gauge their mood. This is...</p>
+      <button class="qopt" type="button">A · High-risk - it just needs a compliance programme</button>
+      <button class="qopt" type="button">B · Limited risk - it only needs a disclosure label</button>
+      <button class="qopt" type="button">C · Prohibited - emotion recognition in the workplace is banned (Art 5)</button>
+      <p class="qwhy">Emotion recognition in the workplace or in education is an Article 5 prohibited practice. There is no compliance path - it is a stop-now item.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · A general-purpose AI model is presumed to carry the heavier "systemic risk" obligations when...</p>
+      <button class="qopt" type="button">A · Its training compute exceeds 10^25 FLOP</button>
+      <button class="qopt" type="button">B · It has more than one million users</button>
+      <button class="qopt" type="button">C · It is trained outside the EU</button>
+      <p class="qwhy">Under Article 51, a GPAI model is presumed to have systemic risk when the compute used to train it exceeds 10^25 FLOP, triggering the Article 55 obligations.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Four tiers</b><span>Prohibited (banned) · high-risk (full programme) · limited (disclose) · minimal (nothing).</span></div>
+      <div class="cheat-item"><b>Tier decides workload</b><span>Obligation is concentrated at the top. Find your high-risk few and spend there.</span></div>
+      <div class="cheat-item"><b>Banned list (Art 5)</b><span>The one most firms trip over: emotion recognition on staff or students.</span></div>
+      <div class="cheat-item"><b>High-risk (Annex III)</b><span>Eight areas - biometrics, infrastructure, education, employment, essential services, police, migration, justice.</span></div>
+      <div class="cheat-item"><b>Full programme</b><span>Risk mgmt, data governance, docs, logging, human oversight, accuracy + conformity assessment + CE + EU registration.</span></div>
+      <div class="cheat-item"><b>The 6(3) nuance</b><span>Narrow tasks can downgrade - unless the system profiles people, then it stays high-risk.</span></div>
+      <div class="cheat-item"><b>GPAI side-layer</b><span>Baseline docs for all; systemic-risk tier above 10^25 FLOP training compute.</span></div>
+      <div class="cheat-item"><b>Vantage</b><span>Hiring tool = Annex III(4), high-risk, profiling closes the escape hatch. Full programme applies.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 2 of 6 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a3-roles-timeline.html">Next: Who must do what + the timeline →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

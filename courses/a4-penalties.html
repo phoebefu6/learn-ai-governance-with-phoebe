@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 4 · Penalties + enforcement - learn AI governance with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Leader session 4 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Leader track · Session 4 of 6</div>
+    <h1>Penalties and enforcement <span class="accent">what non-compliance actually costs</span></h1>
+    <p class="sub">Sessions 1 to 3 told you the Act reaches you, sorted your systems by risk tier, and named who carries which duty. This session puts a number on getting it wrong. The EU AI Act's fines are tiered like its risks, they are calculated on your worldwide turnover, and its top tier is larger than the GDPR's. You will also learn who actually enforces the Act - the EU AI Office for the big general-purpose models, and a national authority in each member state that is your single point of contact.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Medium</span>
+      <span class="chip audience">Leaders: C-level · boards · AI leads</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Concepts</span>
+      <span class="a3" style="flex:4">20-40 · Exercises</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>Why the number matters to a board</h2></div>
+    <p class="lede">A risk tier is abstract until it has a price. This session gives the Act's obligations their teeth: three fine tiers that mirror the risk tiers, a base of global turnover rather than EU-only revenue, and enforcement bodies with the power to investigate and penalise. For a board, this is the slide that turns "we should look at AI governance" into "we will fund AI governance this quarter" - because the downside is now a figure on the income statement, not a vague reputational worry.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. Penalty figures and enforcement structures are set by the Regulation and applied by national authorities that may set their own procedures. Verify against the Act's text and get proper advice before acting.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> The three fine tiers and what triggers each, why the base is worldwide turnover and how to compute your own ceilings, the higher-vs-lower rule for large firms vs SMEs, who enforces the Act, and five questions to put to your AI, legal, and data teams this week.</div>
+  </section>
+
+  <section class="section" id="tiers">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers Article 99 penalties</span><h2>The three fine tiers <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">The Act does not have one fine. It has a ladder, and where you land depends on which kind of rule you broke. The worst breach - doing something the Act prohibits outright - carries the heaviest fine. Breaching an ordinary obligation is the middle tier. Giving an authority wrong or misleading information is the lightest. Every ceiling is a pair: a fixed euro cap or a percentage of your global turnover.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Three fine tiers under Article 99: prohibited practices up to 7 percent or 35 million euro, other obligations up to 3 percent or 15 million euro, incorrect information up to 1 percent or 7.5 million euro">
+        <style>
+          .a4pT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .a4pW { font: 400 12.5px Inter, sans-serif; fill: #D1FAE5; }
+          .a4pB { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .a4pI { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .a4pN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <text class="a4pI" x="30" y="30">Higher of a fixed cap OR a percentage of worldwide annual turnover</text>
+        <rect x="30" y="48" width="620" height="58" rx="10" fill="#064E3B"/>
+        <text class="a4pT" x="52" y="74">Prohibited practices (Art 5)</text>
+        <text class="a4pW" x="52" y="94">using AI the Act bans outright</text>
+        <text class="a4pB" x="470" y="83">7% · EUR 35M</text>
+        <rect x="30" y="120" width="440" height="58" rx="10" fill="#059669"/>
+        <text class="a4pT" x="52" y="146">Other obligations (high-risk + Art 50)</text>
+        <text class="a4pW" x="52" y="166">most provider and deployer duties</text>
+        <text class="a4pB" x="330" y="155">3% · EUR 15M</text>
+        <rect x="30" y="192" width="300" height="58" rx="10" fill="#10B981"/>
+        <text class="a4pT" x="52" y="218">Wrong info to authorities</text>
+        <text class="a4pW" x="52" y="238">incorrect, incomplete, misleading</text>
+        <text class="a4pB" x="210" y="227">1% · 7.5M</text>
+        <rect x="30" y="266" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a4pN" x="54" y="278">Heaviest at the top: banned uses cost most. The base is GLOBAL turnover, not EU-only revenue.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the three fine tiers of Article 99</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>What you did</th><th>Fixed cap</th><th>% of worldwide turnover</th></tr></thead>
+      <tbody>
+        <tr><td>Broke a prohibition (Art 5 banned practice)</td><td>EUR 35 million</td><td>7%</td></tr>
+        <tr><td>Breached other obligations (high-risk duties, Art 50 transparency)</td><td>EUR 15 million</td><td>3%</td></tr>
+        <tr><td>Gave incorrect, incomplete or misleading information</td><td>EUR 7.5 million</td><td>1%</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Higher or lower - and always on global turnover<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two details decide the real number, and both catch leaders off guard.</p>
+        <ul>
+          <li><strong>Higher of the two, for most firms.</strong> The fine is up to the <em>greater</em> of the fixed cap or the percentage. For a large company the percentage usually wins - 7% of a big global turnover dwarfs EUR 35 million.</li>
+          <li><strong>Lower of the two, for SMEs and startups.</strong> The Act flips the rule for smaller firms: they face up to the <em>lesser</em> of the cap or the percentage, so the fine stays proportionate to their size.</li>
+          <li><strong>The base is worldwide turnover.</strong> Not EU revenue, not the revenue of the product at fault - your group's total worldwide annual turnover for the preceding financial year. This is why the number gets large fast.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Explain the EU AI Act's three penalty tiers to a board: what triggers each, the fixed cap and percentage for each, why the base is worldwide turnover, and how the higher-of rule for large firms differs from the lower-of rule for SMEs. Plain English, no legalese.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Bigger than the GDPR<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The GDPR's top tier.</strong> Data-protection leaders anchor on the GDPR's headline fine: up to EUR 20 million or 4% of global turnover, whichever is higher.</li>
+          <li><strong>The AI Act goes higher.</strong> Its top tier - EUR 35 million or 7% - is larger on both halves. For a firm already GDPR-conscious, the message is simple: the AI Act raises the ceiling.</li>
+          <li><strong>Why it lands.</strong> A board that respects the GDPR's number now has a bigger one to respect. The comparison is the fastest way to make AI governance a funded priority.</li>
+        </ul>
+        <div class="callout tip"><strong>The pattern you already know</strong> If your organisation took the GDPR seriously, apply that same seriousness one notch higher. Same logic - percentage of global turnover, whichever is higher for large firms - just a taller ceiling.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="enforce">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers Articles 64, 74, 101</span><h2>Who enforces the Act <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">A fine needs a body to impose it. The Act splits enforcement in two. The big general-purpose AI models are overseen centrally by the European AI Office. Everything else is enforced nationally, by a market surveillance authority in each member state - and that national authority is your single point of contact.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The EU AI Office oversees general-purpose AI, while national market surveillance authorities enforce nationally and are the single point of contact">
+        <style>
+          .a4eT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a4eW { font: 400 12px Inter, sans-serif; fill: #D1FAE5; }
+          .a4eI { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .a4eS { font: 400 12px Inter, sans-serif; fill: #374151; }
+          .a4eN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .a4eArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#a4eAh); }
+        </style>
+        <defs><marker id="a4eAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="300" y="30" width="280" height="66" rx="12" fill="#064E3B"/>
+        <text class="a4eT" x="322" y="58">European AI Office (Art 64)</text>
+        <text class="a4eW" x="322" y="80">oversees + enforces GPAI rules</text>
+        <rect x="40" y="160" width="360" height="66" rx="12" fill="#059669"/>
+        <text class="a4eT" x="62" y="188">National market surveillance (Art 74)</text>
+        <text class="a4eW" x="62" y="210">enforces nationally · single point of contact</text>
+        <rect x="480" y="160" width="360" height="66" rx="12" fill="#10B981"/>
+        <text class="a4eT" x="502" y="188">GPAI-provider fines (Art 101)</text>
+        <text class="a4eW" x="502" y="210">up to EUR 15M or 3%</text>
+        <line class="a4eArr" x1="380" y1="96" x2="240" y2="156"/>
+        <line class="a4eArr" x1="500" y1="96" x2="640" y2="156"/>
+        <rect x="40" y="256" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a4eN" x="64" y="268">GPAI is central (AI Office); your high-risk tool is national - one authority is your point of contact.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - central oversight for GPAI, national enforcement for the rest</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The AI Office and national authorities<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Two layers, each with a clear remit:</p>
+        <ul>
+          <li><strong>European AI Office (Art 64).</strong> A central body within the European Commission that supervises and enforces the rules for general-purpose AI models - the large foundation models. If you build or provide a GPAI model, the AI Office is your overseer.</li>
+          <li><strong>National market surveillance authorities (Art 74).</strong> Each member state designates one. They enforce the Act nationally and act as the single point of contact for companies and the public. For a high-risk system placed in a given country, its authority is who you deal with.</li>
+          <li><strong>GPAI-provider fines (Art 101).</strong> Providers of general-purpose AI models have their own dedicated penalty route - up to EUR 15 million or 3% of worldwide turnover - imposed by the Commission through the AI Office.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage's exposure.</strong> Vantage's AI hiring tool is a high-risk system, not a general-purpose model - so its enforcer is a national market surveillance authority, not the AI Office. If the tool ships to its German customer without the conformity documentation and controls required of a high-risk system, Vantage sits in the middle tier: up to EUR 15 million or 3% of Vantage's worldwide turnover, whichever is higher. Ship a prohibited practice and it jumps to the 7% tier. That single German market entry is what put a real euro figure on the board's decision to fund governance now.</p></div>
+        <div class="callout tip"><strong>Know your enforcer before you ship</strong> Identify which member state's authority governs each market you enter, and treat it as the single point of contact from day one. The GPAI-vs-national split decides who you answer to - do not assume the AI Office handles your ordinary product.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Fines are a ceiling, not a starting price<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is easy to read "up to 7%" as "7%", but the figures in Article 99 are maximums, not tariffs. Authorities are directed to set penalties that are effective, proportionate and dissuasive, and to weigh the circumstances of each case - the nature and gravity of the breach, whether it was intentional or negligent, whether you cooperated and self-reported, whether anyone was actually harmed, and the size and market position of the company. A first, minor, self-reported slip by a cooperative SME is a very different matter from a large firm that shipped a banned practice and hid it. This is not a reason to relax - the ceiling is real and the reputational damage of any enforcement action is its own cost - but it is a reason to build a governance program you can point to. Evidence that you took reasonable care, documented your decisions, and moved quickly to fix problems is exactly what pulls a penalty down from its ceiling. Governance is not only how you avoid a fine; it is how you argue the fine down if one ever comes.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Compute your ceilings <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">Put your own numbers on the top two tiers. Abstract percentages become a board slide the moment they are your euros.</p>
+    <div class="steps">
+      <div class="step"><p>Write down your group's total worldwide annual turnover for the last financial year. Use the whole group, not just the EU or the product at fault.</p></div>
+      <div class="step"><p>Compute 7% of that figure - your prohibited-practice ceiling - and compare it to EUR 35 million. For most firms the percentage is higher; note which applies to you.</p></div>
+      <div class="step"><p>Compute 3% - your other-obligations ceiling, the one a non-compliant high-risk system sits in - and compare it to EUR 15 million.</p></div>
+      <div class="step"><p>If you are an SME or startup, remember the rule flips: your fine is capped at the lower of the two. Note both figures so the board sees the real exposure.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your ceiling calculator (paste into any chat AI)</span>Help me compute my EU AI Act fine ceilings. My group's worldwide annual turnover is [figure]. Show me 7% and 3% of that, compare each to the fixed caps of EUR 35M and EUR 15M, and tell me which applies given the higher-of rule for large firms or the lower-of rule for SMEs. Educational only, remind me to get advice.</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>Rank what authorities weigh <span class="tag demo">★ 8 min · your next AI review</span></h2></div>
+    <p class="lede">Four questions that reveal whether you would argue a penalty up or down.</p>
+    <div class="steps">
+      <div class="step"><p><strong>"Could we show we took reasonable care - documented decisions, risk assessments, controls?"</strong> Evidence of care is the single biggest lever on a fine.</p></div>
+      <div class="step"><p><strong>"If a problem surfaced, would we self-report and cooperate, or hope no one notices?"</strong> Cooperation and self-reporting pull the number down; concealment pushes it up.</p></div>
+      <div class="step"><p><strong>"Do we know which national authority is our single point of contact in each EU market we enter?"</strong> If nobody can name it, you are not ready to ship.</p></div>
+      <div class="step"><p><strong>"Are any of our uses anywhere near a prohibited practice?"</strong> That is the 7% tier - the one worth checking first and hardest.</p></div>
+    </div>
+    <div class="callout tip"><strong>The mindset</strong> The fine ceiling is fixed by law, but where you land under it is decided by what you can evidence. Build the governance program so that if an authority ever asks, the answer is a folder of proof, not a shrug.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session a5 <span class="tag exercise">◐ 30 min total</span></h2></div>
+    <ul>
+      <li>Keep your ceiling figures (7% and 3% of worldwide turnover) - a5 shows the frameworks that keep you off the ladder in the first place.</li>
+      <li>Find out which national market surveillance authority governs each EU market you sell into, and whether anyone owns that relationship.</li>
+      <li>Ask whether any of your AI uses could be near an Art 5 prohibited practice - the 7% tier is the one to rule out first.</li>
+      <li>Optional: skim Article 99 - the penalty structure is short and the higher-vs-lower rule is worth reading in the original.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to ask your AI, legal, and data teams this week</strong>
+      <ol>
+        <li>What is our group's worldwide annual turnover, and therefore our 7% and 3% fine ceilings?</li>
+        <li>Are we treated as a large firm (higher of the two) or an SME (lower of the two)?</li>
+        <li>Which national market surveillance authority is our single point of contact in each EU market?</li>
+        <li>Could we evidence reasonable care to an authority, or only assert it?</li>
+        <li>Are any of our AI uses close to a prohibited practice - the 7% tier?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the primary texts. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 99 (penalties)</span><span class="note">Part 1 · the three fine tiers + higher-vs-lower rule</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 64 (AI Office)</span><span class="note">Part 2 · central oversight of GPAI</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 74 (market surveillance)</span><span class="note">Part 2 · national enforcement + single point of contact</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 101 (GPAI-provider fines)</span><span class="note">Part 2 · up to EUR 15M or 3% for GPAI providers</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · A large company breaches an outright prohibition under the EU AI Act. The top fine tier is...</p>
+      <button class="qopt" type="button">A · A fixed EUR 20 million</button>
+      <button class="qopt" type="button">B · 4% of EU-only revenue</button>
+      <button class="qopt" type="button">C · Up to EUR 35 million or 7% of worldwide annual turnover, whichever is higher</button>
+      <p class="qwhy">Prohibited-practice breaches carry the top tier under Article 99: up to EUR 35M or 7% of total worldwide turnover, and for a large firm the higher of the two applies.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · Vantage ships its high-risk AI hiring tool. Who is its enforcer, and which tier applies to a non-compliant high-risk system?</p>
+      <button class="qopt" type="button">A · The European AI Office; the 7% tier</button>
+      <button class="qopt" type="button">B · A national market surveillance authority; the 3% / EUR 15M tier</button>
+      <button class="qopt" type="button">C · The EDPS; no fine applies</button>
+      <p class="qwhy">A high-risk system is enforced nationally (Art 74), not by the AI Office. Breaching high-risk obligations sits in the middle tier: up to EUR 15M or 3%.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · For an SME or startup, the fine under the EU AI Act is capped at...</p>
+      <button class="qopt" type="button">A · The lower of the fixed cap or the percentage</button>
+      <button class="qopt" type="button">B · Always the fixed cap</button>
+      <button class="qopt" type="button">C · Always the percentage, with no cap</button>
+      <p class="qwhy">The Act flips the rule for SMEs and startups: they face up to the lesser of the cap or the percentage, keeping the fine proportionate to their size.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Top tier (Art 99)</b><span>Prohibited practice: up to EUR 35M or 7% of worldwide turnover.</span></div>
+      <div class="cheat-item"><b>Middle tier</b><span>Other obligations, incl. high-risk + Art 50: up to EUR 15M or 3%.</span></div>
+      <div class="cheat-item"><b>Bottom tier</b><span>Wrong / incomplete / misleading info: up to EUR 7.5M or 1%.</span></div>
+      <div class="cheat-item"><b>Higher or lower</b><span>Large firms pay the higher of cap-or-%; SMEs and startups pay the lower.</span></div>
+      <div class="cheat-item"><b>The base</b><span>Worldwide annual turnover of the whole group - not EU-only revenue.</span></div>
+      <div class="cheat-item"><b>Bigger than the GDPR</b><span>GDPR tops out at EUR 20M / 4%. The AI Act's 7% tier is higher.</span></div>
+      <div class="cheat-item"><b>Who enforces</b><span>AI Office (Art 64) oversees GPAI; national authorities (Art 74) enforce + are your point of contact.</span></div>
+      <div class="cheat-item"><b>GPAI fines</b><span>GPAI-provider penalties run under Art 101: up to EUR 15M or 3%.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 4 of 6 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a5-frameworks.html">Next: The frameworks that make it runnable →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

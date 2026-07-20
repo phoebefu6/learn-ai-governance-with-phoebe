@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 3 · Who must do what + the timeline - learn AI governance with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Leader session 3 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Leader track · Session 3 of 6</div>
+    <h1>Who must do what, <span class="accent">and when</span></h1>
+    <p class="sub">Being in scope and high-risk is only half the picture. The EU AI Act assigns duties by role - the company that built the system carries a very different load from the one that merely uses it - and it phases those duties in over years, not all at once. This session gives you the supply chain of roles, the one that costs the most, and the application-date timeline you must plan against - including the live amendment that may move the biggest deadline.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Medium</span>
+      <span class="chip audience">Leaders: C-level · boards · AI leads</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Concepts</span>
+      <span class="a3" style="flex:4">20-40 · Exercises</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>Role and date, before programme</h2></div>
+    <p class="lede">Sessions 1 and 2 told you which systems are in scope and which are high-risk. Two questions remain before you can plan a single piece of work: what is your role for each system, and when does the clock actually run out? Role decides how much of the compliance burden lands on you versus a partner. The timeline decides how much runway you have. Leaders who answer these two wrongly either do a supplier's work for free or discover a deadline the quarter it lands. This session settles both, and flags a live amendment that could shift the biggest date.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. The EU AI Act timeline is under live amendment (the "Digital Omnibus") and roles can be reassigned by contract or by how a system is modified. Verify against the Regulation and get proper advice before you rely on any date or role here.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> The five roles and the one-line duty of each, why the provider of a high-risk system carries the heaviest load, why a Singapore firm selling into the EU is usually the provider, the phased application-date timeline, and the live delay you should plan around.</div>
+  </section>
+
+  <section class="section" id="roles">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers the roles in the chain</span><h2>The roles <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">The Act sees AI moving along a supply chain, and it gives each link a name and a set of duties. The names matter because the obligations - and the fines - attach to the role, not to the company in general. Get your role right for each system and you know exactly which duties are yours.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The supply chain: provider to importer to distributor to deployer, with an authorised representative acting as the EU point of contact for a non-EU provider">
+        <style>
+          .a3rT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a3rW { font: 400 11.5px Inter, sans-serif; fill: #D1FAE5; }
+          .a3rI { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .a3rS { font: 400 11.5px Inter, sans-serif; fill: #374151; }
+          .a3rN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .a3rArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#a3rAh); }
+        </style>
+        <defs><marker id="a3rAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="30" y="90" width="180" height="66" rx="12" fill="#064E3B"/>
+        <text class="a3rT" x="50" y="118">PROVIDER</text>
+        <text class="a3rW" x="50" y="140">builds it · heaviest load</text>
+        <rect x="248" y="90" width="170" height="66" rx="12" fill="#059669"/>
+        <text class="a3rT" x="268" y="118">IMPORTER</text>
+        <text class="a3rW" x="268" y="140">brings it into the EU</text>
+        <rect x="456" y="90" width="170" height="66" rx="12" fill="#10B981"/>
+        <text class="a3rT" x="476" y="118">DISTRIBUTOR</text>
+        <text class="a3rW" x="476" y="140">makes it available</text>
+        <rect x="664" y="90" width="186" height="66" rx="12" fill="#064E3B"/>
+        <text class="a3rT" x="684" y="118">DEPLOYER</text>
+        <text class="a3rW" x="684" y="140">uses it · lighter duties</text>
+        <line class="a3rArr" x1="210" y1="123" x2="244" y2="123"/>
+        <line class="a3rArr" x1="418" y1="123" x2="452" y2="123"/>
+        <line class="a3rArr" x1="626" y1="123" x2="660" y2="123"/>
+        <rect x="30" y="206" width="380" height="62" rx="12" fill="#ECFDF5" stroke="#6EE7B7"/>
+        <text class="a3rI" x="50" y="232">AUTHORISED REPRESENTATIVE</text>
+        <text class="a3rS" x="50" y="252">the EU point of contact for a non-EU provider</text>
+        <line class="a3rArr" x1="120" y1="204" x2="120" y2="160"/>
+        <rect x="30" y="288" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a3rN" x="54" y="300">The provider carries the most. A SG firm selling its own AI into the EU is usually the provider.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the roles in the AI supply chain</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>Role</th><th>One line</th><th>Key duty</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Provider</strong></td><td>Develops it and puts it out under its own name (Art 3, 16)</td><td>The full high-risk programme - heaviest load</td></tr>
+        <tr><td><strong>Deployer</strong></td><td>Uses the system under its own authority (Art 3, 26)</td><td>Use as instructed, keep human oversight, monitor</td></tr>
+        <tr><td><strong>Importer</strong></td><td>EU-established, brings a non-EU provider's system in (Art 23)</td><td>Check the provider did the conformity work</td></tr>
+        <tr><td><strong>Distributor</strong></td><td>Makes the system available down the chain (Art 24)</td><td>Verify markings and documentation are present</td></tr>
+        <tr><td><strong>Authorised rep</strong></td><td>EU point of contact for a non-EU provider (Art 22, 25)</td><td>Hold documentation, liaise with authorities</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Why the provider carries the most<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>For a high-risk system, the provider (Article 16) owns almost the entire compliance programme:</p>
+        <ul>
+          <li>Build and run the risk-management system, ensure data governance and technical documentation, keep logs, design human oversight, and hit accuracy and robustness targets.</li>
+          <li>Put the system through a <strong>conformity assessment</strong>, apply <strong>CE marking</strong>, and <strong>register it in the EU database</strong> before it goes to market.</li>
+          <li>Set up a quality-management system and a post-market monitoring process, and report serious incidents.</li>
+        </ul>
+        <p>The deployer (Article 26), by contrast, has a lighter and more operational set of duties: use the system according to the provider's instructions, assign competent human oversight, monitor how it performs, and keep the logs it generates. Real, but a fraction of the provider's load.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The Singapore firm is usually the provider<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>A Singapore company that builds an AI product and sells it into the EU under its own brand is the <strong>provider</strong> - the role with the heaviest obligations - even with no office in Europe. That surprises leaders who assume a distant vendor escapes the burden. It does not; the burden follows the system.</p>
+        <ul>
+          <li>A <strong>customer in the EU who buys and uses</strong> that system is the deployer, with its own lighter duties.</li>
+          <li>Because the provider sits outside the EU, the Act generally requires it to appoint an <strong>authorised representative</strong> inside the EU as a point of contact for regulators.</li>
+          <li>Watch the reassignment trap: if a deployer <strong>substantially modifies</strong> a high-risk system or puts its own name on it, that deployer can <em>become</em> a provider and inherit the heavy duties.</li>
+        </ul>
+        <div class="callout tip"><strong>The pattern that matters</strong> Your role is not fixed by your industry - it is fixed by what you do to the system. Build and brand it, you are the provider. Just use it, you are the deployer. Change it materially, you may have just promoted yourself into the heavy role.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>One company can hold several roles<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>It is tempting to think a company is simply "a provider" or "a deployer", but in practice most organisations hold different roles for different systems, and sometimes several roles for a single one. A firm might be the provider of the hiring tool it sells, the deployer of a vendor's customer-service chatbot it runs internally, and the importer of a third system it brings into the EU on someone else's behalf - all at once. This is why the classification work you started in session 1 is per-system, not per-company: there is no single answer to "what is our role", only "what is our role for this system". The practical discipline is to keep a register that names, for every in-scope AI system, both its risk tier and your role, because those two facts together determine the entire set of obligations you carry for it. Do that once and keep it current, and the rest of compliance becomes a matter of executing against a known list rather than rediscovering your exposure each time a regulator or customer asks.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="timeline">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers the application dates</span><h2>The timeline <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">The Act did not switch on all at once. It entered into force in 2024 and phases its obligations in over three years, worst-first: the banned practices came early, the heavy high-risk duties come later to give providers time to build. Knowing the dates turns compliance from a panic into a plan.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Timeline of EU AI Act application dates from August 2024 in force to August 2027 for embedded high-risk systems, with a note on the proposed Digital Omnibus delay">
+        <style>
+          .a3tT { font: 700 12.5px Inter, sans-serif; fill: #FFFFFF; }
+          .a3tD { font: 700 12px Inter, sans-serif; fill: #D1FAE5; }
+          .a3tI { font: 700 12px Inter, sans-serif; fill: #1F2937; }
+          .a3tS { font: 400 11.5px Inter, sans-serif; fill: #374151; }
+          .a3tN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .a3tLine { stroke: #D1D5DB; stroke-width: 3; }
+        </style>
+        <line class="a3tLine" x1="60" y1="70" x2="820" y2="70"/>
+        <circle cx="90" cy="70" r="7" fill="#064E3B"/>
+        <rect x="40" y="86" width="150" height="60" rx="10" fill="#064E3B"/>
+        <text class="a3tD" x="56" y="108">1 Aug 2024</text>
+        <text class="a3tT" x="56" y="128">In force</text>
+        <circle cx="260" cy="70" r="7" fill="#059669"/>
+        <rect x="200" y="156" width="160" height="72" rx="10" fill="#059669"/>
+        <text class="a3tD" x="216" y="178">2 Feb 2025</text>
+        <text class="a3tT" x="216" y="198">Prohibitions +</text>
+        <text class="a3tT" x="216" y="216">AI literacy</text>
+        <circle cx="430" cy="70" r="7" fill="#10B981"/>
+        <rect x="370" y="86" width="170" height="72" rx="10" fill="#10B981"/>
+        <text class="a3tI" x="386" y="108">2 Aug 2025</text>
+        <text class="a3tI" x="386" y="128">GPAI + governance</text>
+        <text class="a3tI" x="386" y="146">+ penalties</text>
+        <circle cx="620" cy="70" r="7" fill="#064E3B"/>
+        <rect x="548" y="156" width="184" height="72" rx="10" fill="#064E3B"/>
+        <text class="a3tD" x="564" y="178">2 Aug 2026</text>
+        <text class="a3tT" x="564" y="198">Most of the Act +</text>
+        <text class="a3tT" x="564" y="216">Annex III high-risk</text>
+        <circle cx="790" cy="70" r="7" fill="#059669"/>
+        <rect x="700" y="86" width="150" height="60" rx="10" fill="#059669"/>
+        <text class="a3tD" x="716" y="108">2 Aug 2027</text>
+        <text class="a3tT" x="716" y="128">Embedded high-risk</text>
+        <rect x="40" y="248" width="800" height="34" rx="8" fill="#ECFDF5" stroke="#6EE7B7"/>
+        <text class="a3tS" x="56" y="270">Live "Digital Omnibus" amendment may delay high-risk: Annex III to ~2 Dec 2027, Annex I to 2 Aug 2028. Re-verify.</text>
+        <rect x="40" y="294" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a3tN" x="64" y="306">Plan to the original dates as your baseline, then adjust if the delay is confirmed. Do not wait for it.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the phased application dates, worst-first</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The dates that bind you<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The Act phases in like this:</p>
+        <ul>
+          <li><strong>1 Aug 2024</strong> - entered into force. The clock starts.</li>
+          <li><strong>2 Feb 2025</strong> - the prohibited practices become enforceable, and the AI-literacy duty applies. The banned list is live first.</li>
+          <li><strong>2 Aug 2025</strong> - GPAI model obligations, the governance structure, and the penalty regime apply.</li>
+          <li><strong>2 Aug 2026</strong> - most of the Act applies, including the Annex III high-risk obligations and the Article 50 transparency duties. This is the big one for most companies.</li>
+          <li><strong>2 Aug 2027</strong> - the high-risk rules for AI embedded in already-regulated products (Annex I) apply.</li>
+        </ul>
+        <p>The logic is worst-first: the most dangerous uses were shut down earliest, and the heavy high-risk programme lands later so providers have time to build it. For a typical high-risk system, <strong>2 Aug 2026</strong> is the date to plan around.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The live delay you should track<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>As this course is written, the EU has proposed an amendment package - informally the <strong>"Digital Omnibus"</strong> - that would push the heaviest deadlines back:</p>
+        <ul>
+          <li>Annex III high-risk obligations may move from 2 Aug 2026 to around <strong>2 Dec 2027</strong>.</li>
+          <li>Annex I embedded high-risk obligations may move to <strong>2 Aug 2028</strong>.</li>
+          <li>The package has also floated adding a ninth prohibited practice to the Article 5 banned list.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage plans to 2026, watches 2027.</strong> Vantage is the provider of a high-risk hiring tool, so its baseline deadline for the full programme is 2 Aug 2026. Its board asked the obvious question: if the delay is coming, why not wait? Because the delay is proposed, not law, and because a German customer already asked for conformity documentation. Vantage plans and builds to the original 2026 date, treats any confirmed delay as breathing room rather than a reason to stop, and keeps a standing item to re-verify the dates before each milestone.</p></div>
+        <div class="callout tip"><strong>The mindset</strong> Treat proposed relief as a bonus, never as a plan. Build to the earliest binding date; if it moves, you are early, not late. And always re-verify the timeline against the current Regulation before you commit to it - this is the one part of the Act most likely to change under you.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Why the dates run worst-first<span class="mini">2 min read</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The staggered timeline is not bureaucratic randomness; it follows a deliberate logic that helps you predict where regulators will focus. The uses the Act judges simply unacceptable - the Article 5 banned practices - were switched off first, only six months after entry into force, because there is nothing to build or phase in: you just stop. The general-purpose model rules and the governance and penalty machinery came next, because the ecosystem needed the enforcement structure and the foundation-model layer settled before the heavy product-level duties landed. The full high-risk programme was given the longest runway because it is genuinely hard to build - a risk-management system, data governance, technical documentation, human oversight, a conformity assessment - and rushing providers into it would have produced paper compliance rather than real safety. For a leader, the practical read is this: enforcement attention tracks the calendar. The banned list is already live and already enforced, so a prohibited use is your most acute exposure today, while the high-risk programme is a build-it-properly project you should be resourcing now against a 2026 or 2027 date. Knowing the order lets you sequence your own work to match the regulator's.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Name your role for each system <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">Take the in-scope systems from session 1 and pin a role to each.</p>
+    <div class="steps">
+      <div class="step"><p>List each in-scope system and ask the first question: did we build it and put it out under our own name? If yes, you are the provider - the heavy role.</p></div>
+      <div class="step"><p>If we merely use a vendor's system under our own authority, you are the deployer. Note it, and note whether you have modified it (which could push you back to provider).</p></div>
+      <div class="step"><p>If you are a non-EU provider, flag that you likely need an authorised representative in the EU, and note who that might be.</p></div>
+      <div class="step"><p>Build a two-column register: system to the left, tier-and-role to the right. That register is the backbone of everything the rest of the course asks you to do.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your role-check partner (paste into any chat AI)</span>You are helping a leader assign EU AI Act roles. For each AI system I describe, ask whether we built it and put it out under our own name (provider), or merely use it under our own authority (deployer), or bring in / distribute someone else's - and whether we have modified it. Then tell me our role, the one-line key duty, and whether a non-EU provider needs an authorised representative. Educational only, remind me to get advice. My systems: [list them]</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>Place your systems on the timeline <span class="tag demo">★ 8 min · your next AI review</span></h2></div>
+    <p class="lede">Turn the dates into deadlines you own.</p>
+    <div class="steps">
+      <div class="step"><p><strong>"Do we run any prohibited practice?"</strong> If yes, the deadline already passed (2 Feb 2025) - that is a stop-now item, not a plan-for item.</p></div>
+      <div class="step"><p><strong>"Do we provide or use a GPAI model?"</strong> Those obligations applied from 2 Aug 2025 - check you are current, not future-planning.</p></div>
+      <div class="step"><p><strong>"For each high-risk system, is it standalone (Annex III) or embedded in a regulated product (Annex I)?"</strong> That decides 2 Aug 2026 versus 2 Aug 2027.</p></div>
+      <div class="step"><p><strong>"What is our earliest binding date, and how much runway is left?"</strong> Mark it on the calendar, then note the proposed Digital Omnibus delay beside it as possible relief - and set a reminder to re-verify.</p></div>
+    </div>
+    <div class="callout tip"><strong>The mindset</strong> Role plus date equals your plan. Once every in-scope system has a role and a deadline, compliance stops being abstract dread and becomes a dated to-do list you can staff and fund.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session a4 <span class="tag exercise">◐ 30 min total</span></h2></div>
+    <ul>
+      <li>Complete the tier-and-role register for every in-scope system - a4 covers the penalties that make getting this right worth the effort.</li>
+      <li>For each high-risk system, write down its binding date (2026 standalone, 2027 embedded) and note the proposed delay beside it.</li>
+      <li>If you are a non-EU provider, find out whether you have - or need - an authorised representative in the EU.</li>
+      <li>Optional: skim Articles 16 (provider duties) and 26 (deployer duties) so the split is concrete for your team.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to ask your AI, legal, and data teams this week</strong>
+      <ol>
+        <li>For each in-scope system, are we the provider, the deployer, the importer, or the distributor?</li>
+        <li>Have we substantially modified or re-branded any vendor system - and could that make us the provider?</li>
+        <li>As a non-EU provider, do we have an authorised representative in the EU, or do we need one?</li>
+        <li>What is the binding application date for each of our high-risk systems - 2 Aug 2026 or 2 Aug 2027?</li>
+        <li>Are we planning to the original dates, and are we tracking the Digital Omnibus delay to re-verify before each milestone?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the primary texts. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 3 (definitions of the roles)</span><span class="note">Part 1 · provider, deployer, importer, distributor, rep</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 16 + Article 26 (duties)</span><span class="note">Part 1 · provider load vs deployer duties</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act implementation timeline (+ Digital Omnibus)</span><span class="note">Part 2 · phased dates + the live proposed delay</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">1 · Vantage builds its AI hiring tool in Singapore and sells it into the EU under its own brand. Its EU AI Act role is...</p>
+      <button class="qopt" type="button">A · Provider - it develops the system and puts it out under its own name</button>
+      <button class="qopt" type="button">B · Deployer - it has no office in the EU</button>
+      <button class="qopt" type="button">C · Distributor - it only sells the system</button>
+      <p class="qwhy">A company that develops a system and places it on the market under its own name is the provider (Art 3, 16) - the heaviest role - regardless of where it sits. It will also likely need an EU authorised representative.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · For most companies, the key deadline when standalone high-risk (Annex III) obligations apply is...</p>
+      <button class="qopt" type="button">A · 1 Aug 2024 - when the Act entered into force</button>
+      <button class="qopt" type="button">B · 2 Feb 2025 - with the prohibitions</button>
+      <button class="qopt" type="button">C · 2 Aug 2026 - when most of the Act, including Annex III high-risk, applies</button>
+      <p class="qwhy">Most of the Act, including the Annex III high-risk obligations and Article 50 transparency duties, applies from 2 Aug 2026. The proposed Digital Omnibus delay may push this to around Dec 2027 - plan to the earlier date.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · A deployer buys a high-risk system, then substantially modifies it and puts its own name on it. The likely result is...</p>
+      <button class="qopt" type="button">A · Nothing changes - it stays a deployer with light duties</button>
+      <button class="qopt" type="button">B · It can become the provider and inherit the heavy obligations</button>
+      <button class="qopt" type="button">C · The system drops out of scope</button>
+      <p class="qwhy">Substantially modifying a high-risk system or putting your own name on it can make you the provider, inheriting the full Article 16 programme. Role follows what you do to the system, not your industry.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Five roles</b><span>Provider, deployer, importer, distributor, authorised representative. Duties attach to the role.</span></div>
+      <div class="cheat-item"><b>Provider = heaviest</b><span>Full high-risk programme + conformity assessment + CE marking + EU registration (Art 16).</span></div>
+      <div class="cheat-item"><b>Deployer = lighter</b><span>Use as instructed, keep human oversight, monitor, keep logs (Art 26).</span></div>
+      <div class="cheat-item"><b>SG firm selling in</b><span>Build and brand it, you are the provider - and usually need an EU authorised representative.</span></div>
+      <div class="cheat-item"><b>Reassignment trap</b><span>Substantially modify or re-brand a system and a deployer can become the provider.</span></div>
+      <div class="cheat-item"><b>Timeline</b><span>In force Aug 2024 · prohibitions Feb 2025 · GPAI+penalties Aug 2025 · high-risk Aug 2026 · embedded Aug 2027.</span></div>
+      <div class="cheat-item"><b>Live delay</b><span>Digital Omnibus may move Annex III to ~Dec 2027, Annex I to Aug 2028. Re-verify - do not wait.</span></div>
+      <div class="cheat-item"><b>Vantage</b><span>Provider of a high-risk tool; baseline deadline 2 Aug 2026; plans to it, watches the delay.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 3 of 6 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a4-penalties.html">Next: The penalties →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

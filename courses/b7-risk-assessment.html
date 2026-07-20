@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 7 · Risk assessment + conformity - learn AI governance with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Practitioner session 7 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Practitioner track · Session 7 of 8</div>
+    <h1>Risk assessment <span class="accent">and conformity</span></h1>
+    <p class="sub">This is the session where a high-risk system earns the right to go to market. Two machines run here: the fundamental rights impact assessment a deployer may owe before first use, and the provider's conformity route to a CE mark and an EU registration. They are easy to confuse and expensive to get wrong. We walk both slowly, then map Vantage's own pre-market path step by step.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Hardest</span>
+      <span class="chip audience">AI/ML · risk · compliance</span>
+      <span class="chip audience">Pre-market path</span>
+      <span class="chip time">Session 7 of 8</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-22 · The FRIA</span>
+      <span class="a3" style="flex:4">22-40 · Conformity</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>Two machines, one market gate</h2></div>
+    <p class="lede">A high-risk AI system does not simply ship. Someone has to assess it before it goes live, and someone has to declare it conforms before it goes to market. The EU AI Act splits this cleanly: deployers of certain systems may owe a fundamental rights impact assessment (FRIA) before first use, and providers must pass a conformity assessment, sign a declaration, affix a CE mark, and register the system. This session keeps those two straight and turns each into a checklist you can run.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. Article numbers and thresholds move as guidance and delegated acts land - this walks the mechanism so you know what to look up, not the final word on your specific obligations. Read Regulation (EU) 2024/1689 and get advice.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> A clear line between the deployer's FRIA and the provider's risk-management system, the pre-market path from conformity assessment to CE mark to registration, and Vantage's own mapped route to market.</div>
+  </section>
+
+  <section class="section" id="fria">
+    <div class="section-kicker"><span class="klabel">Part 1 · the deployer's duty</span><h2>The fundamental rights impact assessment <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">The FRIA (Article 27) is a deployer obligation, not a provider one. It falls on public bodies and on deployers of certain Annex III systems, and it is done before the system is first used. It is the deployer asking, in writing, "what could this do to the people it touches, and how will we catch it?"</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="What a fundamental rights impact assessment covers: the deployment, the timeframe, affected persons, specific risks of harm, and human oversight plus governance and complaint measures">
+        <style>
+          .b7fT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b7fW { font: 400 11px Inter, sans-serif; fill: #D1FAE5; }
+          .b7fS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b7fN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b7fArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#b7fAh); }
+        </style>
+        <defs><marker id="b7fAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="330" y="20" width="220" height="52" rx="12" fill="#064E3B"/><text class="b7fT" x="352" y="42">FRIA (Art 27)</text><text class="b7fW" x="352" y="60">deployer · before first use</text>
+        <rect x="30" y="120" width="180" height="52" rx="10" fill="#059669"/><text class="b7fT" x="48" y="146">The deployment</text><text class="b7fW" x="48" y="164">process + timeframe</text>
+        <rect x="240" y="120" width="180" height="52" rx="10" fill="#059669"/><text class="b7fT" x="258" y="146">Affected persons</text><text class="b7fW" x="258" y="164">categories touched</text>
+        <rect x="450" y="120" width="180" height="52" rx="10" fill="#C2410C"/><text class="b7fT" x="468" y="146">Risks of harm</text><text class="b7fW" x="468" y="164">specific, named</text>
+        <rect x="660" y="120" width="190" height="52" rx="10" fill="#10B981"/><text class="b7fT" x="678" y="146">Oversight</text><text class="b7fW" x="678" y="164">governance + complaint</text>
+        <rect x="240" y="220" width="400" height="46" rx="10" fill="#6B7280"/><text class="b7fT" x="258" y="248">Notify the market surveillance authority (AI Office template)</text>
+        <line class="b7fArr" x1="380" y1="72" x2="140" y2="118"/>
+        <line class="b7fArr" x1="410" y1="72" x2="335" y2="118"/>
+        <line class="b7fArr" x1="470" y1="72" x2="540" y2="118"/>
+        <line class="b7fArr" x1="500" y1="72" x2="740" y2="118"/>
+        <rect x="30" y="240" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b7fN" x="54" y="252">The FRIA is the deployer's duty - distinct from the provider's Article 9 risk-management system.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - what a FRIA covers, and where it goes</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Who owes a FRIA, and when<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Public bodies and public-service providers</strong> deploying a high-risk system owe a FRIA.</li>
+          <li><strong>Deployers of certain Annex III systems</strong> owe one too - notably creditworthiness / credit scoring (point 5(b)) and life and health insurance risk assessment and pricing (point 5(c)).</li>
+          <li><strong>Timing:</strong> before the first use of the system. It is a pre-deployment gate, not an after-the-fact write-up.</li>
+          <li><strong>Filing:</strong> the deployer notifies the market surveillance authority of the results, using a template provided by the AI Office.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Explain the EU AI Act fundamental rights impact assessment (FRIA, Article 27): who must do it (public bodies plus deployers of certain Annex III systems like credit scoring and insurance), when (before first use), what it must describe, and how it differs from the provider's Article 9 risk-management system.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What the FRIA must describe<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The assessment is concrete. It sets out:</p>
+        <ul>
+          <li><strong>The deployment processes</strong> - how the deployer will actually use the system, in context.</li>
+          <li><strong>The usage timeframe and frequency</strong> - how long and how often it runs.</li>
+          <li><strong>The categories of affected persons</strong> - who is on the receiving end.</li>
+          <li><strong>The specific risks of harm</strong> to those people - named, not generic.</li>
+          <li><strong>Human-oversight measures</strong> - how a person stays in the loop.</li>
+          <li><strong>Governance and complaint mechanisms</strong> - what happens when something goes wrong, and how affected people raise it.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>FRIA vs the provider's Article 9 system<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Do not merge these. The provider runs a <strong>risk-management system</strong> under Article 9 across the whole lifecycle of the high-risk system - identifying, evaluating, and mitigating risks in the product itself. The deployer's <strong>FRIA</strong> under Article 27 is narrower and downstream: it looks at fundamental-rights impacts in <em>this</em> deployment context. A provider's Article 9 work does not discharge a deployer's FRIA, and vice versa. When the same organisation is both, it does both - and can reuse evidence, but must not pretend one covers the other.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="conformity">
+    <div class="section-kicker"><span class="klabel">Part 2 · the provider's route</span><h2>Conformity, CE, registration <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">Before a high-risk system reaches the market, the provider walks a fixed path: assess conformity, sign an EU declaration of conformity, affix the CE marking, and register the system in the EU database. Most Annex III systems self-assess; a narrow slice needs a notified body.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 260" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The pre-market path for a high-risk system: conformity assessment, then EU declaration of conformity, then CE marking, then EU database registration">
+        <style>
+          .b7cT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b7cW { font: 400 11px Inter, sans-serif; fill: #D1FAE5; }
+          .b7cS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b7cN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b7cArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#b7cAh); }
+        </style>
+        <defs><marker id="b7cAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="20" y="90" width="185" height="58" rx="10" fill="#064E3B"/><text class="b7cT" x="38" y="116">Conformity</text><text class="b7cW" x="38" y="136">Art 43 · assess</text>
+        <rect x="235" y="90" width="185" height="58" rx="10" fill="#059669"/><text class="b7cT" x="253" y="116">Declaration</text><text class="b7cW" x="253" y="136">Art 47 · EU DoC</text>
+        <rect x="450" y="90" width="185" height="58" rx="10" fill="#10B981"/><text class="b7cT" x="468" y="116">CE marking</text><text class="b7cW" x="468" y="136">Art 48 · affix</text>
+        <rect x="665" y="90" width="190" height="58" rx="10" fill="#D97706"/><text class="b7cT" x="683" y="116">Registration</text><text class="b7cW" x="683" y="136">Art 49 · EU database</text>
+        <line class="b7cArr" x1="207" y1="119" x2="231" y2="119"/>
+        <line class="b7cArr" x1="422" y1="119" x2="446" y2="119"/>
+        <line class="b7cArr" x1="637" y1="119" x2="661" y2="119"/>
+        <rect x="20" y="26" width="410" height="40" rx="8" fill="#ECFDF5" stroke="#6EE7B7"/><text class="b7cS" x="38" y="51">Default: self-assessment / internal control (Annex VI)</text>
+        <rect x="450" y="26" width="405" height="40" rx="8" fill="#ECFDF5" stroke="#6EE7B7"/><text class="b7cS" x="468" y="51">Biometrics without standards: notified body (Annex VII)</text>
+        <rect x="20" y="200" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b7cN" x="44" y="212">A substantial modification re-triggers conformity assessment - a "done" system is not done forever.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - conformity to declaration to CE mark to registration</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Self-assessment vs notified body<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Self-assessment is the default.</strong> For high-risk systems in Annex III points 2 to 8, the conformity assessment is internal control under Annex VI - the provider assesses its own conformity against the requirements.</li>
+          <li><strong>Third-party for biometrics without standards.</strong> For Annex III point 1 (biometrics), where harmonised standards or common specifications are absent, a notified body runs the assessment under Annex VII.</li>
+          <li><strong>Substantial modification re-triggers.</strong> Change the system substantially after assessment and you must assess conformity again. Governance is continuous, not a one-time stamp.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Declaration, CE mark, and the register<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Once conformity is assessed, three steps take the system to market, all before it is placed on the market:</p>
+        <ul>
+          <li><strong>EU declaration of conformity (Article 47)</strong> - the provider signs a formal statement that the system meets the requirements, and keeps it available.</li>
+          <li><strong>CE marking (Article 48)</strong> - the familiar mark is affixed, signalling conformity, as for other regulated products.</li>
+          <li><strong>EU database registration (Article 49)</strong> - the provider registers the high-risk system in the EU database before market. Certain law-enforcement and migration systems register in a non-public section of that database.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Vantage vs its credit-scoring cousin<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The two machines land differently depending on where you sit in the value chain, which is exactly what trips teams up.</p>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage's hiring tool: the provider path, no FRIA.</strong> As the <em>provider</em> of a high-risk Annex III(4) employment system, Vantage self-assesses conformity under Annex VI, signs an EU declaration of conformity, affixes the CE mark, and registers the system before it goes to market. It does not owe a FRIA - that duty sits with the employer who deploys it. But if Vantage built the <em>credit-scoring cousin</em> its roadmap flirts with (Annex III point 5(b)), any deployer of that system would owe a FRIA before first use. Same company, different obligations, driven by role and use case - map both before you ship either.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Map Vantage's pre-market path <span class="tag demo">★ 10 min · checklist</span></h2></div>
+    <p class="lede">Turn the mechanism into a route for one system. Map Vantage's path and decide the FRIA question.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Conformity route.</strong> Confirm the tier (high-risk, Annex III(4)) and pick the route: self-assessment under Annex VI, since it is not point-1 biometrics.</p></div>
+      <div class="step"><p><strong>Declaration + CE.</strong> Note the EU declaration of conformity (Art 47) and the CE marking (Art 48) as the next two steps before market.</p></div>
+      <div class="step"><p><strong>Registration.</strong> Register the system in the EU database (Art 49) before placing it on the market.</p></div>
+      <div class="step"><p><strong>FRIA decision.</strong> Decide: does Vantage, as provider, owe a FRIA? No. Then note who would - the deploying employer, and, for the credit-scoring cousin, its deployer.</p></div>
+    </div>
+    <div class="callout win"><strong>★ Vantage after b7</strong> Vantage has its route to market on one page: self-assess conformity (Annex VI) → EU declaration of conformity (Art 47) → CE marking (Art 48) → EU database registration (Art 49), all before launch, and re-triggered by any substantial modification. It has confirmed it owes no FRIA as provider, while flagging that its customers do. The last piece, b8, wires all seven sessions into one operating model.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b8 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>For one high-risk system, map its pre-market path: conformity route, declaration, CE mark, registration.</li>
+      <li>Decide whether you are the provider, the deployer, or both - and write down which of the FRIA and Article 9 duties that creates.</li>
+      <li>List one plausible "substantial modification" to your system and note that it would re-trigger conformity assessment.</li>
+      <li>Read: EU AI Act Articles 27, 43, and 47 to 49, plus Annex VI and Annex VII.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the EU AI Act text. This page covers ~80% of the working content on assessment and conformity.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 27 (FRIA) + Annex III points 5(b), 5(c)</span><span class="note">Part 1 · the deployer's fundamental rights impact assessment</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 43 + Annex VI, Annex VII (conformity assessment)</span><span class="note">Part 2 · self-assessment vs notified body, and re-triggering</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Articles 47, 48, 49 (declaration, CE mark, registration)</span><span class="note">Part 2 · the path to market</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · A fundamental rights impact assessment (Article 27) is primarily an obligation of the...</p>
+      <button class="qopt" type="button">A · Notified body</button>
+      <button class="qopt" type="button">B · European Commission</button>
+      <button class="qopt" type="button">C · Deployer - public bodies and deployers of certain Annex III systems, before first use</button>
+      <p class="qwhy">The FRIA is a deployer duty done before first use. It falls on public bodies and deployers of certain Annex III systems such as credit scoring and insurance - distinct from the provider's Article 9 risk-management system.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · For most high-risk Annex III systems (points 2 to 8), the default conformity assessment is...</p>
+      <button class="qopt" type="button">A · Self-assessment / internal control under Annex VI</button>
+      <button class="qopt" type="button">B · A notified-body audit under Annex VII, always</button>
+      <button class="qopt" type="button">C · A public vote</button>
+      <p class="qwhy">Self-assessment (Annex VI) is the default for Annex III points 2 to 8. A notified body (Annex VII) is required for point-1 biometrics where harmonised standards or common specifications are absent.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Put the provider's pre-market steps in order after conformity assessment.</p>
+      <button class="qopt" type="button">A · CE marking → registration → declaration</button>
+      <button class="qopt" type="button">B · EU declaration of conformity → CE marking → EU database registration</button>
+      <button class="qopt" type="button">C · Registration → declaration → CE marking</button>
+      <p class="qwhy">After assessing conformity: sign the EU declaration of conformity (Art 47), affix the CE marking (Art 48), then register in the EU database (Art 49) - all before the system is placed on the market.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 7 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>FRIA = deployer</b><span>Article 27. Public bodies + deployers of certain Annex III systems (credit scoring 5(b), insurance 5(c)).</span></div>
+      <div class="cheat-item"><b>Before first use</b><span>The FRIA is a pre-deployment gate, notified to the market surveillance authority via an AI Office template.</span></div>
+      <div class="cheat-item"><b>What it describes</b><span>Deployment, timeframe/frequency, affected persons, specific risks of harm, oversight, governance + complaints.</span></div>
+      <div class="cheat-item"><b>Not the Art 9 system</b><span>FRIA (deployer, this context) is distinct from the provider's lifecycle risk-management system.</span></div>
+      <div class="cheat-item"><b>Conformity default</b><span>Self-assessment / internal control (Annex VI) for Annex III points 2 to 8.</span></div>
+      <div class="cheat-item"><b>Notified body</b><span>Annex VII for point-1 biometrics where harmonised standards or common specs are absent.</span></div>
+      <div class="cheat-item"><b>Path to market</b><span>Conformity → EU declaration (Art 47) → CE marking (Art 48) → EU database registration (Art 49).</span></div>
+      <div class="cheat-item"><b>Modification re-triggers</b><span>A substantial modification re-triggers conformity assessment. Never "done forever".</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 7 of 8 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b8-operating-model.html">Next: The AI governance operating model →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

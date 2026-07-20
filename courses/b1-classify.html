@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 1 · Classify a system - learn AI governance with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Practitioner session 1 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Practitioner track · Session 1 of 8</div>
+    <h1>Classify a system <span class="accent">before anything else</span></h1>
+    <p class="sub">Everything you owe under the EU AI Act flows from one decision: which risk tier your system is in. Get the tier right and the obligations follow; get it wrong and you either over-build or ship something banned. This session turns the classification into a tool - a live checker that takes what a system does and returns its tier, its obligations, and the article behind it. Vantage classifies its hiring tool here.</p>
+    <div class="chip-row">
+      <span class="chip level">🟢 Practitioner track</span>
+      <span class="chip audience">AI/ML · risk · compliance</span>
+      <span class="chip audience">Live classifier included</span>
+      <span class="chip time">Start here</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · Concepts</span>
+      <span class="a3" style="flex:5">18-40 · Build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>The decision that gates everything</h2></div>
+    <p class="lede">The EU AI Act is risk-tiered: what you must do depends entirely on which tier your system falls in. A prohibited system cannot ship at all. A high-risk one carries a heavy compliance programme. A limited-risk one needs only disclosure. A minimal-risk one needs nothing. So the first, gating task for any AI system is classification - and it is a decision you can learn to make quickly and defend. This session builds that reflex with a checker you drive.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. The checker is a teaching model of the risk-tier logic - real classification depends on specific facts. Read Regulation (EU) 2024/1689 and get advice.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> The risk-tier decision logic in order, hands-on time with a live classifier, and the two nuances that trip people up - the Article 6(3) downgrade and the "profiling is always high-risk" rule.</div>
+  </section>
+
+  <section class="section" id="flow">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers the decision logic</span><h2>First match wins <span class="tag concept">7 min live</span></h2></div>
+    <p class="lede">Classification runs in order: check prohibited first, then high-risk, then limited, else minimal - and assess GPAI as a parallel layer. The first tier that matches is the answer.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Decision order: in scope, then prohibited, then high-risk, then limited-risk, else minimal; GPAI is a parallel layer">
+        <style>
+          .b1fT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b1fW { font: 400 11px Inter, sans-serif; fill: #D1FAE5; }
+          .b1fS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b1fN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b1fArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#b1fAh); }
+        </style>
+        <defs><marker id="b1fAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="20" y="90" width="130" height="52" rx="10" fill="#1F2937"/><text class="b1fT" x="36" y="112">In scope?</text><text class="b1fW" x="36" y="130">(Art 2)</text>
+        <rect x="180" y="90" width="140" height="52" rx="10" fill="#B91C1C"/><text class="b1fT" x="196" y="112">Prohibited?</text><text class="b1fW" x="196" y="130">Art 5 - stop</text>
+        <rect x="350" y="90" width="140" height="52" rx="10" fill="#C2410C"/><text class="b1fT" x="366" y="112">High-risk?</text><text class="b1fW" x="366" y="130">Art 6 + Annex III</text>
+        <rect x="520" y="90" width="140" height="52" rx="10" fill="#059669"/><text class="b1fT" x="536" y="112">Limited?</text><text class="b1fW" x="536" y="130">Art 50 disclose</text>
+        <rect x="690" y="90" width="150" height="52" rx="10" fill="#6B7280"/><text class="b1fT" x="706" y="112">Minimal</text><text class="b1fW" x="706" y="130">no obligations</text>
+        <rect x="350" y="200" width="310" height="48" rx="10" fill="#1D4ED8"/><text class="b1fT" x="366" y="222">Parallel: is it a GPAI model? (Art 51/53/55)</text><text class="b1fW" x="366" y="240">baseline docs; + systemic risk above 10^25 FLOP</text>
+        <line class="b1fArr" x1="152" y1="116" x2="176" y2="116"/>
+        <line class="b1fArr" x1="322" y1="116" x2="346" y2="116"/>
+        <line class="b1fArr" x1="492" y1="116" x2="516" y2="116"/>
+        <line class="b1fArr" x1="662" y1="116" x2="686" y2="116"/>
+        <rect x="20" y="266" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b1fN" x="44" y="278">First match wins. A GPAI model can be its own tier while systems built on it classify separately.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the risk-tier decision order</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The order, and why order matters<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>In scope? (Art 2)</strong> - if not (no EU market, no EU output), the Act does not apply. Everything below assumes you are in.</li>
+          <li><strong>Prohibited? (Art 5)</strong> - the eight banned practices. If it matches, stop: it cannot ship, and the fine tier is the highest (7% / EUR 35M).</li>
+          <li><strong>High-risk? (Art 6 + Annex III)</strong> - the eight use-case areas (employment, credit, education, biometrics, law enforcement...). This is where most consequential business AI lands.</li>
+          <li><strong>Limited-risk? (Art 50)</strong> - chatbots, deepfakes, synthetic content. Disclosure and labelling only.</li>
+          <li><strong>Minimal</strong> - everything else. No mandatory obligations.</li>
+          <li><strong>GPAI (parallel):</strong> if the artefact is a general-purpose model, it carries its own obligations regardless of the tier of systems built on it.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Walk me through classifying an AI system under the EU AI Act in order: is it in scope (Art 2), prohibited (Art 5), high-risk (Art 6 + Annex III), limited-risk (Art 50), or minimal - and separately, is it a GPAI model? Then classify an AI CV-screening tool used on EU candidates and name the article.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>★ Build-along: classify systems<span class="mini">4 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Pick systems in the checker and read the tier, the obligations, and the basis. Start with "screen job applicants" (Vantage's tool -> high-risk, Annex III(4)), then a prohibited one (social scoring), a limited one (chatbot), and a GPAI model.</p>
+        <div class="aiactbox" data-caption="Pick what an AI system does - the classifier returns its tier, the obligations that attach, and the article or annex behind it."></div>
+        <div class="callout tip"><strong>Honesty note - what the classifier is</strong> A teaching model of Articles 5, 6, 50, and Chapter V. It gives you the structure and the usual answer for a scenario; a real classification turns on your specific facts (especially the Article 6(3) downgrade). Use it to build the reflex; confirm real calls with the Regulation and advice.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="nuances">
+    <div class="section-kicker"><span class="klabel">Part 2 · the two nuances</span><h2>Downgrade, and the profiling trap <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">Two rules decide the close calls in the high-risk tier. One can pull a system down out of high-risk; the other slams it back in. Miss them and you will misclassify.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 240" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Article 6(3) can downgrade a narrow procedural or preparatory Annex III system, unless it profiles people, in which case it is always high-risk">
+        <style>
+          .b1nT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b1nS { font: 400 12px Inter, sans-serif; fill: #1F2937; }
+          .b1nW { font: 400 12px Inter, sans-serif; fill: #D1FAE5; }
+          .b1nN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b1nArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#b1nAh); }
+        </style>
+        <defs><marker id="b1nAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="30" y="90" width="220" height="60" rx="12" fill="#C2410C"/><text class="b1nT" x="50" y="116">Annex III use case</text><text class="b1nW" x="50" y="138">looks high-risk</text>
+        <rect x="330" y="30" width="240" height="56" rx="12" fill="#059669"/><text class="b1nT" x="350" y="54">Art 6(3) downgrade</text><text class="b1nW" x="350" y="74">narrow / preparatory only</text>
+        <rect x="330" y="150" width="240" height="56" rx="12" fill="#B91C1C"/><text class="b1nT" x="350" y="174">Profiles people?</text><text class="b1nW" x="350" y="194">ALWAYS high-risk</text>
+        <rect x="640" y="90" width="210" height="60" rx="12" fill="#ECFDF5" stroke="#6EE7B7"/><text class="b1nS" x="660" y="116">The downgrade only</text><text class="b1nS" x="660" y="136">holds if there is NO profiling</text>
+        <line class="b1nArr" x1="252" y1="112" x2="326" y2="62"/>
+        <line class="b1nArr" x1="252" y1="128" x2="326" y2="176"/>
+        <line class="b1nArr" x1="572" y1="58" x2="636" y2="108"/>
+        <rect x="30" y="216" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b1nN" x="54" y="228">If the system profiles natural persons, no Art 6(3) downgrade applies - it is high-risk, full stop.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the Article 6(3) downgrade and the profiling trap</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The Article 6(3) downgrade<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Not every system in an Annex III area is automatically high-risk. Article 6(3) lets a system escape the high-risk tier if it does <strong>not pose a significant risk</strong> because it only:</p>
+        <ul>
+          <li>performs a <strong>narrow procedural task</strong>; or</li>
+          <li><strong>improves the result</strong> of a completed human activity; or</li>
+          <li>detects decision patterns/deviations <strong>without replacing</strong> human review; or</li>
+          <li>performs a <strong>preparatory task</strong>.</li>
+        </ul>
+        <p>Example: a tool that only formats and forwards applications to a recruiter, without scoring or ranking, may qualify for the downgrade. But the moment it ranks, scores, or filters candidates, it is doing the consequential work - and it is high-risk.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The profiling trap<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The override:</strong> if the system performs <strong>profiling of natural persons</strong>, the Article 6(3) downgrade does not apply - it is high-risk, full stop.</li>
+          <li><strong>Why it matters:</strong> teams reach for the downgrade to avoid the compliance burden, then forget that any real evaluation of a person (scoring, ranking, predicting behaviour) is profiling. The escape hatch closes.</li>
+          <li><strong>The honest test:</strong> "does this system make or shape a judgement about a specific person?" If yes, assume high-risk and prove otherwise, not the reverse.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage classifies its hiring tool.</strong> Vantage hoped its CV screener might qualify for the Article 6(3) downgrade as a "preparatory" tool. But it ranks candidates - that is profiling. No downgrade: it is high-risk under Annex III(4). The classification decided Vantage's entire compliance roadmap for the rest of the track.</p></div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Classify your real systems <span class="tag demo">★ 10 min · the checker above</span></h2></div>
+    <p class="lede">Run your own AI on the classifier.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Your systems.</strong> For each in-scope AI system, pick the closest scenario in the checker and record the tier + basis.</p></div>
+      <div class="step"><p><strong>Test a downgrade.</strong> Take a borderline Annex III system and ask honestly: is it narrow/preparatory, or does it profile a person? Decide whether the downgrade genuinely applies.</p></div>
+      <div class="step"><p><strong>Find a prohibited one.</strong> Check whether anything you do touches an Article 5 ban (emotion recognition at work, social scoring). If so, that is a stop-now item.</p></div>
+      <div class="step"><p><strong>Reflect.</strong> In one line: which of your systems is high-risk and least prepared? That is where sessions b2-b7 pay off first.</p></div>
+    </div>
+    <div class="callout win"><strong>★ Vantage after b1</strong> Vantage knows its hiring tool is high-risk (Annex III(4)) and cannot dodge it via the downgrade - it profiles candidates. That single classification writes its roadmap: the full high-risk obligations, which b2 tackles next.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b2 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>Classify every in-scope AI system with the checker and record tier + basis for each.</li>
+      <li>For any you want to downgrade under Art 6(3), write the honest profiling test result - does it judge a person?</li>
+      <li>Flag anything touching an Article 5 prohibition as an immediate stop-and-review.</li>
+      <li>Read: EU AI Act Article 6 and Annex III - the high-risk definition and the use-case list.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the EU AI Act text. This page covers ~80% of the working content on classification.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Articles 5, 6, 50 + Annex III</span><span class="note">Part 1 · the tiers and the decision order (the checker)</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Article 6(3) (the downgrade + profiling override)</span><span class="note">Part 2 · the two nuances that decide close calls</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Chapter V (GPAI classification)</span><span class="note">Part 1 · the parallel layer; full depth in b4</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · You classify a system in order. What do you check FIRST (after confirming it is in scope)?</p>
+      <button class="qopt" type="button">A · Whether it is minimal-risk</button>
+      <button class="qopt" type="button">B · Whether it is a prohibited practice (Article 5)</button>
+      <button class="qopt" type="button">C · Whether it is a GPAI model</button>
+      <p class="qwhy">First match wins, and prohibited is checked first: if it matches Article 5 it cannot ship, and no lower tier is relevant. Then high-risk, then limited, else minimal.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · An Annex III system might avoid the high-risk tier via the Article 6(3) downgrade - UNLESS it...</p>
+      <button class="qopt" type="button">A · Is used by more than 250 people</button>
+      <button class="qopt" type="button">B · Runs in the cloud</button>
+      <button class="qopt" type="button">C · Profiles natural persons - then it is always high-risk</button>
+      <p class="qwhy">The downgrade covers narrow/preparatory systems, but profiling of people overrides it: any system that scores, ranks, or predicts about a person is high-risk, no downgrade.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · An AI CV-screening tool that ranks candidates, used on EU applicants, is...</p>
+      <button class="qopt" type="button">A · High-risk (Annex III(4), employment) - it profiles candidates</button>
+      <button class="qopt" type="button">B · Minimal risk - it is just software</button>
+      <button class="qopt" type="button">C · Prohibited</button>
+      <p class="qwhy">Employment/recruitment is Annex III(4). Ranking candidates is profiling, so the Article 6(3) downgrade does not apply - it is high-risk, with the full obligations.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 1 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Classify first</b><span>Everything you owe flows from the tier. It is the gating decision for any AI system.</span></div>
+      <div class="cheat-item"><b>The order</b><span>In scope? → prohibited (Art 5)? → high-risk (Art 6 + Annex III)? → limited (Art 50)? → else minimal.</span></div>
+      <div class="cheat-item"><b>First match wins</b><span>Stop at the first tier that matches. GPAI is assessed as a parallel layer.</span></div>
+      <div class="cheat-item"><b>Prohibited = stop</b><span>Article 5 practices cannot ship at all; highest fine tier (7% / EUR 35M).</span></div>
+      <div class="cheat-item"><b>High-risk = the burden</b><span>Annex III use cases: employment, credit, education, biometrics, law enforcement, etc.</span></div>
+      <div class="cheat-item"><b>Art 6(3) downgrade</b><span>A narrow/preparatory Annex III system can drop out - but only if it does not profile people.</span></div>
+      <div class="cheat-item"><b>Profiling trap</b><span>Any system that judges a person is high-risk. No downgrade. Assume high-risk, prove otherwise.</span></div>
+      <div class="cheat-item"><b>The checker</b><span>A teaching model of Art 5/6/50/Ch V. Confirm real close calls with the Regulation + advice.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 1 of 8 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b2-high-risk-obligations.html">Next: High-risk obligations →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/aiact-live.js?v=1"></script>
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 2 · High-risk obligations - learn AI governance with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Practitioner session 2 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Practitioner track · Session 2 of 8</div>
+    <h1>High-risk obligations <span class="accent">the whole programme</span></h1>
+    <p class="sub">Once a system is high-risk, a specific compliance programme attaches to it. There are seven things the system itself must meet, a wrapper of duties the provider carries around it, and a separate set of duties for the deployer who puts it to work. This session lays the whole map out so nothing is missed, then Vantage turns it into a checklist with an owner on every line.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Medium</span>
+      <span class="chip audience">AI/ML · risk · compliance</span>
+      <span class="chip audience">The obligations map</span>
+      <span class="chip time">After b1</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · Concepts</span>
+      <span class="a3" style="flex:5">18-40 · Build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>What "high-risk" actually costs you</h2></div>
+    <p class="lede">In b1 you learned to classify. The hard news is that a high-risk classification is not a label - it is a programme. The system must satisfy seven requirements. The provider must wrap it in a quality and documentation regime, prove conformity, mark it, and register it. And the deployer who uses it carries its own duties. This session gives you the full inventory so you can build a checklist that leaves nothing unowned.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. This is a working map of the high-risk regime, not a substitute for reading Regulation (EU) 2024/1689 and getting advice on your specific system.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> The seven system requirements (Art 9-15) in plain language, the provider wrapper (QMS, docs, conformity, CE, registration) and the deployer's separate duties (Art 26) - assembled into a checklist with a named owner on every line.</div>
+  </section>
+
+  <section class="section" id="seven">
+    <div class="section-kicker"><span class="klabel">Part 1 · the system requirements</span><h2>The seven the system must meet <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">Articles 9 through 15 set out seven requirements every high-risk system must satisfy. They are not optional extras - they are the definition of a compliant high-risk system. Learn them as a set of seven.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Seven requirements a high-risk system must meet: risk management, data governance, technical documentation, logging, transparency, human oversight, accuracy and security">
+        <style>
+          .b2oT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b2oW { font: 400 10px Inter, sans-serif; fill: #D1FAE5; }
+          .b2oS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b2oN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="40" width="180" height="60" rx="10" fill="#064E3B"/><text class="b2oT" x="46" y="66">1 · Risk mgmt</text><text class="b2oW" x="46" y="84">Art 9 · lifecycle</text>
+        <rect x="240" y="40" width="180" height="60" rx="10" fill="#059669"/><text class="b2oT" x="256" y="66">2 · Data + bias</text><text class="b2oW" x="256" y="84">Art 10 · governance</text>
+        <rect x="450" y="40" width="180" height="60" rx="10" fill="#064E3B"/><text class="b2oT" x="466" y="66">3 · Technical docs</text><text class="b2oW" x="466" y="84">Art 11 · Annex IV</text>
+        <rect x="660" y="40" width="190" height="60" rx="10" fill="#059669"/><text class="b2oT" x="676" y="66">4 · Logging</text><text class="b2oW" x="676" y="84">Art 12 · automatic</text>
+        <rect x="30" y="130" width="180" height="60" rx="10" fill="#10B981"/><text class="b2oT" x="46" y="156">5 · Transparency</text><text class="b2oW" x="46" y="174">Art 13 · instructions</text>
+        <rect x="240" y="130" width="180" height="60" rx="10" fill="#064E3B"/><text class="b2oT" x="256" y="156">6 · Human oversight</text><text class="b2oW" x="256" y="174">Art 14 · by persons</text>
+        <rect x="450" y="130" width="400" height="60" rx="10" fill="#059669"/><text class="b2oT" x="466" y="156">7 · Accuracy · robustness · cybersecurity</text><text class="b2oW" x="466" y="174">Art 15 · perform reliably and resist attack</text>
+        <rect x="30" y="220" width="820" height="52" rx="10" fill="#ECFDF5" stroke="#6EE7B7"/><text class="b2oS" x="50" y="244">All seven must hold together. A gap in any one means the system is not conformant - there is no "six of seven".</text><text class="b2oS" x="50" y="262">Design them in from the start; retrofitting after build is where teams burn the most time and money.</text>
+        <rect x="30" y="288" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b2oN" x="54" y="300">Seven requirements, one set. The system is compliant only when every one of them is satisfied.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the seven high-risk system requirements</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>Requirement</th><th>Article</th><th>What it means</th></tr></thead>
+      <tbody>
+        <tr><td>Risk management system</td><td>Art 9</td><td>A continuous, documented process across the whole lifecycle - identify, estimate, and mitigate risks; test; repeat.</td></tr>
+        <tr><td>Data + data governance</td><td>Art 10</td><td>Training, validation, and test data relevant, representative, and as error-free as possible; identify and mitigate harmful bias.</td></tr>
+        <tr><td>Technical documentation</td><td>Art 11</td><td>Drawn up before the system goes to market, per Annex IV; kept current; proves the system meets the requirements.</td></tr>
+        <tr><td>Record-keeping / logging</td><td>Art 12</td><td>Automatic logging of events over the system's lifetime, enabling traceability of how it behaved.</td></tr>
+        <tr><td>Transparency + instructions</td><td>Art 13</td><td>Design and instructions for use let deployers interpret output and use the system correctly.</td></tr>
+        <tr><td>Human oversight</td><td>Art 14</td><td>Built so natural persons can effectively oversee it - intervene, override, and stop.</td></tr>
+        <tr><td>Accuracy, robustness, security</td><td>Art 15</td><td>Appropriate levels of accuracy; resilient to errors and misuse; resistant to attempts to alter use or performance.</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Risk management + data and bias (Art 9-10)<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Risk management (Art 9):</strong> not a one-off assessment - a system that runs across the whole lifecycle. You identify known and foreseeable risks, estimate them, mitigate, then test that the mitigations work, and keep iterating as the system and its use evolve.</li>
+          <li><strong>Data governance (Art 10):</strong> the training, validation, and test datasets must be relevant, representative, and as free of errors as possible for the intended purpose - and you must examine them for and mitigate <strong>harmful bias</strong>. This is where a hiring model earns or loses its fairness case.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Explain the seven requirements a high-risk AI system must meet under the EU AI Act (Articles 9 to 15) in plain language, one line each. Then for an AI CV-screening tool, tell me what Article 10 data governance and bias mitigation would concretely require.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Documentation, logging, transparency (Art 11-13)<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Technical documentation (Art 11):</strong> drawn up before the system is placed on the market, following Annex IV, and kept up to date. It is the evidence file that shows the system meets the requirements.</li>
+          <li><strong>Record-keeping (Art 12):</strong> the system logs events automatically over its lifetime, so behaviour is traceable and post-market monitoring and incident review are possible.</li>
+          <li><strong>Transparency + instructions (Art 13):</strong> the system and its instructions for use are designed so a deployer can understand and correctly interpret its output - capabilities, limitations, and the conditions it was built for.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Human oversight + accuracy and security (Art 14-15)<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Human oversight (Art 14):</strong> the system is designed so natural persons can effectively oversee it while in use - understand it, monitor it, spot when to intervene, and override or stop it. Oversight has to be genuinely possible, not a rubber stamp.</li>
+          <li><strong>Accuracy, robustness, cybersecurity (Art 15):</strong> the system performs at an appropriate accuracy level, is resilient to errors and misuse, and resists attempts to alter its use or performance (for example data poisoning or adversarial attacks).</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="wrapper">
+    <div class="section-kicker"><span class="klabel">Part 2 · provider wrapper + deployer</span><h2>The provider wrapper + the deployer's part <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">The seven requirements are about the system. Around them, the provider carries a wrapper of organisational duties - and the deployer who puts the system to work carries a separate set. Both matter, and they are frequently the same company wearing two hats.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 330" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Provider duties wrap the seven system requirements: quality management, documentation, logs, conformity, CE marking, registration; deployer carries use, oversight, logs, and incident duties">
+        <style>
+          .b2pT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b2pW { font: 400 10px Inter, sans-serif; fill: #D1FAE5; }
+          .b2pS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b2pN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b2pArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#b2pAh); }
+        </style>
+        <defs><marker id="b2pAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="30" y="30" width="400" height="220" rx="14" fill="#ECFDF5" stroke="#6EE7B7"/>
+        <text class="b2pS" x="50" y="54" style="font-weight:700">PROVIDER wrapper</text>
+        <rect x="50" y="66" width="170" height="46" rx="8" fill="#064E3B"/><text class="b2pT" x="64" y="88">Quality mgmt</text><text class="b2pW" x="64" y="104">Art 17 · QMS</text>
+        <rect x="240" y="66" width="170" height="46" rx="8" fill="#059669"/><text class="b2pT" x="254" y="88">Keep docs + logs</text><text class="b2pW" x="254" y="104">Art 18 + 19</text>
+        <rect x="50" y="124" width="170" height="46" rx="8" fill="#059669"/><text class="b2pT" x="64" y="146">Conformity</text><text class="b2pW" x="64" y="162">Art 43</text>
+        <rect x="240" y="124" width="170" height="46" rx="8" fill="#064E3B"/><text class="b2pT" x="254" y="146">Declaration</text><text class="b2pW" x="254" y="162">Art 47</text>
+        <rect x="50" y="182" width="170" height="46" rx="8" fill="#10B981"/><text class="b2pT" x="64" y="204">CE marking</text><text class="b2pW" x="64" y="220">Art 48</text>
+        <rect x="240" y="182" width="170" height="46" rx="8" fill="#059669"/><text class="b2pT" x="254" y="204">EU registration</text><text class="b2pW" x="254" y="220">Art 49</text>
+        <rect x="500" y="60" width="350" height="190" rx="14" fill="#1F2937"/>
+        <text class="b2pT" x="520" y="86" style="fill:#6EE7B7;font-weight:700">DEPLOYER duties · Art 26</text>
+        <text class="b2pW" x="520" y="112">Use per the provider's instructions</text>
+        <text class="b2pW" x="520" y="134">Assign trained human oversight</text>
+        <text class="b2pW" x="520" y="156">Control input data · monitor · suspend on risk</text>
+        <text class="b2pW" x="520" y="178">Keep logs at least 6 months</text>
+        <text class="b2pW" x="520" y="200">Inform workers before workplace use</text>
+        <text class="b2pW" x="520" y="222">Report serious incidents to the provider</text>
+        <line class="b2pArr" x1="432" y1="150" x2="498" y2="150"/>
+        <rect x="30" y="266" width="820" height="34" rx="8" fill="#ECFDF5" stroke="#6EE7B7"/><text class="b2pS" x="50" y="288">If you build AND use the system, you wear both hats - the provider wrapper AND the deployer duties apply to you.</text>
+        <rect x="30" y="308" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b2pN" x="54" y="320">Provider proves and registers the system; deployer runs it responsibly. Know which hat you wear - often both.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the provider wrapper and the deployer's separate duties</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Quality management system (Art 17)<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>QMS (Art 17):</strong> the provider must run a documented quality management system - written policies, procedures, and instructions covering the whole compliance strategy: design, development, testing, data management, risk management, post-market monitoring, and record-keeping.</li>
+          <li><strong>Why it exists:</strong> it is the organisational backbone that makes the seven system requirements repeatable and auditable, not a one-time heroic effort for one release.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Keep docs (18), keep logs (19), then prove it<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Keep documentation (Art 18):</strong> retain the technical documentation, QMS records, approvals, and changes, and make them available to authorities on request for the required period.</li>
+          <li><strong>Keep logs (Art 19):</strong> retain the automatically generated logs (from Art 12) to the extent they are under the provider's control.</li>
+          <li><strong>Conformity assessment (Art 43):</strong> before the system goes to market, run the applicable conformity assessment procedure to demonstrate it meets the requirements.</li>
+          <li><strong>Declaration of conformity (Art 47) + CE marking (Art 48):</strong> draw up the EU declaration of conformity and affix the CE marking - the visible sign it has passed.</li>
+          <li><strong>EU database registration (Art 49):</strong> register the high-risk system in the EU database before placing it on the market.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage builds the seven for its hiring tool.</strong> Vantage, a Singapore firm selling a CV-screening tool into the EU, is the provider. It stands up an Article 9 risk process, cleans and de-biases its training data under Article 10, writes the Annex IV documentation, wires in Article 12 logging, designs Article 14 oversight so a recruiter can override any ranking, and hardens accuracy and security under Article 15. Then it wraps them: a QMS (Art 17), retained docs and logs (18 and 19), a conformity assessment (43), a declaration (47), CE marking (48), and EU-database registration (49). Only then can it ship.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The deployer's duties (Art 26)<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The company that <strong>uses</strong> a high-risk system is the deployer, and Article 26 gives it its own list - separate from the provider's:</p>
+        <ul>
+          <li><strong>Use per instructions:</strong> operate the system according to the provider's instructions for use.</li>
+          <li><strong>Human oversight:</strong> assign oversight to natural persons who are competent, trained, and have the authority to act.</li>
+          <li><strong>Input data:</strong> ensure input data is relevant and representative for the intended purpose, to the extent it controls that data.</li>
+          <li><strong>Monitor + suspend:</strong> monitor operation, and where use may present a risk, suspend and inform the provider.</li>
+          <li><strong>Keep logs:</strong> retain the logs the system generates for at least <strong>6 months</strong> (unless other law says otherwise).</li>
+          <li><strong>Inform workers:</strong> before putting a high-risk system to use in the workplace, inform workers and their representatives.</li>
+          <li><strong>Report incidents + check registration:</strong> report serious incidents, and check the system is registered in the EU database before use.</li>
+        </ul>
+        <div class="callout tip"><strong>Two hats warning</strong> If your company both builds a high-risk system and uses it internally, you are provider AND deployer - both lists apply. A frequent source of missed obligations is assuming one role covers everything.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Build the high-risk obligations checklist <span class="tag demo">★ 10 min</span></h2></div>
+    <p class="lede">Turn the map into a checklist for one real high-risk system, and put a name on every line.</p>
+    <div class="steps">
+      <div class="step"><p><strong>List the seven.</strong> Write Art 9-15 as seven checklist rows. For each, note whether it exists today, is partial, or is missing for your system.</p></div>
+      <div class="step"><p><strong>Add the provider wrapper.</strong> Add rows for QMS (17), keep docs (18) + logs (19), conformity (43), declaration (47), CE (48), and registration (49).</p></div>
+      <div class="step"><p><strong>Add the deployer duties.</strong> If you use the system, add the Article 26 rows - use per instructions, oversight, input data, monitor/suspend, 6-month logs, inform workers, report incidents, check registration.</p></div>
+      <div class="step"><p><strong>Assign an owner.</strong> Put a named person or team against every single row. Any row without an owner is the real risk - flag it.</p></div>
+    </div>
+    <div class="callout win"><strong>★ Vantage after b2</strong> Vantage now has a live checklist: the seven system requirements, the provider wrapper, and - because it also pilots the tool on its own hiring - the Article 26 deployer duties, with an owner on every line. It can see exactly which rows are missing (Annex IV docs and a formal QMS) and who is accountable for closing them. Next, b3 adds the transparency duties that ride on top.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b3 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>Finish the seven-requirement audit for your highest-priority high-risk system: exists / partial / missing on each.</li>
+      <li>Complete the provider wrapper rows and mark which artefacts (QMS, Annex IV docs, declaration) you can produce today.</li>
+      <li>If you deploy the system, write your Article 26 duties and confirm the 6-month log retention is actually configured.</li>
+      <li>Read: EU AI Act Articles 9-19 and Article 26 - the system requirements, provider obligations, and deployer duties.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the EU AI Act text. This page covers ~80% of the working content on high-risk obligations.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Articles 9-15 (the seven system requirements)</span><span class="note">Part 1 · risk mgmt, data/bias, docs, logging, transparency, oversight, accuracy</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Articles 17, 18, 19 (provider QMS, docs, logs)</span><span class="note">Part 2 · the provider wrapper around the system</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Article 26 (deployer duties)</span><span class="note">Part 2 · the separate list for the company that uses the system</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Articles 43, 47, 48, 49 (conformity, declaration, CE, registration)</span><span class="note">Part 2 · the proof-and-register steps; full depth in later work</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · How many core requirements must a high-risk system itself satisfy (Articles 9-15), and can you skip one?</p>
+      <button class="qopt" type="button">A · Three, and minor ones are optional</button>
+      <button class="qopt" type="button">B · Five, and logging is discretionary</button>
+      <button class="qopt" type="button">C · Seven, and all must hold - there is no "six of seven"</button>
+      <p class="qwhy">Articles 9-15 set seven requirements: risk management, data governance, documentation, logging, transparency, human oversight, and accuracy/robustness/security. The system is compliant only when every one is met.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">2 · Which obligation belongs to the DEPLOYER (the company using the system), not the provider?</p>
+      <button class="qopt" type="button">A · Keep the system's logs for at least 6 months and inform workers before workplace use (Art 26)</button>
+      <button class="qopt" type="button">B · Draw up the Annex IV technical documentation (Art 11)</button>
+      <button class="qopt" type="button">C · Affix the CE marking (Art 48)</button>
+      <button class="qopt" type="button">D · Register the system in the EU database as provider (Art 49)</button>
+      <p class="qwhy">Article 26 is the deployer list: use per instructions, assign oversight, keep logs at least 6 months, inform workers, monitor and report. Documentation, CE marking, and provider registration sit with the provider.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">3 · Under Article 10, training data for a high-risk system must be...</p>
+      <button class="qopt" type="button">A · Encrypted at rest and nothing more</button>
+      <button class="qopt" type="button">B · Relevant, representative, and as error-free as possible, with harmful bias identified and mitigated</button>
+      <button class="qopt" type="button">C · Sourced only from inside the EU</button>
+      <p class="qwhy">Article 10 requires training, validation, and test data to be relevant, representative, and as free of errors as possible for the purpose - and requires examining for and mitigating harmful bias.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 2 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Seven system requirements</b><span>Art 9-15: risk mgmt, data/bias, docs, logging, transparency, oversight, accuracy/security.</span></div>
+      <div class="cheat-item"><b>All seven, together</b><span>No partial credit. A gap in any one means the system is not conformant.</span></div>
+      <div class="cheat-item"><b>Risk mgmt is continuous</b><span>Art 9 runs across the whole lifecycle - identify, mitigate, test, repeat. Not one assessment.</span></div>
+      <div class="cheat-item"><b>Data + bias (Art 10)</b><span>Relevant, representative, error-free as possible; identify and mitigate harmful bias.</span></div>
+      <div class="cheat-item"><b>Provider wrapper</b><span>QMS (17), keep docs (18) + logs (19), conformity (43), declaration (47), CE (48), registration (49).</span></div>
+      <div class="cheat-item"><b>Deployer duties (Art 26)</b><span>Use per instructions, oversight, control input, monitor/suspend, logs 6 months, inform workers, report.</span></div>
+      <div class="cheat-item"><b>Logs kept 6 months+</b><span>Deployer retains the system's logs at least 6 months unless other law requires longer.</span></div>
+      <div class="cheat-item"><b>Two hats</b><span>Build and use the same system? You are provider AND deployer - both lists apply.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 2 of 8 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b3-transparency.html">Next: Transparency obligations →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

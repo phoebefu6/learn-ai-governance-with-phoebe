@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 4 · GPAI / foundation models - learn AI governance with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Practitioner session 4 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Practitioner track · Session 4 of 8</div>
+    <h1>GPAI and foundation models <span class="accent">what you owe, and when</span></h1>
+    <p class="sub">Almost every team now builds on a foundation model somebody else trained. The EU AI Act carves out a whole regime for those general-purpose AI (GPAI) models - a baseline set of duties for every provider, and a heavier tier for the largest models that could pose systemic risk. The good news for most of us: you are usually a deployer, not a provider. The catch: fine-tune or rebrand a model as your own and you can inherit the provider's obligations. This session sorts out which hat you are wearing. Vantage builds on a third-party LLM here.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Hands-on</span>
+      <span class="chip audience">AI/ML · providers · deployers</span>
+      <span class="chip audience">GPAI regime</span>
+      <span class="chip time">Session 4 of 8</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-22 · Baseline duties</span>
+      <span class="a3" style="flex:4">22-40 · Systemic-risk tier</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>Why GPAI gets its own rulebook</h2></div>
+    <p class="lede">The risk-tier logic from session b1 classifies AI systems by what they do. But a foundation model does not do any one thing - it can be pointed at a thousand tasks downstream. So the Act treats general-purpose AI models as their own category with their own obligations, sitting parallel to the system tiers. If you train, fine-tune, or rebrand such a model, this part of the Act is yours. If you only call one through an API, most of it belongs to your supplier - but you still need to know what to ask them for.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. This session is a working map of the GPAI regime (Articles 51, 53, 55) to help you spot your role and your duties - it is not a compliance opinion. Real obligations turn on your specific facts. Read Regulation (EU) 2024/1689 and get advice.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> A clear read on whether you are a GPAI provider or a downstream deployer, the four baseline duties every provider owes, the extra obligations that kick in for systemic-risk models, and the one move - material fine-tuning under your own name - that flips a deployer into a provider.</div>
+  </section>
+
+  <section class="section" id="baseline">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers the baseline regime</span><h2>Baseline GPAI obligations <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">Every provider of a general-purpose AI model owes four baseline duties under Article 53 - two documentation duties, a copyright policy, and a public training-content summary. Two of them relax for open-source models, but never for systemic-risk ones.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A general-purpose AI model with its four baseline duties: technical documentation, downstream-provider documentation, a copyright policy, and a public training-content summary">
+        <style>
+          .b4gT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b4gW { font: 400 11px Inter, sans-serif; fill: #D1FAE5; }
+          .b4gS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b4gN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b4gArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#b4gAh); }
+        </style>
+        <defs><marker id="b4gAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="350" y="24" width="180" height="60" rx="12" fill="#064E3B"/><text class="b4gT" x="372" y="50">GPAI model</text><text class="b4gW" x="372" y="70">provider (Art 53)</text>
+        <rect x="20" y="150" width="190" height="72" rx="10" fill="#059669"/><text class="b4gT" x="38" y="176">Technical docs</text><text class="b4gW" x="38" y="196">Annex XI - to the</text><text class="b4gW" x="38" y="212">AI Office / authorities</text>
+        <rect x="240" y="150" width="190" height="72" rx="10" fill="#059669"/><text class="b4gT" x="258" y="176">Downstream docs</text><text class="b4gW" x="258" y="196">Annex XII - for those</text><text class="b4gW" x="258" y="212">who build on it</text>
+        <rect x="460" y="150" width="180" height="72" rx="10" fill="#10B981"/><text class="b4gT" x="478" y="176">Copyright policy</text><text class="b4gW" x="478" y="196">honour Art 4(3) TDM</text><text class="b4gW" x="478" y="212">opt-outs</text>
+        <rect x="670" y="150" width="180" height="72" rx="10" fill="#10B981"/><text class="b4gT" x="688" y="176">Training summary</text><text class="b4gW" x="688" y="196">public, sufficiently</text><text class="b4gW" x="688" y="212">detailed</text>
+        <rect x="20" y="256" width="410" height="46" rx="10" fill="#ECFDF5" stroke="#6EE7B7"/><text class="b4gS" x="40" y="280">Open-source relaxes the first two docs -</text><text class="b4gS" x="40" y="296">free/open model, public params + architecture.</text>
+        <line class="b4gArr" x1="410" y1="86" x2="150" y2="146"/>
+        <line class="b4gArr" x1="430" y1="86" x2="335" y2="146"/>
+        <line class="b4gArr" x1="450" y1="86" x2="545" y2="146"/>
+        <line class="b4gArr" x1="470" y1="86" x2="745" y2="146"/>
+        <rect x="460" y="266" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b4gN" x="484" y="278">The copyright policy and public summary hold for</text>
+        <text class="b4gN" x="484" y="296">every provider - open or closed, small or systemic.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four baseline GPAI duties</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Duty 1 - technical documentation (Annex XI)<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The provider keeps up-to-date technical documentation of the model and makes it available to the AI Office and national authorities on request. Annex XI sets out what goes in it: the training and testing process, evaluation results, design choices, and the model's capabilities and limitations.</p>
+        <ul>
+          <li><strong>Who reads it:</strong> the regulator, not the public. It is your evidence that you built and tested the model responsibly.</li>
+          <li><strong>Keep it current:</strong> "up-to-date" is doing real work here - it must track material changes to the model.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Duty 2 - documentation for downstream providers (Annex XII)<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Separately, the provider gives documentation to the companies that will build AI systems on top of the model. Annex XII covers what these downstream providers need: the model's capabilities and limitations, how to integrate it, and what it can and cannot safely be used for.</p>
+        <ul>
+          <li><strong>Who reads it:</strong> the developers downstream - so they can comply with their own obligations.</li>
+          <li><strong>The point:</strong> obligations flow down the chain. A downstream team cannot govern what it was never told.</li>
+        </ul>
+        <p>If you are the deployer calling the model, this is the document you should be asking your supplier for.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Duty 3 - a copyright policy<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The provider puts in place a policy to comply with EU copyright law. In particular, it must honour the text-and-data-mining (TDM) opt-outs that rights-holders can exercise under Article 4(3) of the Copyright Directive (Directive 2019/790).</p>
+        <ul>
+          <li><strong>What it means in practice:</strong> if a rights-holder has reserved their content from data mining, your training pipeline must respect that reservation.</li>
+          <li><strong>Why it is here:</strong> foundation models are trained on vast scraped corpora - this is the Act's hook to keep that lawful.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Duty 4 - a public training-content summary<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The provider publishes a "sufficiently detailed summary" of the content used to train the model, following a template provided by the AI Office. This one is public - it is the transparency counterweight to models trained on data nobody can see.</p>
+        <ul>
+          <li><strong>Not a full dataset dump:</strong> a summary, at the level of detail the template asks for - enough for rights-holders and the public to understand what went in.</li>
+          <li><strong>The template matters:</strong> the AI Office sets the shape, so this is not a free-form disclosure.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The open-source relaxation - and its hard limit<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>What relaxes:</strong> for a free and open-source model released with public parameters and architecture, the first two documentation duties (Annex XI and XII) are relaxed.</li>
+          <li><strong>What never relaxes:</strong> the copyright policy and the public training-content summary stay - open or closed.</li>
+          <li><strong>The hard limit:</strong> the open-source relaxation does NOT apply to models with systemic risk. Cross that threshold and every duty is back on, plus the Article 55 tier.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>List the four baseline obligations of a GPAI model provider under Article 53 of the EU AI Act, note which two are relaxed for open-source models, and explain why that relaxation does not apply to systemic-risk models.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="systemic">
+    <div class="section-kicker"><span class="klabel">Part 2 · the systemic-risk tier</span><h2>The systemic-risk tier <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">The largest models get extra scrutiny. A model is presumed to carry systemic risk once its training compute crosses 10^25 FLOP - and then a heavier set of duties under Article 55 attaches on top of the baseline.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The 10 to the 25 FLOP threshold gate, above which a GPAI model is presumed to carry systemic risk and gains four extra Article 55 obligations">
+        <style>
+          .b4sT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b4sW { font: 400 11px Inter, sans-serif; fill: #D1FAE5; }
+          .b4sS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b4sN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b4sArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#b4sAh); }
+        </style>
+        <defs><marker id="b4sAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="30" y="120" width="180" height="80" rx="12" fill="#064E3B"/><text class="b4sT" x="50" y="150">Training compute</text><text class="b4sW" x="50" y="170">above 10^25 FLOP?</text><text class="b4sW" x="50" y="188">(or Commission designation)</text>
+        <rect x="330" y="120" width="200" height="80" rx="12" fill="#059669"/><text class="b4sT" x="350" y="150">Systemic risk</text><text class="b4sW" x="350" y="170">presumed - Art 51</text><text class="b4sW" x="350" y="188">baseline duties STAY</text>
+        <rect x="620" y="30" width="230" height="52" rx="10" fill="#059669"/><text class="b4sT" x="640" y="54">Model evaluation</text><text class="b4sW" x="640" y="72">adversarial / red-teaming</text>
+        <rect x="620" y="96" width="230" height="52" rx="10" fill="#059669"/><text class="b4sT" x="640" y="120">Assess + mitigate risk</text><text class="b4sW" x="640" y="138">at Union level</text>
+        <rect x="620" y="162" width="230" height="52" rx="10" fill="#10B981"/><text class="b4sT" x="640" y="186">Report incidents</text><text class="b4sW" x="640" y="204">serious ones, to AI Office</text>
+        <rect x="620" y="228" width="230" height="52" rx="10" fill="#10B981"/><text class="b4sT" x="640" y="252">Cybersecurity</text><text class="b4sW" x="640" y="270">model + infrastructure</text>
+        <line class="b4sArr" x1="212" y1="160" x2="326" y2="160"/>
+        <line class="b4sArr" x1="532" y1="150" x2="616" y2="60"/>
+        <line class="b4sArr" x1="532" y1="155" x2="616" y2="120"/>
+        <line class="b4sArr" x1="532" y1="165" x2="616" y2="186"/>
+        <line class="b4sArr" x1="532" y1="170" x2="616" y2="248"/>
+        <rect x="30" y="266" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b4sN" x="54" y="278">Above the threshold, Article 55 stacks four extra duties on top of the four baseline ones.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the systemic-risk threshold and the extra duties</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The 10^25 FLOP threshold (Article 51)<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The presumption:</strong> a GPAI model is presumed to have high-impact capabilities - and therefore systemic risk - when the cumulative compute used for its training exceeds 10^25 floating-point operations (FLOP).</li>
+          <li><strong>The other route:</strong> the Commission can also designate a model as systemic based on other criteria, and it can update the threshold as the field moves.</li>
+          <li><strong>Scale:</strong> this catches a handful of frontier models. Almost nothing a typical company trains gets near it.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The four extra obligations (Article 55)<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>On top of the baseline duties, a systemic-risk model provider must:</p>
+        <ul>
+          <li><strong>Evaluate the model</strong> - including adversarial testing and red-teaming to find and document risks.</li>
+          <li><strong>Assess and mitigate systemic risks</strong> at Union level, across the model's lifecycle.</li>
+          <li><strong>Track and report serious incidents</strong> to the AI Office (and relevant authorities), with corrective measures.</li>
+          <li><strong>Ensure cybersecurity</strong> of the model and its physical infrastructure.</li>
+        </ul>
+        <p>These are ongoing, operational duties - not a one-time filing. They mirror the kind of frontier-safety work the largest labs already publish.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Provider or deployer? The role that decides everything<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Most companies are deployers</strong> of GPAI, not providers - you call a model through an API or embed a licensed one, and the provider's obligations sit with the lab.</li>
+          <li><strong>But you can inherit them:</strong> if you materially fine-tune a model, or put a model on the market under your own name or brand, you can become a provider - with the Article 53 (and possibly 55) duties.</li>
+          <li><strong>The honest test:</strong> "am I presenting this as my own model, or meaningfully changing what it is?" If yes, assume you have picked up provider obligations.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage builds on a third-party LLM.</strong> Vantage's hiring tool calls a commercial foundation model through an API - it does not train or materially fine-tune it. So the LLM vendor is the GPAI provider and carries the Article 53/55 duties; Vantage is a downstream deployer. Vantage's job is to demand the Annex XII documentation from the vendor and fold it into its own high-risk system file. If Vantage later fine-tuned the model on its own candidate data and shipped it as "Vantage AI", that calculus would change - it could become a provider too.</p></div>
+        <div class="callout tip"><strong>Practitioner tip</strong> Before you assume you are "just a deployer", check your contract and your pipeline. Two things flip you into provider territory: putting the model out under your own name, and fine-tuning it enough to materially change its capabilities. Light prompt-tuning or RAG on top does not - but write down the reasoning either way.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Which hat are you wearing? <span class="tag demo">★ 10 min</span></h2></div>
+    <p class="lede">Decide, for one real use of a foundation model, whether it makes you a GPAI provider or a downstream deployer - and what you owe as a result.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Name the model + your use.</strong> Which foundation model do you rely on, and how - API call, embedded license, or your own training/fine-tuning?</p></div>
+      <div class="step"><p><strong>Apply the two flip tests.</strong> Are you putting it out under your own name? Are you materially fine-tuning it? A yes to either points to provider; two no's point to deployer.</p></div>
+      <div class="step"><p><strong>List what you owe.</strong> If deployer: the documentation you must get from your provider (Annex XII) and fold into your own system file. If provider: the four baseline duties, plus the Article 55 tier if you are anywhere near systemic scale.</p></div>
+      <div class="step"><p><strong>Reflect.</strong> In one line: are you certain your vendor actually meets its GPAI duties - and have you asked them for the evidence?</p></div>
+    </div>
+    <div class="callout win"><strong>★ Vantage after b4</strong> Vantage confirms it is a downstream deployer of its LLM vendor, not a GPAI provider. So its job is not the four baseline duties - it is to demand the vendor's Annex XII documentation and copyright/training assurances, and file them as evidence in its own high-risk system dossier. One decision, and Vantage knows exactly which obligations are the vendor's and which are its own.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b5 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>For every foundation model your team uses, record whether you are a provider or a deployer, and the reasoning (name, fine-tuning, rebranding).</li>
+      <li>For each model you deploy, list the documentation you should obtain from the provider and note whether you actually have it.</li>
+      <li>If any model you touch could be a provider situation, sketch the four baseline duties against it and flag gaps.</li>
+      <li>Read: EU AI Act Articles 51, 53, and 55 - the GPAI definition, baseline duties, and systemic-risk obligations.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the EU AI Act text. This page covers ~80% of the working content on the GPAI regime.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 53 (baseline GPAI obligations)</span><span class="note">Part 1 · the four duties + the open-source relaxation</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 51 (systemic-risk classification)</span><span class="note">Part 2 · the 10^25 FLOP threshold + designation</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 55 (systemic-risk obligations)</span><span class="note">Part 2 · evaluation, mitigation, incidents, cybersecurity</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">1 · Which baseline GPAI duty is public (not just filed with regulators)?</p>
+      <button class="qopt" type="button">A · The Annex XI technical documentation</button>
+      <button class="qopt" type="button">B · The Annex XII downstream-provider documentation</button>
+      <button class="qopt" type="button">C · The sufficiently detailed summary of training content</button>
+      <p class="qwhy">The training-content summary is published following the AI Office template. The Annex XI docs go to the AI Office/authorities on request, and Annex XII docs go to downstream providers - neither is public.</p>
+    </div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">2 · A GPAI model is presumed to carry systemic risk when...</p>
+      <button class="qopt" type="button">A · It is used by more than 45 million people</button>
+      <button class="qopt" type="button">B · Its cumulative training compute exceeds 10^25 FLOP (or the Commission designates it)</button>
+      <button class="qopt" type="button">C · It is closed-source</button>
+      <p class="qwhy">Article 51 sets a presumption of systemic risk above 10^25 FLOP of training compute; the Commission can also designate a model and update the threshold. Open/closed and user counts are not the test.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Your team calls a commercial LLM through an API without fine-tuning it. You are...</p>
+      <button class="qopt" type="button">A · A downstream deployer - the provider's GPAI duties sit with the vendor</button>
+      <button class="qopt" type="button">B · A GPAI provider with all Article 53 duties</button>
+      <button class="qopt" type="button">C · Exempt from the AI Act entirely</button>
+      <p class="qwhy">Calling a model as-is makes you a deployer; the vendor is the GPAI provider. You would only inherit provider duties by materially fine-tuning the model or putting it out under your own name.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 4 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>GPAI is parallel</b><span>Foundation-model duties sit alongside the system risk tiers, not inside them.</span></div>
+      <div class="cheat-item"><b>Four baseline duties</b><span>Annex XI tech docs, Annex XII downstream docs, a copyright policy, a public training summary (Art 53).</span></div>
+      <div class="cheat-item"><b>Copyright policy</b><span>Comply with EU copyright law and honour Art 4(3) TDM opt-outs (Directive 2019/790).</span></div>
+      <div class="cheat-item"><b>Public summary</b><span>A sufficiently detailed summary of training content, on the AI Office template.</span></div>
+      <div class="cheat-item"><b>Open-source relaxes 2</b><span>Free/open models drop the two doc duties - but never the copyright policy or summary.</span></div>
+      <div class="cheat-item"><b>Systemic threshold</b><span>Presumed above 10^25 FLOP training compute, or by Commission designation (Art 51).</span></div>
+      <div class="cheat-item"><b>Art 55 extras</b><span>Model evaluation + red-teaming, assess/mitigate systemic risk, report incidents, cybersecurity.</span></div>
+      <div class="cheat-item"><b>Provider vs deployer</b><span>Most are deployers - but fine-tune or rebrand a model as your own and you become a provider.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 4 of 8 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b5-nist-rmf.html">Next: NIST AI RMF hands-on →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

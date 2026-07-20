@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 8 · The AI governance operating model - learn AI governance with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Practitioner session 8 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Practitioner track · Session 8 of 8 · finale</div>
+    <h1>The AI governance <span class="accent">operating model</span></h1>
+    <p class="sub">Seven sessions gave you the parts: classify, obligations, transparency, GPAI, the NIST method, ISO/IEC 42001, assessment and conformity. This finale assembles them into one thing that runs - an operating model built around a single AI registry, staffed by real roles, fed by evaluations as evidence, and harmonised with the data and privacy governance you already do. Vantage graduates here from accidental scope to defensible, certifiable governance.</p>
+    <div class="chip-row">
+      <span class="chip level">🔴 Hardest</span>
+      <span class="chip audience">AI/ML · risk · compliance</span>
+      <span class="chip audience">The whole system</span>
+      <span class="chip time">Finale · 8 of 8</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-22 · Operating model</span>
+      <span class="a3" style="flex:4">22-40 · One system</span>
+      <span class="a4" style="flex:1">40-45 · Close</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>From parts to a running system</h2></div>
+    <p class="lede">A pile of good practices is not governance. Governance is a system that keeps running when you are not looking - a place every AI system is recorded, people who own decisions, a rhythm that catches new risk, and evidence that a regulator or customer can inspect. This finale connects everything you learned into one operating model, then folds it into the data and privacy governance you already run so you end with one system, not three silos.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. This is a synthesis session - it stitches the EU AI Act, ISO/IEC 42001, NIST, and GDPR/PDPA into a workable shape, but your operating model must be fitted to your own systems, sector, and counsel. Confirm specifics with the source texts and advice.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> An operating model with an AI registry at its centre, the roles that run it, evaluations as evidence, and a plan to harmonise AI, data, and privacy governance into one habit - scored against Vantage and turned into your own 90-day plan.</div>
+  </section>
+
+  <section class="section" id="model">
+    <div class="section-kicker"><span class="klabel">Part 1 · the operating model</span><h2>The operating model <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">Put an AI registry in the centre. Everything else hangs off it: what a system is (classification), what it owes (obligations), how you judge its risk (NIST), how you run the management system (ISO), the evidence it works (evals), and how you watch it in the wild (monitoring and incidents).</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="An AI registry at the centre feeding classification, obligations tracking, the NIST risk method, the ISO management system, evaluations as evidence, and incident and monitoring">
+        <style>
+          .b8oT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b8oW { font: 400 11px Inter, sans-serif; fill: #D1FAE5; }
+          .b8oS { font: 700 13px Inter, sans-serif; fill: #422006; }
+          .b8oN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b8oArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#b8oAh); }
+        </style>
+        <defs><marker id="b8oAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <circle cx="440" cy="160" r="66" fill="#D97706"/><text class="b8oS" x="440" y="156" text-anchor="middle">AI registry</text><text class="b8oS" x="440" y="176" text-anchor="middle" style="font-weight:400">every system</text>
+        <rect x="60" y="30" width="180" height="50" rx="10" fill="#064E3B"/><text class="b8oT" x="78" y="52">Classification</text><text class="b8oW" x="78" y="70">tier + basis</text>
+        <rect x="640" y="30" width="180" height="50" rx="10" fill="#059669"/><text class="b8oT" x="658" y="52">Obligations</text><text class="b8oW" x="658" y="70">tracked, per tier</text>
+        <rect x="20" y="140" width="180" height="50" rx="10" fill="#10B981"/><text class="b8oT" x="38" y="162">Risk method</text><text class="b8oW" x="38" y="180">NIST</text>
+        <rect x="680" y="140" width="180" height="50" rx="10" fill="#10B981"/><text class="b8oT" x="698" y="162">Management sys</text><text class="b8oW" x="698" y="180">ISO 42001</text>
+        <rect x="60" y="250" width="180" height="50" rx="10" fill="#059669"/><text class="b8oT" x="78" y="272">Evals</text><text class="b8oW" x="78" y="290">as evidence</text>
+        <rect x="640" y="250" width="180" height="50" rx="10" fill="#064E3B"/><text class="b8oT" x="658" y="272">Monitor + incident</text><text class="b8oW" x="658" y="290">watch in the wild</text>
+        <line class="b8oArr" x1="240" y1="62" x2="392" y2="128"/>
+        <line class="b8oArr" x1="640" y1="62" x2="490" y2="128"/>
+        <line class="b8oArr" x1="200" y1="163" x2="372" y2="161"/>
+        <line class="b8oArr" x1="680" y1="163" x2="508" y2="161"/>
+        <line class="b8oArr" x1="240" y1="270" x2="392" y2="196"/>
+        <line class="b8oArr" x1="640" y1="270" x2="490" y2="196"/>
+        <rect x="20" y="318" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b8oN" x="44" y="330">The registry is the backbone - if a system is not in it, it is not governed.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the AI registry at the centre of the operating model</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The registry is the backbone<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>An AI system registry (or inventory) is the one artefact everything else depends on. For every AI system it records:</p>
+        <ul>
+          <li><strong>What it is and what it does</strong> - enough to classify it.</li>
+          <li><strong>Its tier</strong> - prohibited, high-risk, limited, minimal, or a GPAI model.</li>
+          <li><strong>Its owner</strong> - a named person accountable for it.</li>
+          <li><strong>Its obligations and status</strong> - what it owes, and how far along it is.</li>
+        </ul>
+        <p>The blunt rule: if a system is not in the registry, it is not governed. Shadow AI is ungoverned AI. The registry is how "accidental scope" - systems nobody realised were in scope - stops happening.</p>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Design an AI governance operating model centred on an AI system registry. Show how the registry feeds classification, obligations tracking, a NIST-style risk method, an ISO/IEC 42001 management system, model evaluations as evidence, and continual monitoring plus incident reporting - and name the roles that run it.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Roles, and evals as evidence<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>An AI governance lead</strong> - owns the operating model, the registry, and the review cadence.</li>
+          <li><strong>Product / system owners</strong> - each accountable for one system's obligations and evidence.</li>
+          <li><strong>A review board</strong> - the forum that signs off new systems, tier changes, and high-risk launches.</li>
+          <li><strong>Model evaluations produce the evidence</strong> that a system works and is safe. Evals are not a research nicety here - they are the proof you attach to a system's registry entry. (This is where the LLM/RAG evaluation course pays off directly.)</li>
+          <li><strong>Continual monitoring and serious-incident reporting</strong> close the loop: systems drift, so governance watches them in production and has a route to report when something goes seriously wrong.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>How the seven sessions plug in<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Read the model as the whole track assembled: <strong>b1</strong> fills the registry's tier field (classification); <strong>b2</strong> populates obligations; <strong>b3</strong> covers transparency duties; <strong>b4</strong> handles the GPAI layer; <strong>b5</strong> is the NIST risk method that scores each entry; <strong>b6</strong> is the ISO/IEC 42001 management system that makes it auditable; <strong>b7</strong> is the pre-market machinery (FRIA, conformity, CE, registration). The operating model is not new content - it is the wiring diagram that makes the seven parts run as one.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="harmony">
+    <div class="section-kicker"><span class="klabel">Part 2 · one system</span><h2>One system for AI, data, and privacy <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">You are almost certainly already governing data and privacy. Do not stand AI governance up beside them as a third silo. Harmonise: one data map, one impact-assessment habit, one owner - built to the strictest of the frameworks that apply.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI governance harmonised with GDPR and PDPA around one data map, one impact-assessment habit, and one owner, built to the stricter framework">
+        <style>
+          .b8hT { font: 700 13px Inter, sans-serif; fill: #FFFFFF; }
+          .b8hW { font: 400 11px Inter, sans-serif; fill: #D1FAE5; }
+          .b8hS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b8hN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b8hArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#b8hAh); }
+        </style>
+        <defs><marker id="b8hAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="40" y="30" width="200" height="54" rx="10" fill="#064E3B"/><text class="b8hT" x="58" y="54">AI governance</text><text class="b8hW" x="58" y="72">EU AI Act · FRIA</text>
+        <rect x="340" y="30" width="200" height="54" rx="10" fill="#059669"/><text class="b8hT" x="358" y="54">Data governance</text><text class="b8hW" x="358" y="72">governed data in</text>
+        <rect x="640" y="30" width="200" height="54" rx="10" fill="#10B981"/><text class="b8hT" x="658" y="54">Privacy</text><text class="b8hW" x="658" y="72">GDPR / PDPA · DPIA</text>
+        <rect x="240" y="150" width="400" height="60" rx="12" fill="#ECFDF5" stroke="#6EE7B7"/><text class="b8hS" x="440" y="176" text-anchor="middle">One data map · one impact-assessment habit</text><text class="b8hS" x="440" y="196" text-anchor="middle">one owner · stricter-of-the-frameworks</text>
+        <line class="b8hArr" x1="140" y1="84" x2="340" y2="152"/>
+        <line class="b8hArr" x1="440" y1="84" x2="440" y2="148"/>
+        <line class="b8hArr" x1="740" y1="84" x2="540" y2="152"/>
+        <rect x="240" y="240" width="400" height="40" rx="8" fill="#6B7280"/><text class="b8hT" x="440" y="265" text-anchor="middle">FRIA + DPIA: run them together, not twice</text>
+        <rect x="40" y="252" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b8hN" x="64" y="264">Build to the EU AI Act floor, add ISO for proof, harmonise with privacy - one habit, not three.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - AI, data, and privacy governance as one system</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The FRIA / DPIA overlap<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>They overlap on purpose.</strong> The EU AI Act's fundamental rights impact assessment and the GDPR/PDPA data-protection impact assessment both ask "who does this affect, and how do we protect them?" Run them off one data map and one owner rather than as two disconnected forms.</li>
+          <li><strong>AI governance reads governed data.</strong> An AI system is only as governed as the data feeding it - your data governance work (lineage, quality, cataloguing) is an input, not a separate universe.</li>
+          <li><strong>Evals are the shared evidence.</strong> The same evaluation results that prove a model works also feed privacy and risk reviews. Produce evidence once, use it everywhere.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Stricter of the frameworks<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Build to the EU AI Act floor.</strong> The Act is mandatory - it is your minimum, not your aspiration.</li>
+          <li><strong>Add ISO/IEC 42001 for proof.</strong> A certifiable management system makes your compliance auditable and repeatable rather than heroic.</li>
+          <li><strong>Use NIST for method.</strong> It gives you the risk vocabulary and functions to score and treat each system.</li>
+          <li><strong>Then take the stricter.</strong> Where GDPR/PDPA and the AI Act both bite, build to whichever demands more. One conservative standard beats three partial ones and a lot of arguing.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage's full operating model.</strong> Vantage now runs one system: an AI registry listing its hiring tool (high-risk, Annex III(4), owner named) alongside every other model; a NIST-based risk method scoring each; an ISO/IEC 42001 AIMS making it auditable; evaluations attached as evidence; monitoring and incident routes live. Its FRIA-style thinking and its GDPR/PDPA DPIA run off one data map, one owner. Vantage started this track by discovering it had accidentally built a high-risk EU system with no governance. It ends with defensible, certifiable governance it can hand a customer - accidental scope turned into a system that runs.</p></div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode self">Self-study</span>Compliance as a habit<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The last idea is the most durable: governance is not a project that finishes, it is a habit that repeats. Tie a review cadence to your own delivery - every new system and every significant feature enters the registry, gets classified, and picks up its obligations before it ships. Do that, and you never again wake up to an ungoverned high-risk system in production. That is the whole point of the operating model: it makes the right thing the default thing. Warmly done - you finished the track. Go make your AI defensible.</p>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Score the model, plan 90 days <span class="tag demo">★ 10 min · scorecard</span></h2></div>
+    <p class="lede">Turn the whole track into an honest self-score and a short plan. Rate Vantage first, then rate yourself.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Score six dimensions.</strong> Rate 0 to 3 on: registry, roles, risk method, management system, evals, monitoring. Where is Vantage strong, where thin?</p></div>
+      <div class="step"><p><strong>Find the gap.</strong> Pick the lowest-scoring dimension - that is where the next month of effort goes.</p></div>
+      <div class="step"><p><strong>Draft a 90-day plan.</strong> Three moves: what you stand up in 30 days (usually the registry), 60 days (roles + risk method), 90 days (evals + the ISO path).</p></div>
+      <div class="step"><p><strong>Set the cadence.</strong> Write one sentence: the review rhythm that ties governance to every new system or feature, so it becomes a habit.</p></div>
+    </div>
+    <div class="callout win"><strong>★ Vantage graduates</strong> Vantage walked in with an accidental high-risk EU hiring tool and no governance. It walks out with a real operating model: one AI registry, named roles and a review board, a NIST risk method, an ISO/IEC 42001 management system aiming at a certificate, evaluations as evidence, and monitoring live - all harmonised with its data and privacy governance under one data map and one owner. Accidental scope became certifiable, defensible governance. That is the finish line, and it is yours too.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>After the track <span class="tag exercise">◐ light · your call</span></h2></div>
+    <ul>
+      <li>Start the registry today: one row per AI system, with tier, owner, and status. Even a rough one beats none.</li>
+      <li>Name your AI governance lead and your review board - who, and how often they meet.</li>
+      <li>Write your one-sentence review cadence and put it somewhere your delivery process will actually trip over it.</li>
+      <li>Revisit b1 to b7 for the system whose score was lowest - that is your first real build.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">A synthesis of the whole track. This finale weaves the EU AI Act, ISO/IEC 42001, NIST, and GDPR/PDPA into one operating model - confirm specifics against each source.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Operating-model synthesis (registry, roles, evals, monitoring)</span><span class="note">Part 1 · assembled from b1 to b7, not a single source text</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Harmonisation of EU AI Act + ISO/IEC 42001 + NIST + GDPR/PDPA</span><span class="note">Part 2 · the FRIA/DPIA overlap and stricter-of-the-frameworks</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act (floor) + GDPR/PDPA (privacy) as the mandatory baselines</span><span class="note">Part 2 · the legal minimum the model is built to</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · What sits at the centre of an AI governance operating model?</p>
+      <button class="qopt" type="button">A · The company website</button>
+      <button class="qopt" type="button">B · An AI system registry / inventory - every system, its tier, owner, obligations, status</button>
+      <button class="qopt" type="button">C · A single annual report</button>
+      <p class="qwhy">The registry is the backbone. If a system is not recorded there, it is not governed. Classification, obligations, risk method, management system, evals, and monitoring all hang off it.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · The AI Act's FRIA and the GDPR/PDPA DPIA are best handled by...</p>
+      <button class="qopt" type="button">A · Two unrelated teams who never talk</button>
+      <button class="qopt" type="button">B · Skipping one, since they overlap</button>
+      <button class="qopt" type="button">C · Running them together off one data map and one owner</button>
+      <p class="qwhy">They overlap on the same question - who is affected and how do we protect them. Run them together off one data map and one owner rather than as two disconnected forms or three silos.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The "stricter of the frameworks" approach means you...</p>
+      <button class="qopt" type="button">A · Build to the EU AI Act floor, add ISO for proof, and take whichever framework demands more</button>
+      <button class="qopt" type="button">B · Follow only the cheapest framework</button>
+      <button class="qopt" type="button">C · Wait until a regulator tells you what to do</button>
+      <p class="qwhy">The Act is the mandatory floor; ISO/IEC 42001 makes compliance auditable; NIST gives method. Where frameworks overlap, build to the stricter one - one conservative standard beats several partial ones.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 8 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Registry = backbone</b><span>Every AI system, its tier, owner, obligations, status. Not in the registry = not governed.</span></div>
+      <div class="cheat-item"><b>Real roles</b><span>An AI governance lead, product/system owners, a review board that signs off launches.</span></div>
+      <div class="cheat-item"><b>Evals = evidence</b><span>Model evaluations prove a system works and is safe - attach them to the registry entry.</span></div>
+      <div class="cheat-item"><b>Watch it live</b><span>Continual monitoring + serious-incident reporting close the loop after launch.</span></div>
+      <div class="cheat-item"><b>One system, not three</b><span>Harmonise AI, data, and privacy governance: one data map, one impact habit, one owner.</span></div>
+      <div class="cheat-item"><b>FRIA + DPIA together</b><span>They overlap - run them as one habit off the same data map, not two forms.</span></div>
+      <div class="cheat-item"><b>Stricter of frameworks</b><span>EU AI Act floor + ISO 42001 for proof + NIST for method; build to whichever demands more.</span></div>
+      <div class="cheat-item"><b>Compliance is a habit</b><span>Tie a review cadence to every new system/feature. Make the right thing the default thing.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 8 of 8 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a1-why-governance.html">Or take the leader track →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

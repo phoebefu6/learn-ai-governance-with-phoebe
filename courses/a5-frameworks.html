@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leader session 5 · NIST AI RMF, ISO 42001 &amp; the SG framework - learn AI governance with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Leader session 5 of 6</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Leader track · Session 5 of 6</div>
+    <h1>The frameworks that make it runnable <span class="accent">law, method, proof</span></h1>
+    <p class="sub">The EU AI Act tells you what you must do. It does not tell you how to run the work day to day, or how to prove to a customer that you did. That is where the frameworks come in. This session gives you three - the NIST AI Risk Management Framework as your method, ISO/IEC 42001 as your certifiable proof, and Singapore's Model AI Governance Framework as the voluntary regional reference - and the one line that fits them together: NIST shows what good looks like, ISO 42001 lets you prove it, the EU AI Act makes parts mandatory.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Deciding</span>
+      <span class="chip audience">Leaders: C-level · boards · AI leads</span>
+      <span class="chip audience">No jargon</span>
+      <span class="chip time">45 min</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-20 · Concepts</span>
+      <span class="a3" style="flex:4">20-40 · Exercises</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>Why the law alone is not a program</h2></div>
+    <p class="lede">A leader who has read the Act often asks the same next question: "so what do we actually do on Monday?" The Act is a set of obligations, not a playbook. The frameworks are the playbook. NIST gives your teams a shared way to reason about AI risk. ISO 42001 gives you a management system you can be audited against and certified for - proof, not assertion. And Singapore's Model Framework is the region's voluntary reference, useful even where the Act does not reach. This session is about choosing which one answers which need, so your program has a spine instead of a slogan.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. Frameworks are voluntary references that interact with, but do not replace, binding law. Verify against each framework's own text and the EU AI Act, and get proper advice before acting.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - read after class</span>
+      <span class="pill peach">★ Try it now prompt</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you walk out with today</strong> The law / method / proof map, what NIST AI RMF and ISO/IEC 42001 each give you, where the Singapore Model Framework fits, how to pick a starting framework for your maturity, and five questions to put to your AI, legal, and data teams this week.</div>
+  </section>
+
+  <section class="section" id="stack">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers the framework map</span><h2>Law, method, proof <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">The three things share a topic but do three different jobs. One is binding, two are voluntary. One tells you the rules, one tells you how to reason, one lets you prove you did. Seen as a stack instead of a menu, they stop competing and start reinforcing each other.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="A stack: the EU AI Act is binding law, NIST AI RMF is a voluntary method, ISO 42001 is certifiable proof, and the Singapore Model Framework is a voluntary APAC reference">
+        <style>
+          .a5fT { font: 700 15px Inter, sans-serif; fill: #FFFFFF; }
+          .a5fW { font: 400 12.5px Inter, sans-serif; fill: #D1FAE5; }
+          .a5fI { font: 700 14px Inter, sans-serif; fill: #1F2937; }
+          .a5fS { font: 400 12.5px Inter, sans-serif; fill: #374151; }
+          .a5fN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="36" width="820" height="52" rx="12" fill="#064E3B"/>
+        <text class="a5fT" x="52" y="59">EU AI Act - LAW (what you must do)</text>
+        <text class="a5fW" x="52" y="78">binding · risk tiers, obligations, fines - the mandatory floor</text>
+        <rect x="30" y="100" width="400" height="66" rx="12" fill="#059669"/>
+        <text class="a5fT" x="52" y="126">NIST AI RMF - METHOD</text>
+        <text class="a5fW" x="52" y="146">voluntary · how to reason about risk</text>
+        <text class="a5fW" x="52" y="162">(Govern, Map, Measure, Manage)</text>
+        <rect x="450" y="100" width="400" height="66" rx="12" fill="#10B981"/>
+        <text class="a5fT" x="472" y="126">ISO/IEC 42001 - PROOF</text>
+        <text class="a5fW" x="472" y="146">voluntary but CERTIFIABLE ·</text>
+        <text class="a5fW" x="472" y="162">an auditable AI management system</text>
+        <rect x="30" y="184" width="820" height="46" rx="12" fill="#ECFDF5" stroke="#6EE7B7"/>
+        <text class="a5fI" x="52" y="205">Singapore Model AI Governance Framework</text>
+        <text class="a5fS" x="52" y="222">voluntary, principles-based · the APAC reference (+ a 2024 GenAI edition)</text>
+        <rect x="30" y="250" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a5fN" x="54" y="262">NIST shows what good looks like · ISO 42001 lets you prove it · the EU AI Act makes parts mandatory.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four references, seen as one stack</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>Framework</th><th>Binding?</th><th>What it gives you</th><th>When to use</th></tr></thead>
+      <tbody>
+        <tr><td>EU AI Act</td><td>Yes - law</td><td>The mandatory rules and fines</td><td>When your AI is in scope - the floor</td></tr>
+        <tr><td>NIST AI RMF</td><td>No - voluntary</td><td>A method to reason about AI risk</td><td>To give teams a shared risk language</td></tr>
+        <tr><td>ISO/IEC 42001</td><td>No - but certifiable</td><td>An auditable management system</td><td>To prove governance to a customer or auditor</td></tr>
+        <tr><td>SG Model Framework</td><td>No - voluntary</td><td>Principles-based regional guidance</td><td>APAC reference, incl. where the Act does not reach</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The one line that fits them together<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Say it this way: <strong>"NIST shows what good looks like, ISO 42001 lets you prove it, and the EU AI Act makes parts of it mandatory."</strong></p>
+        <ul>
+          <li><strong>Law - EU AI Act.</strong> The only binding item. It sets what you must do; the frameworks help you do it well, but they never replace it.</li>
+          <li><strong>Method - NIST AI RMF.</strong> A voluntary US-origin framework that gives your organisation a shared vocabulary and process for AI risk, mapping cleanly onto the Act's obligations.</li>
+          <li><strong>Proof - ISO/IEC 42001.</strong> The first certifiable AI management-system standard. It turns good intentions into an auditable system a third party can verify.</li>
+          <li><strong>Regional reference - SG Model Framework.</strong> Voluntary and principles-based, the APAC starting point - especially valuable for a Singapore firm operating beyond the Act's reach.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Explain to a board how the EU AI Act, the NIST AI RMF, ISO/IEC 42001, and Singapore's Model AI Governance Framework fit together - which is binding, which is a method, which is certifiable proof, and which is a regional reference - and how a company uses them as one stack rather than choosing one.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Why "which framework?" is the wrong question<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>They answer different needs.</strong> Mandatory obligation is the Act. A risk method is NIST. Third-party-verifiable proof is ISO 42001. Asking which to pick is like asking whether to use a map or a receipt - you need both, for different reasons.</li>
+          <li><strong>They interlock.</strong> NIST's functions map onto the Act's obligations; ISO 42001 gives you the management system to operate them; the SG framework echoes the same principles for the region.</li>
+          <li><strong>Maturity decides the order, not the choice.</strong> Most firms start with a method (NIST) to get a shared language, then formalise into a management system (ISO 42001) when they need to prove governance to a customer.</li>
+        </ul>
+        <div class="callout tip"><strong>The mindset</strong> Do not shop for one framework. Decide which need is most urgent - mandatory compliance, a shared risk method, or provable governance - and reach for the framework that answers it, knowing the others sit alongside.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="nistiso">
+    <div class="section-kicker"><span class="klabel">Part 2 · covers NIST AI 100-1 + ISO/IEC 42001</span><h2>NIST and ISO in one look <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">The two workhorse frameworks have a shape worth knowing. NIST is built on four functions that form a cycle of reasoning. ISO 42001 is a management system built on the same Plan-Do-Check-Act loop that runs ISO 27001 for security - familiar territory for anyone who has been through a certification before.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="NIST AI RMF has four functions Govern, Map, Measure, Manage; ISO 42001 runs a Plan-Do-Check-Act management system">
+        <style>
+          .a5nT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .a5nW { font: 400 12px Inter, sans-serif; fill: #D1FAE5; }
+          .a5nI { font: 700 13px Inter, sans-serif; fill: #1F2937; }
+          .a5nS { font: 400 12px Inter, sans-serif; fill: #374151; }
+          .a5nN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <text class="a5nI" x="30" y="30">NIST AI RMF - four functions</text>
+        <rect x="30" y="42" width="180" height="52" rx="10" fill="#064E3B"/><text class="a5nT" x="52" y="66">Govern</text><text class="a5nW" x="52" y="84">culture</text>
+        <rect x="222" y="42" width="180" height="52" rx="10" fill="#059669"/><text class="a5nT" x="244" y="66">Map</text><text class="a5nW" x="244" y="84">context + risk</text>
+        <rect x="30" y="104" width="180" height="52" rx="10" fill="#10B981"/><text class="a5nT" x="52" y="128">Measure</text><text class="a5nW" x="52" y="146">assess + monitor</text>
+        <rect x="222" y="104" width="180" height="52" rx="10" fill="#059669"/><text class="a5nT" x="244" y="128">Manage</text><text class="a5nW" x="244" y="146">prioritise + act</text>
+        <text class="a5nI" x="470" y="30">ISO/IEC 42001 - PDCA system</text>
+        <rect x="470" y="42" width="180" height="52" rx="10" fill="#064E3B"/><text class="a5nT" x="492" y="66">Plan</text><text class="a5nW" x="492" y="84">policy + risks</text>
+        <rect x="662" y="42" width="180" height="52" rx="10" fill="#059669"/><text class="a5nT" x="684" y="66">Do</text><text class="a5nW" x="684" y="84">controls</text>
+        <rect x="470" y="104" width="180" height="52" rx="10" fill="#10B981"/><text class="a5nT" x="492" y="128">Check</text><text class="a5nW" x="492" y="146">audit</text>
+        <rect x="662" y="104" width="180" height="52" rx="10" fill="#059669"/><text class="a5nT" x="684" y="128">Act</text><text class="a5nW" x="684" y="146">improve</text>
+        <rect x="30" y="182" width="812" height="46" rx="12" fill="#ECFDF5" stroke="#6EE7B7"/>
+        <text class="a5nI" x="52" y="203">NIST = how to reason (a method) · ISO 42001 = how to run + certify (a system)</text>
+        <text class="a5nS" x="52" y="220">Singapore Model Framework echoes the same principles for APAC, with a 2024 GenAI edition</text>
+        <rect x="30" y="250" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="a5nN" x="54" y="262">Same instinct, two forms: NIST reasons about risk, ISO 42001 makes it an auditable habit.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - NIST's four functions and ISO 42001's PDCA loop</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>NIST AI RMF - the method<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Voluntary, US-origin (NIST AI 100-1, published January 2023). It is built on four functions:</p>
+        <ul>
+          <li><strong>Govern</strong> - the culture and accountability that runs across everything else: policies, roles, risk tolerance.</li>
+          <li><strong>Map</strong> - understand the context and frame the risks of a given AI system.</li>
+          <li><strong>Measure</strong> - assess, benchmark and monitor those risks with evidence.</li>
+          <li><strong>Manage</strong> - prioritise the risks and act on them.</li>
+        </ul>
+        <p>It also names seven characteristics of trustworthy AI: valid and reliable; safe; secure and resilient; accountable and transparent; explainable and interpretable; privacy-enhanced; and fair with harmful bias managed. A companion GenAI Profile (NIST AI 600-1, July 2024) extends it to generative AI.</p>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>ISO/IEC 42001 and the SG framework<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>ISO/IEC 42001:2023</strong> is the first certifiable AI management-system standard (an AIMS). It follows the same Plan-Do-Check-Act structure as ISO 27001 for information security: you implement an AI policy, define roles, run AI risk and impact assessments, apply the Annex A controls, and commit to continual improvement. Because it is auditable, an independent body can certify you - which is how you hand a customer proof rather than a promise.</li>
+          <li><strong>Singapore's Model AI Governance Framework</strong> (IMDA and PDPC, first issued 2019 and updated 2020) is voluntary and principles-based - the APAC responsible-AI reference. A 2024 Generative AI edition (IMDA with AI Verify) adds nine dimensions: accountability, data, trusted development and deployment, incident reporting, testing and assurance, security, content provenance, safety and alignment research, and AI for the public good.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage picks ISO 42001.</strong> When Vantage's German customer asked for evidence of governance, describing its careful process was not enough - the customer wanted proof. Vantage had already used the NIST AI RMF internally to reason about the hiring tool's bias risk, which gave its teams a shared language. But to answer the customer, it set a path to ISO/IEC 42001 certification: an auditable management system a third party could verify. NIST told Vantage what good looked like; ISO 42001 let it prove it; the EU AI Act made the high-risk parts mandatory. One stack, three jobs.</p></div>
+        <div class="callout tip"><strong>Start where the pressure is</strong> If your teams disagree about what AI risk even means, start with NIST for a shared method. If a customer or regulator is asking for evidence, start the path to ISO 42001. Let the pressure pick your entry point.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise-1">
+    <div class="section-kicker"><span class="klabel">Exercise 1 of 2</span><h2>Map need to framework <span class="tag demo">★ 12 min · pen and paper</span></h2></div>
+    <p class="lede">Three needs, three frameworks. Match yours and the choice makes itself.</p>
+    <div class="steps">
+      <div class="step"><p>Write your three needs as questions: What must we do by law? How should our teams reason about AI risk? How do we prove our governance to an outsider?</p></div>
+      <div class="step"><p>Against the first, write EU AI Act - the mandatory floor. Note which of your systems are in scope from session a2.</p></div>
+      <div class="step"><p>Against the second, write NIST AI RMF, and note whether your teams currently share any method or assess risk ad hoc.</p></div>
+      <div class="step"><p>Against the third, write ISO/IEC 42001, and note whether any customer or regulator has asked, or is likely to ask, for evidence.</p></div>
+    </div>
+    <div class="prompt-box good"><span class="label">★ Your framework-mapper (paste into any chat AI)</span>Help me map AI-governance needs to frameworks. For each need I describe - a mandatory rule, a way to reason about risk, or a way to prove governance - tell me whether the EU AI Act, the NIST AI RMF, or ISO/IEC 42001 answers it, and why. Note where Singapore's Model Framework also applies. Educational only, remind me to get advice.</div>
+  </section>
+
+  <section class="section" id="exercise-2">
+    <div class="section-kicker"><span class="klabel">Exercise 2 of 2</span><h2>Pick your starting framework <span class="tag demo">★ 8 min · your next AI review</span></h2></div>
+    <p class="lede">Four questions that reveal which framework to reach for first.</p>
+    <div class="steps">
+      <div class="step"><p><strong>"Do our teams share a common way to talk about AI risk, or does each project improvise?"</strong> If they improvise, start with NIST.</p></div>
+      <div class="step"><p><strong>"Has any customer, partner or regulator asked us to evidence our governance?"</strong> If yes, start the path to ISO 42001.</p></div>
+      <div class="step"><p><strong>"Are any of our AI systems in scope of the EU AI Act?"</strong> If yes, the Act is a non-negotiable floor regardless of which framework you start with.</p></div>
+      <div class="step"><p><strong>"Do we operate mainly in APAC, beyond the Act's reach?"</strong> If so, Singapore's Model Framework is a natural voluntary reference to anchor on.</p></div>
+    </div>
+    <div class="callout tip"><strong>The mindset</strong> You are not choosing one framework forever - you are choosing where to start. Most firms grow from a shared method (NIST) into a certifiable system (ISO 42001), with the Act as the floor throughout. Pick the entry point your current pressure demands.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session a6 <span class="tag exercise">◐ 30 min total</span></h2></div>
+    <ul>
+      <li>Keep your need-to-framework map - a6 assembles these frameworks into one running program with a single owner.</li>
+      <li>Find out whether your teams already use any AI risk method, and whether anyone has raised ISO 42001 certification.</li>
+      <li>Ask whether a customer or regulator has requested evidence of your AI governance - that is the trigger for the proof layer.</li>
+      <li>Optional: skim the NIST AI RMF's four functions and the seven trustworthy-AI characteristics - they are short and shape the whole method.</li>
+    </ul>
+    <div class="callout win"><strong>★ Questions to ask your AI, legal, and data teams this week</strong>
+      <ol>
+        <li>Do our teams share a common AI risk method like the NIST AI RMF, or assess risk ad hoc?</li>
+        <li>Has any customer or regulator asked us to evidence our governance - the ISO 42001 trigger?</li>
+        <li>Which of our AI systems are in scope of the EU AI Act, our mandatory floor?</li>
+        <li>Do we operate in markets where Singapore's Model Framework is the natural reference?</li>
+        <li>What is our current maturity - a method, a management system, or neither yet?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the primary texts and framework docs. This page covers:</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NIST AI RMF (NIST AI 100-1)</span><span class="note">Part 2 · four functions + seven trustworthy-AI traits</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">ISO/IEC 42001:2023</span><span class="note">Part 2 · the first certifiable AI management system (secondary)</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Singapore Model AI Governance Framework</span><span class="note">Parts 1-2 · voluntary APAC reference + 2024 GenAI edition</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · "NIST shows what good looks like, ISO 42001 lets you prove it, the EU AI Act makes parts mandatory." This means...</p>
+      <button class="qopt" type="button">A · The three are interchangeable</button>
+      <button class="qopt" type="button">B · NIST is a voluntary method, ISO 42001 is certifiable proof, the Act is binding law</button>
+      <button class="qopt" type="button">C · You must be certified to all three</button>
+      <p class="qwhy">They do three different jobs: a method for reasoning about risk, a certifiable management system for proof, and the binding law that makes parts mandatory.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · What is distinctive about ISO/IEC 42001 compared with the NIST AI RMF?</p>
+      <button class="qopt" type="button">A · It is binding law in the EU</button>
+      <button class="qopt" type="button">B · It only applies to generative AI</button>
+      <button class="qopt" type="button">C · It is the first certifiable AI management-system standard - a third party can audit and certify you</button>
+      <p class="qwhy">ISO 42001 is voluntary but certifiable: a PDCA management system an independent body can audit, so you can hand a customer proof rather than a promise.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · The four functions of the NIST AI Risk Management Framework are...</p>
+      <button class="qopt" type="button">A · Govern, Map, Measure, Manage</button>
+      <button class="qopt" type="button">B · Plan, Do, Check, Act</button>
+      <button class="qopt" type="button">C · Identify, Protect, Detect, Respond</button>
+      <p class="qwhy">NIST AI RMF is built on Govern, Map, Measure, Manage. Plan-Do-Check-Act is the ISO management-system loop; the third option is the NIST cybersecurity framework.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Leader session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>The one line</b><span>NIST shows what good looks like, ISO 42001 lets you prove it, the Act makes parts mandatory.</span></div>
+      <div class="cheat-item"><b>Law</b><span>EU AI Act - the only binding item; the mandatory floor.</span></div>
+      <div class="cheat-item"><b>Method</b><span>NIST AI RMF - voluntary, US-origin; Govern, Map, Measure, Manage.</span></div>
+      <div class="cheat-item"><b>Proof</b><span>ISO/IEC 42001:2023 - the first certifiable AI management system; ISO 27001-style PDCA.</span></div>
+      <div class="cheat-item"><b>Trustworthy traits</b><span>NIST names seven: valid, safe, secure, accountable, explainable, privacy-enhanced, fair.</span></div>
+      <div class="cheat-item"><b>GenAI extensions</b><span>NIST GenAI Profile (AI 600-1); SG GenAI edition with nine dimensions.</span></div>
+      <div class="cheat-item"><b>SG framework</b><span>Model AI Governance Framework - voluntary, principles-based, the APAC reference.</span></div>
+      <div class="cheat-item"><b>How to choose</b><span>Not one forever - pick the entry point your current pressure demands.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Leader session 5 of 6 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="a6-program.html">Next: Building an AI governance program →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

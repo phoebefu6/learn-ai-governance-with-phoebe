@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 5 · NIST AI RMF hands-on</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Practitioner session 5 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Practitioner track · Session 5 of 8</div>
+    <h1>NIST AI RMF hands-on <span class="accent">a method to run, not a law to obey</span></h1>
+    <p class="sub">The EU AI Act tells you what you must do. The NIST AI Risk Management Framework tells you how to actually do risk work, week to week, on a real system. It is voluntary, US-origin, and has no certificate at the end - but it is the most practical operating manual in the field, and it maps cleanly onto both the EU AI Act and ISO 42001. This session turns its four functions into a pass you can run on one of your own systems by the end. Vantage runs it on its hiring tool here.</p>
+    <div class="chip-row">
+      <span class="chip level">🟠 Hands-on</span>
+      <span class="chip audience">AI/ML · risk · MLOps</span>
+      <span class="chip audience">GMMM + 7 traits</span>
+      <span class="chip time">Session 5 of 8</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:4">3-22 · Govern-Map-Measure-Manage</span>
+      <span class="a3" style="flex:4">22-40 · The 7 traits + a pass</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>Why reach for a voluntary framework</h2></div>
+    <p class="lede">You could read the EU AI Act cover to cover and still not know how to run risk management on a Tuesday. That is the gap NIST fills. The AI Risk Management Framework (NIST AI 100-1) gives you a repeatable method - four functions, seven trustworthiness traits, and a companion profile for generative AI - that you can drive on any system regardless of jurisdiction. It carries no legal force, but it is how many teams operationalise the duties the law imposes.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. The NIST AI RMF is a voluntary framework, not a regulation - using it does not by itself make you compliant with any law, and this session is a practical walkthrough, not a compliance opinion. For your binding obligations, read Regulation (EU) 2024/1689 and get advice.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> A working grasp of the four RMF functions (Govern, Map, Measure, Manage), the seven trustworthy-AI traits to measure against, and a mini GMMM pass you can run on one real system - one line per function - to see the method work.</div>
+  </section>
+
+  <section class="section" id="functions">
+    <div class="section-kicker"><span class="klabel">Part 1 · covers the four functions</span><h2>Govern, Map, Measure, Manage <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">The RMF has four core functions. Govern sits at the centre and runs through everything; Map, Measure, and Manage form the working loop you cycle through on a system. It is voluntary and US-origin, and it complements - it does not replace - the binding EU AI Act.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 340" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The four NIST AI RMF functions as a cycle - Map, Measure, and Manage circling GOVERN at the centre">
+        <style>
+          .b5fT { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b5fW { font: 400 11px Inter, sans-serif; fill: #D1FAE5; }
+          .b5fS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b5fN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b5fArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#b5fAh); }
+        </style>
+        <defs><marker id="b5fAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <circle cx="440" cy="165" r="66" fill="#064E3B"/><text class="b5fT" x="411" y="162">GOVERN</text><text class="b5fW" x="393" y="182">culture + oversight</text>
+        <rect x="330" y="20" width="220" height="56" rx="12" fill="#059669"/><text class="b5fT" x="352" y="44">MAP</text><text class="b5fW" x="352" y="64">context + frame risks</text>
+        <rect x="620" y="138" width="230" height="56" rx="12" fill="#10B981"/><text class="b5fT" x="642" y="162">MEASURE</text><text class="b5fW" x="642" y="182">analyse + benchmark</text>
+        <rect x="330" y="256" width="220" height="56" rx="12" fill="#059669"/><text class="b5fT" x="352" y="280">MANAGE</text><text class="b5fW" x="352" y="300">prioritise + act</text>
+        <rect x="30" y="138" width="220" height="56" rx="12" fill="#10B981"/><text class="b5fT" x="52" y="162">back to MAP</text><text class="b5fW" x="52" y="182">the loop repeats</text>
+        <path class="b5fArr" d="M470 78 Q560 100 630 150"/>
+        <path class="b5fArr" d="M700 196 Q560 250 490 258"/>
+        <path class="b5fArr" d="M330 288 Q160 270 150 196"/>
+        <path class="b5fArr" d="M180 136 Q250 60 328 52"/>
+        <rect x="30" y="286" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b5fN" x="54" y="298">Govern is continuous and central; Map, Measure, Manage cycle around it on each system.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four RMF functions as a cycle around Govern</figcaption>
+    </figure>
+
+    <table class="clean">
+      <thead><tr><th>Function</th><th>What you do</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Govern</strong></td><td>Cultivate a risk-management culture: oversight, accountability, policies, and roles across the whole AI lifecycle. It runs through the other three.</td></tr>
+        <tr><td><strong>Map</strong></td><td>Establish the context and identify + frame the risks in the actual setting where the system is used.</td></tr>
+        <tr><td><strong>Measure</strong></td><td>Analyse, assess, benchmark, and monitor the mapped risks using quantitative and qualitative metrics.</td></tr>
+        <tr><td><strong>Manage</strong></td><td>Prioritise and act on the mapped and measured risks - treat, respond, and recover.</td></tr>
+      </tbody>
+    </table>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>Govern - the culture at the centre<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Govern is not one step in a line - it is the function that holds the other three together. It is about building a risk-management culture: who is accountable, what policies apply, how oversight works, and how roles are assigned across the AI lifecycle.</p>
+        <ul>
+          <li><strong>Runs throughout:</strong> you do not "finish" Govern - it is active while you Map, Measure, and Manage.</li>
+          <li><strong>Where the org shows up:</strong> this is the function that connects individual system work to leadership, policy, and accountability.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Map - frame the risk in context<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Map establishes the context and identifies the risks that matter in the actual setting of use. The same model can be low-risk in one deployment and dangerous in another - Map is where you pin down which one you are in.</p>
+        <ul>
+          <li><strong>Context first:</strong> purpose, users, affected people, the decisions the system shapes.</li>
+          <li><strong>Frame, do not just list:</strong> the output is risks framed against the real use, not a generic checklist.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Measure - put numbers (and judgement) on it<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>Measure analyses, assesses, benchmarks, and monitors the risks Map surfaced - using both quantitative metrics (accuracy, disparity across groups, robustness) and qualitative assessment where numbers do not reach.</p>
+        <ul>
+          <li><strong>Both kinds of evidence:</strong> metrics where you can, structured judgement where you cannot.</li>
+          <li><strong>Ongoing:</strong> monitoring means you keep measuring after deployment, not just before.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Manage - act, and why it is voluntary<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Manage:</strong> prioritise the mapped and measured risks and act on them - treat, respond, recover. This is where risk work turns into decisions and mitigations.</li>
+          <li><strong>Voluntary + US-origin:</strong> the RMF (NIST AI 100-1, Jan 2023) is a voluntary framework with no certification - you adopt it because it works, not because a law names it.</li>
+          <li><strong>Complements the EU AI Act:</strong> method vs law. NIST gives you the how; the Act gives you the binding what. Run the RMF and you generate much of the evidence the Act asks for.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Explain the four functions of the NIST AI Risk Management Framework (Govern, Map, Measure, Manage), why Govern is described as central and continuous, and how a voluntary US framework complements the binding EU AI Act.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="traits">
+    <div class="section-kicker"><span class="klabel">Part 2 · the traits and applying it</span><h2>The seven trustworthy-AI traits + applying it <span class="tag concept">9 min live</span></h2></div>
+    <p class="lede">The RMF defines seven characteristics of trustworthy AI - the qualities you Measure against. There is also a companion GenAI Profile for generative-AI risks. Then you run the whole loop on one real system.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="The seven trustworthy-AI characteristics from the NIST AI RMF, arranged around a central trustworthy-AI label">
+        <style>
+          .b5tT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b5tC { font: 700 14px Inter, sans-serif; fill: #FFFFFF; }
+          .b5tS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b5tN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <circle cx="440" cy="150" r="60" fill="#064E3B"/><text class="b5tC" x="400" y="146">Trustworthy</text><text class="b5tC" x="425" y="166">AI</text>
+        <rect x="30" y="30" width="190" height="46" rx="10" fill="#059669"/><text class="b5tT" x="46" y="58">Valid &amp; reliable</text>
+        <rect x="30" y="128" width="190" height="46" rx="10" fill="#10B981"/><text class="b5tT" x="46" y="156">Safe</text>
+        <rect x="30" y="226" width="190" height="46" rx="10" fill="#059669"/><text class="b5tT" x="46" y="254">Secure &amp; resilient</text>
+        <rect x="660" y="30" width="200" height="46" rx="10" fill="#10B981"/><text class="b5tT" x="676" y="58">Accountable &amp; transparent</text>
+        <rect x="660" y="110" width="200" height="46" rx="10" fill="#059669"/><text class="b5tT" x="676" y="138">Explainable &amp; interpretable</text>
+        <rect x="660" y="190" width="200" height="46" rx="10" fill="#10B981"/><text class="b5tT" x="676" y="218">Privacy-enhanced</text>
+        <rect x="345" y="256" width="190" height="46" rx="10" fill="#059669"/><text class="b5tT" x="361" y="284">Fair - bias managed</text>
+        <line x1="222" y1="53" x2="386" y2="130" stroke="#D1D5DB" stroke-width="2"/>
+        <line x1="222" y1="150" x2="380" y2="150" stroke="#D1D5DB" stroke-width="2"/>
+        <line x1="222" y1="248" x2="388" y2="170" stroke="#D1D5DB" stroke-width="2"/>
+        <line x1="658" y1="53" x2="496" y2="128" stroke="#D1D5DB" stroke-width="2"/>
+        <line x1="658" y1="132" x2="498" y2="148" stroke="#D1D5DB" stroke-width="2"/>
+        <line x1="658" y1="210" x2="492" y2="168" stroke="#D1D5DB" stroke-width="2"/>
+        <line x1="440" y1="256" x2="440" y2="210" stroke="#D1D5DB" stroke-width="2"/>
+        <rect x="30" y="292" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b5tN" x="54" y="304">These seven traits are what "trustworthy" means here - and what you Measure a system against.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the seven trustworthy-AI characteristics</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>The seven characteristics<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>NIST defines trustworthy AI through seven characteristics:</p>
+        <ul>
+          <li><strong>Valid &amp; reliable</strong> - it does what it claims, consistently.</li>
+          <li><strong>Safe</strong> - it does not endanger life, health, property, or the environment.</li>
+          <li><strong>Secure &amp; resilient</strong> - it withstands attack and recovers from disruption.</li>
+          <li><strong>Accountable &amp; transparent</strong> - responsibility is clear and the system is open to scrutiny.</li>
+          <li><strong>Explainable &amp; interpretable</strong> - its outputs and mechanisms can be understood.</li>
+          <li><strong>Privacy-enhanced</strong> - it protects the data and identities it touches.</li>
+          <li><strong>Fair - with harmful bias managed</strong> - it manages harmful bias across affected groups.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The Generative AI Profile (NIST AI 600-1)<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>What it is:</strong> a companion profile (NIST AI 600-1, published 26 July 2024) that maps the RMF onto the specific risks of generative AI.</li>
+          <li><strong>Why you need it:</strong> generative models bring risks the core framework only sketches - confabulation, harmful content, data leakage, and more.</li>
+          <li><strong>How to use it:</strong> run the same four functions, but with the GenAI-specific risks and controls the profile lays out.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Running the RMF on one system<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <p>The four functions become a pass you drive on a single system:</p>
+        <ul>
+          <li><strong>Map</strong> the context and the risks in the real setting of use.</li>
+          <li><strong>Measure</strong> those risks against the seven traits, with metrics where you can.</li>
+          <li><strong>Manage</strong> the treatments - prioritise, mitigate, monitor.</li>
+          <li><strong>Govern</strong> the whole thing - accountability, policy, and oversight around it.</li>
+        </ul>
+        <p>It maps onto ISO 42001 (session b6) so the work you do here feeds a certifiable management system later.</p>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage runs GMMM on its hiring tool.</strong> Map surfaces the headline risk immediately: a CV-ranking model can carry harmful bias against protected groups - a direct hit on the "fair, bias managed" trait. Measure puts numbers on it (selection-rate disparity across gender and ethnicity, plus accuracy). Manage schedules the mitigations (reweighting, human-in-the-loop review, monitoring). Govern names an accountable owner and writes the policy. The pass gives Vantage exactly the evidence its high-risk EU AI Act file needs.</p></div>
+        <div class="callout tip"><strong>Practitioner tip</strong> Do not try to Measure everything on day one. Map first and let the context tell you which of the seven traits actually matter for this system - for a hiring tool, fairness and explainability lead; for a control system, safety and reliability lead. Depth follows the risk.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Run a mini GMMM pass <span class="tag demo">★ 10 min</span></h2></div>
+    <p class="lede">Take one of your own AI systems and run a one-line pass through each of the four functions.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Map (one line).</strong> Name the system, its context of use, and the single biggest risk in that setting.</p></div>
+      <div class="step"><p><strong>Measure (one line).</strong> Pick the trait most at stake and the metric (or structured judgement) you would use to assess it.</p></div>
+      <div class="step"><p><strong>Manage (one line).</strong> State the one treatment you would prioritise and how you would monitor it.</p></div>
+      <div class="step"><p><strong>Govern (one line).</strong> Name the accountable owner and the policy or oversight that surrounds it.</p></div>
+    </div>
+    <div class="callout win"><strong>★ Vantage after b5</strong> Vantage now has a live risk method, not just a legal checklist. Its GMMM pass on the hiring tool names bias as the lead risk, a disparity metric to measure it, human review as the mitigation, and an accountable owner to govern it. That pass is the operational backbone of its EU AI Act compliance - and it slots straight into the ISO 42001 management system b6 builds next.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b6 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>Run a full one-line GMMM pass on your highest-stakes AI system and write it down.</li>
+      <li>Score that system honestly against all seven trustworthy-AI traits - which are strong, which are gaps?</li>
+      <li>If any system is generative, note which GenAI Profile (AI 600-1) risks apply that the core framework misses.</li>
+      <li>Read: NIST AI RMF (NIST AI 100-1) core functions, and skim the Generative AI Profile (NIST AI 600-1).</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the NIST publications. This page covers ~80% of the working content on the RMF.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">NIST AI RMF (NIST AI 100-1)</span><span class="note">Part 1 · the four functions; Part 2 · the seven traits</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Generative AI Profile (NIST AI 600-1)</span><span class="note">Part 2 · the GenAI companion profile</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Crosswalk: RMF ↔ EU AI Act ↔ ISO 42001</span><span class="note">Part 1/2 · method vs law; full ISO depth in b6</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Which RMF function is described as central and continuous - running through the other three?</p>
+      <button class="qopt" type="button">A · Measure</button>
+      <button class="qopt" type="button">B · Govern</button>
+      <button class="qopt" type="button">C · Manage</button>
+      <p class="qwhy">Govern cultivates the risk-management culture - oversight, accountability, policies, roles - and runs across the whole lifecycle while Map, Measure, and Manage cycle around it.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · The NIST AI RMF is best described as...</p>
+      <button class="qopt" type="button">A · An EU regulation with fines for non-compliance</button>
+      <button class="qopt" type="button">B · A certification you pass or fail</button>
+      <button class="qopt" type="button">C · A voluntary, US-origin framework with no certification</button>
+      <p class="qwhy">The RMF (NIST AI 100-1, Jan 2023) is voluntary and US-origin, with no certificate. It complements the binding EU AI Act - method vs law - rather than replacing it.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · Which is NOT one of the seven trustworthy-AI characteristics?</p>
+      <button class="qopt" type="button">A · Profitable &amp; scalable</button>
+      <button class="qopt" type="button">B · Safe</button>
+      <button class="qopt" type="button">C · Fair - with harmful bias managed</button>
+      <p class="qwhy">The seven are: valid &amp; reliable; safe; secure &amp; resilient; accountable &amp; transparent; explainable &amp; interpretable; privacy-enhanced; and fair with harmful bias managed. Profit is not among them.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 5 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Method, not law</b><span>The RMF (AI 100-1) tells you how to do risk work; the EU AI Act tells you what you must do.</span></div>
+      <div class="cheat-item"><b>Voluntary + US</b><span>US-origin, voluntary, no certification - you adopt it because it works.</span></div>
+      <div class="cheat-item"><b>Four functions</b><span>Govern (central), Map, Measure, Manage - a loop around a governing core.</span></div>
+      <div class="cheat-item"><b>Govern is central</b><span>Culture, oversight, accountability, roles - runs through the whole lifecycle.</span></div>
+      <div class="cheat-item"><b>Map then Measure</b><span>Frame risks in the real context first, then benchmark them with metrics + judgement.</span></div>
+      <div class="cheat-item"><b>Seven traits</b><span>Valid/reliable, safe, secure/resilient, accountable/transparent, explainable, privacy, fair.</span></div>
+      <div class="cheat-item"><b>GenAI Profile</b><span>NIST AI 600-1 (Jul 2024) - the companion profile for generative-AI risks.</span></div>
+      <div class="cheat-item"><b>It maps out</b><span>Complements the EU AI Act and maps onto ISO 42001 (next session, b6).</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 5 of 8 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b6-iso-42001.html">Next: ISO 42001 →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>

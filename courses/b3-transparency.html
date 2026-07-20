@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practitioner session 3 · Transparency obligations - learn AI governance with phoebe</title>
+<link rel="stylesheet" href="../assets/style.css?v=1">
+</head>
+<body>
+
+<div class="toolbar">
+  <div class="wrap">
+    <span class="crumb"><a href="../index.html">learn-ai-governance-with-phoebe</a> / Practitioner session 3 of 8</span>
+    <button class="btn" id="toggle-all" type="button">Expand all</button>
+    <button class="btn primary" id="zoom-toggle" type="button">Projector zoom: off</button>
+  </div>
+</div>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="eyebrow">Learn AI Governance with Phoebe · Practitioner track · Session 3 of 8</div>
+    <h1>Transparency obligations <span class="accent">tell people it is AI</span></h1>
+    <p class="sub">Article 50 is short, cheap to comply with, and easy to forget. It says: when people interact with AI, or see AI-generated content, they should know. Four duties, split between providers and deployers, all triggered at first interaction or exposure. This session works through each one, then Vantage checks whether its candidate chatbot discloses that it is AI.</p>
+    <div class="chip-row">
+      <span class="chip level">🟡 Medium</span>
+      <span class="chip audience">AI/ML · risk · compliance</span>
+      <span class="chip audience">The Article 50 duties</span>
+      <span class="chip time">After b2</span>
+    </div>
+    <div class="agenda">
+      <span class="a1" style="flex:1">0-3 · Welcome</span>
+      <span class="a2" style="flex:3">3-18 · Concepts</span>
+      <span class="a3" style="flex:5">18-40 · Build-along</span>
+      <span class="a4" style="flex:1">40-45 · Q&amp;A</span>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <section class="section" id="intro">
+    <div class="section-kicker"><span class="klabel">Part 0</span><h2>The duty that is easy to owe and easy to miss</h2></div>
+    <p class="lede">Transparency is its own obligation, distinct from the risk tier. A limited-risk chatbot owes it. So does a high-risk system - Article 50 rides on top of everything in b2. The duties are simple: disclose that people are dealing with AI, and mark AI-generated content so it can be recognised. They cost little to meet and a lot to ignore, because they are the most visible thing a regulator or a journalist can check.</p>
+    <div class="callout tip"><strong>Read this first</strong> Educational, not legal advice. This is a plain-language walk through Article 50, not a substitute for reading Regulation (EU) 2024/1689 and getting advice on your specific product.</div>
+    <div class="legend">
+      <span class="pill solid">Live - presented in session</span>
+      <span class="pill light">Self-study - full depth after class</span>
+      <span class="pill peach">★ Try it now</span>
+      <span class="pill inkpill">Sources covered at the end</span>
+    </div>
+    <div class="callout win"><strong>★ What you build today</strong> The four Article 50 duties, who bears each one (provider vs deployer) and when it triggers, what "machine-readable marking" actually means, the artistic and editorial exemptions - and an audit of one chatbot or GenAI feature against all of it.</div>
+  </section>
+
+  <section class="section" id="duties">
+    <div class="section-kicker"><span class="klabel">Part 1 · the four duties</span><h2>The Article 50 duties <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">Article 50 sets four transparency duties. Two fall on providers (build it into the system), two fall on deployers (disclose at the point of use). All of them land at the latest at the first interaction or exposure.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Four Article 50 duties: chatbots disclose AI, generative outputs marked machine-readable, emotion or biometric subjects informed, deepfakes disclosed">
+        <style>
+          .b3tT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b3tW { font: 400 10px Inter, sans-serif; fill: #D1FAE5; }
+          .b3tS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b3tN { font: 600 14px Inter, sans-serif; fill: #422006; }
+        </style>
+        <rect x="30" y="40" width="400" height="90" rx="12" fill="#064E3B"/><text class="b3tT" x="50" y="66">50.1 · Chatbot discloses AI</text><text class="b3tW" x="50" y="88">Provider builds it in · person told they</text><text class="b3tW" x="50" y="104">are interacting with an AI, unless obvious</text><text class="b3tW" x="50" y="120">Bearer: PROVIDER</text>
+        <rect x="450" y="40" width="400" height="90" rx="12" fill="#059669"/><text class="b3tT" x="470" y="66">50.2 · Mark generative output</text><text class="b3tW" x="470" y="88">Audio / image / video / text marked as</text><text class="b3tW" x="470" y="104">artificially generated · machine-readable</text><text class="b3tW" x="470" y="120">Bearer: PROVIDER of GenAI</text>
+        <rect x="30" y="150" width="400" height="90" rx="12" fill="#10B981"/><text class="b3tT" x="50" y="176">50.3 · Emotion / biometric</text><text class="b3tW" x="50" y="198">Inform the people exposed to emotion</text><text class="b3tW" x="50" y="214">recognition or biometric categorisation</text><text class="b3tW" x="50" y="230">Bearer: DEPLOYER</text>
+        <rect x="450" y="150" width="400" height="90" rx="12" fill="#064E3B"/><text class="b3tT" x="470" y="176">50.4 · Disclose deepfakes</text><text class="b3tW" x="470" y="198">Disclose deepfake content is artificially</text><text class="b3tW" x="470" y="214">generated / manipulated (lighter for art)</text><text class="b3tW" x="470" y="230">Bearer: DEPLOYER</text>
+        <rect x="30" y="258" width="820" height="34" rx="8" fill="#ECFDF5" stroke="#6EE7B7"/><text class="b3tS" x="50" y="280">50.5 · Timing: give the disclosure clearly and distinguishably, at the latest at the first interaction or exposure.</text>
+        <rect x="30" y="300" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b3tN" x="54" y="312">Two provider duties, two deployer duties - and all of them land no later than first contact.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - the four Article 50 transparency duties</figcaption>
+    </figure>
+
+    <details class="card" open>
+      <summary><span class="mode live">Live</span>50.1 - the chatbot must disclose it is AI<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The duty (50.1):</strong> providers must design AI systems intended to interact directly with people so that those people are informed they are interacting with an AI system - <strong>unless it is obvious</strong> from the circumstances to a reasonably observant person.</li>
+          <li><strong>Who bears it:</strong> the <strong>provider</strong> builds the disclosure into the system.</li>
+          <li><strong>When:</strong> at the latest at the first interaction (50.5).</li>
+          <li><strong>In practice:</strong> a one-line notice at the top of a chat - "You are chatting with an AI assistant" - usually satisfies it.</li>
+        </ul>
+        <div class="prompt-box good"><span class="label">★ Try it now (any chat AI)</span>Explain the four transparency duties under Article 50 of the EU AI Act, and for each tell me whether the provider or the deployer bears it and when it must be given. Then tell me what a candidate-facing recruitment chatbot must disclose.</div>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>50.2 - mark AI-generated content, machine-readably<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The duty (50.2):</strong> providers of generative AI must ensure outputs - audio, image, video, or text - are <strong>marked as artificially generated or manipulated</strong> in a machine-readable format.</li>
+          <li><strong>The standard:</strong> the marking must be effective, interoperable, robust, and reliable, as far as is technically feasible.</li>
+          <li><strong>Who bears it:</strong> the <strong>provider</strong> of the generative system.</li>
+          <li><strong>Why machine-readable:</strong> so downstream platforms and tools can detect the marking automatically, not just a human squinting at a caption.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>50.3 and 50.4 - the deployer's two disclosures<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Emotion recognition / biometric categorisation (50.3):</strong> deployers of these systems must <strong>inform the people exposed</strong> to them (and process personal data lawfully). The duty is on the deployer, because they are the ones running it on real people.</li>
+          <li><strong>Deepfakes (50.4):</strong> deployers who create or use deepfake image, audio, or video content must <strong>disclose that it is artificially generated or manipulated</strong>. A lighter regime applies to clearly artistic, creative, or satirical work - the disclosure just cannot spoil the enjoyment. For AI-generated text published to inform the public on matters of public interest, disclosure is required unless the content went through human review with editorial responsibility.</li>
+          <li><strong>Timing (50.5):</strong> all disclosures given clearly and distinguishably, at the latest at the first interaction or exposure.</li>
+        </ul>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="practice">
+    <div class="section-kicker"><span class="klabel">Part 2 · in practice</span><h2>Doing it in practice <span class="tag concept">8 min live</span></h2></div>
+    <p class="lede">The duties are clear on paper. In a real product they turn into two concrete things on every piece of AI content: a machine-readable mark buried in the file, and a visible disclosure a human can actually read.</p>
+
+    <figure class="zoomable">
+      <svg viewBox="0 0 880 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI-generated content flow: model produces output, provider adds a machine-readable label, deployer adds a visible disclosure, person sees both">
+        <style>
+          .b3pT { font: 700 12px Inter, sans-serif; fill: #FFFFFF; }
+          .b3pW { font: 400 10px Inter, sans-serif; fill: #D1FAE5; }
+          .b3pS { font: 400 11px Inter, sans-serif; fill: #1F2937; }
+          .b3pN { font: 600 14px Inter, sans-serif; fill: #422006; }
+          .b3pArr { stroke: #D1D5DB; stroke-width: 2.5; fill: none; marker-end: url(#b3pAh); }
+        </style>
+        <defs><marker id="b3pAh" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="none" stroke="#9CA3AF" stroke-width="1.6"/></marker></defs>
+        <rect x="20" y="110" width="150" height="60" rx="10" fill="#1F2937"/><text class="b3pT" x="38" y="136">GenAI model</text><text class="b3pW" x="38" y="154">produces output</text>
+        <rect x="230" y="110" width="180" height="60" rx="10" fill="#059669"/><text class="b3pT" x="248" y="136">Machine-readable</text><text class="b3pW" x="248" y="154">watermark / provenance</text>
+        <rect x="470" y="110" width="180" height="60" rx="10" fill="#064E3B"/><text class="b3pT" x="488" y="136">Visible disclosure</text><text class="b3pW" x="488" y="154">"AI-generated" label</text>
+        <rect x="710" y="110" width="150" height="60" rx="10" fill="#10B981"/><text class="b3pT" x="728" y="136">Person sees</text><text class="b3pW" x="728" y="154">both signals</text>
+        <line class="b3pArr" x1="172" y1="140" x2="226" y2="140"/>
+        <line class="b3pArr" x1="412" y1="140" x2="466" y2="140"/>
+        <line class="b3pArr" x1="652" y1="140" x2="706" y2="140"/>
+        <rect x="230" y="200" width="180" height="40" rx="8" fill="#ECFDF5" stroke="#6EE7B7"/><text class="b3pS" x="248" y="224">50.2 · for machines</text>
+        <rect x="470" y="200" width="180" height="40" rx="8" fill="#ECFDF5" stroke="#6EE7B7"/><text class="b3pS" x="488" y="224">50.1 / 50.4 · for humans</text>
+        <line class="b3pArr" x1="320" y1="172" x2="320" y2="198"/>
+        <line class="b3pArr" x1="560" y1="172" x2="560" y2="198"/>
+        <rect x="20" y="266" width="14" height="14" rx="3" fill="#D97706"/>
+        <text class="b3pN" x="44" y="278">Two marks on one artefact: a machine can detect it, and a human can read it. You usually need both.</text>
+      </svg>
+      <figcaption>🔍 Click to zoom - AI content carries a machine-readable label and a visible disclosure</figcaption>
+    </figure>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>What "machine-readable marking" means<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>The idea:</strong> a signal embedded in the content itself that software can detect - a <strong>watermark</strong> in an image or audio track, or <strong>provenance metadata</strong> (for example content-credential data) attached to the file.</li>
+          <li><strong>The bar (50.2):</strong> effective, interoperable, robust, and reliable, as far as technically feasible. Interoperable so other platforms can read it; robust so it survives ordinary editing.</li>
+          <li><strong>Not the same as a caption:</strong> a visible "AI-generated" label helps humans (50.1 / 50.4), but 50.2 specifically wants a machine to be able to tell. In practice you carry both.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>The artistic and editorial exemptions<span class="mini">2 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Artistic / satirical (50.4):</strong> where a deepfake is part of an evidently artistic, creative, satirical, or fictional work, the disclosure obligation is lighter - you disclose in a way that does not hamper the display or enjoyment of the work.</li>
+          <li><strong>Editorial responsibility (50.4):</strong> AI-generated text published to inform the public on matters of public interest must be disclosed - <strong>unless</strong> it underwent human review and a person or organisation holds editorial responsibility for it.</li>
+          <li><strong>The trap:</strong> "it is creative" is not a blanket exemption. The lighter regime is narrow; a recruitment chatbot or a marketing deepfake does not get to hide behind it.</li>
+        </ul>
+      </div>
+    </details>
+
+    <details class="card">
+      <summary><span class="mode live">Live</span>Limited-risk can ALSO be high-risk<span class="mini">3 min</span><span class="caret">▶</span></summary>
+      <div class="body">
+        <ul>
+          <li><strong>Transparency is a distinct layer:</strong> Article 50 is not a risk tier - it is an obligation that can attach to a system regardless of its tier. A system can be <strong>high-risk AND carry Article 50 duties</strong> at the same time.</li>
+          <li><strong>Why it trips people:</strong> teams think "we are just limited-risk, so all we owe is a chatbot notice." But a high-risk system that happens to chat with candidates owes the full b2 programme <strong>and</strong> the Article 50 disclosure.</li>
+          <li><strong>The honest test:</strong> classify for the tier (b1), build the tier's obligations (b2), then ask separately: does anyone interact with this AI, or see content it generated? If yes, Article 50 is live too.</li>
+        </ul>
+        <div class="callout example"><span class="ex-pill">Real world</span><p><strong>Vantage's candidate chatbot must disclose it is AI.</strong> Vantage, the Singapore firm shipping its high-risk CV screener into the EU, adds a chatbot that answers candidate questions during the application. Because a person interacts with it directly, Article 50.1 applies: it must open with a clear line that the candidate is talking to an AI assistant. The system is high-risk (b1) AND owes this transparency duty - the two stack. If the tool also generated any synthetic content shown to candidates, 50.2 marking would apply on top.</p></div>
+        <div class="callout tip"><strong>Cheap insurance</strong> Transparency is the lowest-cost, highest-visibility obligation you owe. A single clear disclosure line and a provenance mark cost almost nothing and remove the easiest complaint anyone can make about your system. Do it even where you are unsure it is strictly required.</div>
+      </div>
+    </details>
+  </section>
+
+  <section class="section" id="exercise">
+    <div class="section-kicker"><span class="klabel">Build-along · take it further</span><h2>Audit a chatbot / GenAI feature against Art 50 <span class="tag demo">★ 10 min</span></h2></div>
+    <p class="lede">Take one real AI feature that talks to people or generates content, and run it against the four duties.</p>
+    <div class="steps">
+      <div class="step"><p><strong>Is AI disclosed?</strong> If people interact with the system, check whether a clear "this is an AI" notice appears at first interaction (50.1). If not, it is obvious enough to a reasonable person - or is it a gap?</p></div>
+      <div class="step"><p><strong>Is content labelled?</strong> If the feature generates audio, image, video, or text, check for a machine-readable mark (50.2) and a visible disclosure. Note which is missing.</p></div>
+      <div class="step"><p><strong>Emotion / deepfake?</strong> If you run emotion recognition or biometric categorisation (50.3), or create deepfakes (50.4), confirm the people exposed are informed and the content is disclosed.</p></div>
+      <div class="step"><p><strong>Check the timing + the stack.</strong> Confirm each disclosure lands at first interaction (50.5). Then ask: is this feature also high-risk? If so, Article 50 stacks on top of the b2 programme.</p></div>
+    </div>
+    <div class="callout win"><strong>★ Vantage after b3</strong> Vantage's candidate chatbot now opens with a plain "you are chatting with an AI assistant" line, satisfying Article 50.1 at first interaction. The team has confirmed the disclosure stacks on top of the high-risk programme rather than replacing it, and logged that any synthetic content shown to candidates would need 50.2 marking. Next, b4 turns to general-purpose AI models.</div>
+  </section>
+
+  <section class="section" id="homework">
+    <div class="section-kicker"><span class="klabel">Homework</span><h2>Before session b4 <span class="tag exercise">◐ 40 min total</span></h2></div>
+    <ul>
+      <li>Audit every AI feature that interacts with people or generates content against the four Article 50 duties.</li>
+      <li>For any generative feature, check whether outputs carry a machine-readable mark - and if not, note the technical path to add one.</li>
+      <li>Confirm each disclosure appears clearly and at the latest at first interaction or exposure.</li>
+      <li>Read: EU AI Act Article 50 - the transparency obligations for providers and deployers.</li>
+    </ul>
+  </section>
+
+  <section class="section" id="official">
+    <div class="section-kicker"><span class="klabel">Source material</span><h2>Official sources covered</h2></div>
+    <p class="lede">Taught from the EU AI Act text. This page covers ~80% of the working content on transparency.</p>
+    <div class="covered">
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">EU AI Act Article 50 (50.1 - 50.5)</span><span class="note">Part 1 · the four duties, who bears each, and the timing rule</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Article 50.2 (machine-readable marking of generative output)</span><span class="note">Part 2 · watermark / provenance and the effective-robust-reliable bar</span></div>
+      <div class="covered-row"><span class="status pill solid">✓</span><span class="name">Article 50.4 (deepfake + editorial exemptions)</span><span class="note">Part 2 · the artistic / satirical and human-review carve-outs</span></div>
+      <div class="covered-row"><span class="status pill light">◐</span><span class="name">Transparency vs risk tier (a system can be high-risk AND owe Art 50)</span><span class="note">Part 2 · why the duty stacks on top of the b2 programme</span></div>
+    </div>
+  </section>
+
+  <section class="section" id="quiz">
+    <div class="section-kicker"><span class="klabel">Check yourself</span><h2>Three questions before you go 🎯 <span class="tag exercise">◐ 90 seconds</span></h2></div>
+    <div class="quiz-q" data-answer="1">
+      <p class="qtext">1 · Under Article 50.2, generative AI outputs must be marked as artificially generated in what form?</p>
+      <button class="qopt" type="button">A · A visible caption only</button>
+      <button class="qopt" type="button">B · A machine-readable format - effective, interoperable, robust, and reliable as far as feasible</button>
+      <button class="qopt" type="button">C · A signed paper certificate</button>
+      <p class="qwhy">Article 50.2 requires providers of generative AI to mark outputs (audio, image, video, text) as artificially generated in a machine-readable format that is effective, interoperable, robust, and reliable so far as technically feasible.</p>
+    </div>
+    <div class="quiz-q" data-answer="2">
+      <p class="qtext">2 · When must an Article 50 disclosure be given at the latest?</p>
+      <button class="qopt" type="button">A · Within 30 days of launch</button>
+      <button class="qopt" type="button">B · Only if a user asks</button>
+      <button class="qopt" type="button">C · Clearly and distinguishably, at the latest at the first interaction or exposure</button>
+      <p class="qwhy">Article 50.5 says the disclosures must be provided clearly and distinguishably, at the latest at the time of the first interaction or exposure.</p>
+    </div>
+    <div class="quiz-q" data-answer="0">
+      <p class="qtext">3 · A high-risk hiring system adds a candidate chatbot. What does it owe on transparency?</p>
+      <button class="qopt" type="button">A · Article 50 applies too - the chatbot must disclose it is AI, on top of the high-risk programme</button>
+      <button class="qopt" type="button">B · Nothing - high-risk systems are exempt from Article 50</button>
+      <button class="qopt" type="button">C · Only the chatbot notice; the high-risk obligations drop away</button>
+      <p class="qwhy">Transparency is a distinct obligation. A system can be high-risk AND carry Article 50 duties - the chatbot must disclose it is AI (50.1), and that stacks on top of the full high-risk programme, it does not replace it.</p>
+    </div>
+    <p class="quiz-score"></p>
+  </section>
+
+  <section class="cheat" id="cheatsheet">
+    <h3>Practitioner session 3 cheat sheet <span>· pin this</span></h3>
+    <div class="grid-2">
+      <div class="cheat-item"><b>Four duties (Art 50)</b><span>Chatbot discloses AI, generative output marked, emotion/biometric subjects informed, deepfakes disclosed.</span></div>
+      <div class="cheat-item"><b>50.1 - chatbot</b><span>Provider builds in a notice that a person is interacting with AI, unless obvious.</span></div>
+      <div class="cheat-item"><b>50.2 - mark output</b><span>Provider marks generative output machine-readably: effective, interoperable, robust, reliable.</span></div>
+      <div class="cheat-item"><b>50.3 / 50.4 - deployer</b><span>Deployer informs people exposed to emotion/biometric systems, and discloses deepfakes.</span></div>
+      <div class="cheat-item"><b>Timing (50.5)</b><span>Clearly and distinguishably, at the latest at first interaction or exposure.</span></div>
+      <div class="cheat-item"><b>Machine-readable = detectable</b><span>Watermark or provenance metadata a machine can read - not just a human caption.</span></div>
+      <div class="cheat-item"><b>Exemptions are narrow</b><span>Artistic/satirical is lighter; editorial-reviewed text is carved out. Not a blanket escape.</span></div>
+      <div class="cheat-item"><b>It stacks</b><span>A system can be high-risk AND owe Article 50. Transparency does not replace the programme.</span></div>
+    </div>
+  </section>
+
+  <footer class="pagefoot">
+    <span>Practitioner session 3 of 8 · learn-ai-governance-with-phoebe · by Phoebe Fu &nbsp;·&nbsp; 📚 <a href="https://phoebefu6.github.io/learn-with-phoebe/">Learn with Phoebe ↗</a></span>
+    <span><a href="../index.html">← All sessions</a> &nbsp;·&nbsp; <a href="b4-gpai.html">Next: General-purpose AI →</a></span>
+  </footer>
+
+</main>
+
+<script src="../assets/app.js?v=1"></script>
+</body>
+</html>
